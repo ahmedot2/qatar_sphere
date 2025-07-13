@@ -1,15 +1,6 @@
 import Image from 'next/image';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { GlassCard } from '@/components/ui/glass-card';
-import { InvestmentChart } from '@/components/investment-chart';
-import { SphereIcon, PartnerIcon } from '@/components/icons';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import {
   Cpu,
   DollarSign,
@@ -24,316 +15,226 @@ import {
   Landmark,
   Users,
   HeartHandshake,
-  AreaChart,
+  ArrowRight,
   ShieldCheck,
   Globe,
   BrainCircuit,
-  ClipboardCheck,
-  Calendar,
-  Rocket,
+  AreaChart,
 } from 'lucide-react';
 
+const FeatureCard = ({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) => (
+  <div className="flex flex-col items-center text-center">
+    <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-secondary">
+      {icon}
+    </div>
+    <h3 className="text-xl font-bold">{title}</h3>
+    <p className="mt-2 text-muted-foreground">{description}</p>
+  </div>
+);
+
+const BenefitCard = ({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) => (
+    <Card className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <CardHeader>
+        <div className="mx-auto bg-secondary rounded-full p-3 w-fit">
+          {icon}
+        </div>
+        <CardTitle>{title}</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <p className="text-muted-foreground">{description}</p>
+      </CardContent>
+    </Card>
+);
+
 export default function Home() {
-  const financialMetrics = [
-    { label: "Sphere Venue Investment", value: "$2.8 Billion" },
-    { label: "District Infrastructure", value: "$1.4 Billion" },
-    { label: "Total Project Investment", value: "$4.2 Billion" },
-    { label: "Projected Annual Revenue", value: "$1.8 Billion" },
-    { label: "Simple Payback Period", value: "~2.3 Years" },
-    { label: "Annual GDP Contribution", value: "QAR 20-30 Billion" },
-  ];
-
-  const partners = [
-    { name: 'CSCEC', description: 'The world\'s largest contractor, ensuring complex mega-projects are delivered on time and on budget.' },
-    { name: 'Tencent', description: 'A global leader in AI and interactive entertainment, powering our personalization engine.' },
-    { name: 'Alibaba', description: 'Providing robust cloud infrastructure for real-time data processing and smart city management.' },
-    { name: 'Wanda Group', description: 'Premier developer of entertainment content, co-developing world-class shows and experiences.' },
-  ];
-
   return (
-    <div className="bg-background">
-      <header className="fixed top-0 left-0 right-0 z-50 p-4 bg-background/50 backdrop-blur-md">
-        <nav className="container mx-auto flex justify-between items-center">
-          <h1 className="text-xl font-headline font-bold text-primary">QatarSphere</h1>
-          <Button variant="outline">QIA Portal</Button>
-        </nav>
+    <div className="bg-background text-foreground">
+      <header className="fixed top-0 left-0 right-0 z-50 p-4 bg-background/80 backdrop-blur-md">
+        <div className="container mx-auto flex justify-between items-center">
+          <h1 className="text-2xl font-bold">QatarSphere</h1>
+          <nav className="hidden md:flex items-center gap-6">
+            <a href="#vision" className="text-sm font-medium hover:text-primary">Vision</a>
+            <a href="#solution" className="text-sm font-medium hover:text-primary">Solution</a>
+            <a href="#impact" className="text-sm font-medium hover:text-primary">Impact</a>
+            <a href="#financials" className="text-sm font-medium hover:text-primary">Financials</a>
+          </nav>
+          <Button>QIA Portal</Button>
+        </div>
       </header>
 
       <main>
-        {/* Slide 1: Title */}
-        <section className="h-screen bg-cover bg-center" style={{ backgroundImage: "url('https://placehold.co/1920x1080.png')" }} data-ai-hint="futuristic sphere city dusk">
-          <div className="absolute inset-0 bg-primary/70" />
-          <GlassCard className="relative z-10 text-center animate-in fade-in slide-in-from-bottom-12 duration-1000">
-            <h1 className="text-4xl md:text-6xl font-headline font-bold text-white">The QatarSphere District</h1>
-            <p className="mt-4 text-lg md:text-2xl text-white/90">A Landmark Investment in Qatar's Future</p>
-            <p className="mt-2 text-sm md:text-base text-accent">Presented by: His Excellency Sheikh Jabr bin Thani Al Thani</p>
-          </GlassCard>
-        </section>
-
-        {/* Slide 2: Executive Summary */}
-        <section>
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-headline">Executive Summary</h2>
-            <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">A Vision for National Prosperity & Technological Sovereignty, designed to become a global epicenter for the next industrial revolution.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="text-center animate-in fade-in slide-in-from-bottom-4 duration-500">
-              <CardHeader>
-                <Cpu className="mx-auto h-12 w-12 text-primary" />
-                <CardTitle className="font-body">The Proposal</CardTitle>
-              </CardHeader>
-              <CardContent>$4.2B to develop the world's first "cognitive city" district.</CardContent>
-            </Card>
-            <Card className="text-center animate-in fade-in slide-in-from-bottom-4 duration-500 [animation-delay:100ms]">
-              <CardHeader>
-                <DollarSign className="mx-auto h-12 w-12 text-primary" />
-                <CardTitle className="font-body">The Dual Engine</CardTitle>
-              </CardHeader>
-              <CardContent>Adds QAR 20-30B annually to GDP.</CardContent>
-            </Card>
-            <Card className="text-center animate-in fade-in slide-in-from-bottom-4 duration-500 [animation-delay:200ms]">
-              <CardHeader>
-                <TrendingUp className="mx-auto h-12 w-12 text-primary" />
-                <CardTitle className="font-body">The Strategic Imperative</CardTitle>
-              </CardHeader>
-              <CardContent>A living laboratory for AI, Quantum Computing, and Robotics.</CardContent>
-            </Card>
-            <Card className="text-center animate-in fade-in slide-in-from-bottom-4 duration-500 [animation-delay:300ms]">
-              <CardHeader>
-                <Gem className="mx-auto h-12 w-12 text-primary" />
-                <CardTitle className="font-body">The Ask</CardTitle>
-              </CardHeader>
-              <CardContent>Seeking QIA's backing to anchor this nation-building project.</CardContent>
-            </Card>
+        {/* Hero Section */}
+        <section className="min-h-screen pt-32 pb-20 text-center bg-secondary/50">
+          <div className="container mx-auto">
+            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">
+              The QatarSphere District
+            </h1>
+            <p className="max-w-2xl mx-auto mt-4 text-lg text-muted-foreground">
+              A Landmark Investment in Qatar's Future, designed to become a global epicenter for the next industrial revolution.
+            </p>
+            <div className="mt-8">
+              <Button size="lg">
+                Explore the Vision <ArrowRight className="ml-2" />
+              </Button>
+            </div>
+            <div className="mt-12 relative">
+              <div className="absolute -inset-2 rounded-xl bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 opacity-20 blur-2xl"></div>
+              <Card className="shadow-2xl overflow-hidden">
+                <Image
+                  src="https://placehold.co/1200x600.png"
+                  alt="QatarSphere Hero Image"
+                  width={1200}
+                  height={600}
+                  className="object-cover"
+                  data-ai-hint="futuristic city dusk"
+                />
+              </Card>
+            </div>
           </div>
         </section>
 
-        {/* Slide 3: A New Paradigm */}
-        <section>
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-headline">A New Paradigm: Beyond Entertainment</h2>
-            <p className="text-muted-foreground mt-2 max-w-3xl mx-auto">While competitors build bigger screens, we will build a smarter city. A globally significant hub for technological innovation.</p>
-          </div>
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-8">
-            <GlassCard className="w-full lg:w-1/2">
-              <h3 className="text-2xl font-headline text-accent">The Entertainment Layer</h3>
-              <p className="mt-2">A world-class destination attracting 3.2 million visitors annually, serving as the public face and a key revenue driver for the entire ecosystem.</p>
-            </GlassCard>
-            <SphereIcon className="h-24 w-24 text-primary shrink-0 animate-pulse" />
-            <GlassCard className="w-full lg:w-1/2">
-              <h3 className="text-2xl font-headline text-accent">The Technology Core</h3>
-              <p className="mt-2">A dedicated Special Economic and Technology Zone (SET-Zone) to attract the brightest minds in AI, Quantum Computing, Advanced Robotics, and Blockchain.</p>
-            </GlassCard>
+        {/* Executive Summary Section */}
+        <section id="vision">
+          <div className="container mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+            <FeatureCard icon={<Cpu size={24} className="text-primary"/>} title="The Proposal" description="$4.2B to develop the world's first 'cognitive city' district." />
+            <FeatureCard icon={<DollarSign size={24} className="text-primary"/>} title="The Dual Engine" description="Adds QAR 20-30B annually to GDP." />
+            <FeatureCard icon={<TrendingUp size={24} className="text-primary"/>} title="The Strategic Imperative" description="A living laboratory for AI, Quantum Computing, and Robotics." />
+            <FeatureCard icon={<Gem size={24} className="text-primary"/>} title="The Ask" description="Seeking QIA's backing to anchor this nation-building project." />
           </div>
         </section>
 
-        {/* Slide 4: Proposed Solution */}
+        {/* The Solution Section */}
+        <section id="solution" className="bg-secondary/50">
+          <div className="container mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold">A Dual-Purpose Ecosystem</h2>
+              <p className="max-w-3xl mx-auto mt-3 text-muted-foreground">
+                Our 850,000-square-meter district is designed with two synergistic purposes, creating a virtuous cycle of innovation and experience.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8 items-start">
+              <Card className="p-2">
+                <CardContent className="p-0">
+                   <Image src="https://placehold.co/600x400.png" width={600} height={400} alt="Public Experience" className="rounded-lg mb-6" data-ai-hint="modern entertainment venue" />
+                   <div className="px-6 pb-6">
+                    <h3 className="text-2xl font-bold text-primary">Zone 1: The Public Experience</h3>
+                    <ul className="mt-4 space-y-4 text-muted-foreground">
+                      <li className="flex items-start gap-4"><Building2 className="h-5 w-5 text-primary shrink-0 mt-1" /><span>The QatarSphere venue, with dynamic, submersible stages.</span></li>
+                      <li className="flex items-start gap-4"><Hotel className="h-5 w-5 text-primary shrink-0 mt-1" /><span>Luxury hotels with 2,500 rooms.</span></li>
+                      <li className="flex items-start gap-4"><ShoppingBag className="h-5 w-5 text-primary shrink-0 mt-1" /><span>200+ retail spaces and a 2-mile entertainment promenade.</span></li>
+                    </ul>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card className="p-2">
+                <CardContent className="p-0">
+                   <Image src="https://placehold.co/600x400.png" width={600} height={400} alt="Innovation Campus" className="rounded-lg mb-6" data-ai-hint="futuristic research lab" />
+                   <div className="px-6 pb-6">
+                    <h3 className="text-2xl font-bold text-primary">Zone 2: The Qatar Innovation Campus</h3>
+                    <ul className="mt-4 space-y-4 text-muted-foreground">
+                      <li className="flex items-start gap-4"><FlaskConical className="h-5 w-5 text-primary shrink-0 mt-1" /><span>State-of-the-art R&D facilities and secure data centers.</span></li>
+                      <li className="flex items-start gap-4"><Bot className="h-5 w-5 text-primary shrink-0 mt-1" /><span>"Sandbox" environments for testing autonomous robots and AI systems.</span></li>
+                      <li className="flex items-start gap-4"><Server className="h-5 w-5 text-primary shrink-0 mt-1" /><span>Corporate headquarters and startup incubators for global tech firms.</span></li>
+                    </ul>
+                   </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* National Impact Section */}
+        <section id="impact">
+          <div className="container mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold">National & Cultural Impact</h2>
+              <p className="max-w-3xl mx-auto mt-3 text-muted-foreground">
+                A powerful catalyst for our national vision, creating parallel streams of human and economic development.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+               <BenefitCard icon={<Landmark size={28} className="text-primary"/>} title="Celebrate Heritage" description="A unique brand of 'Culture & Code' to define Qatar's global identity." />
+               <BenefitCard icon={<Users size={28} className="text-primary"/>} title="Build a Knowledge Workforce" description="A National Technology Fellowship to develop elite Qatari talent." />
+               <BenefitCard icon={<HeartHandshake size={28} className="text-primary"/>} title="Enhance Community" description="World-class public spaces and a new source of national pride." />
+            </div>
+          </div>
+        </section>
+
+        {/* Value Proposition Section */}
         <section className="bg-secondary/50">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-headline">A Dual-Purpose Ecosystem</h2>
-            <p className="text-muted-foreground mt-2 max-w-3xl mx-auto">Our 850,000-square-meter district is designed with two synergistic purposes, creating a virtuous cycle of innovation and experience.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl">
-            <Card className="p-6">
-              <h3 className="text-2xl font-headline text-primary">Zone 1: The Public Experience</h3>
-              <ul className="mt-4 space-y-4">
-                <li className="flex items-start gap-4"><Building2 className="h-6 w-6 text-accent shrink-0 mt-1" /><span>The QatarSphere venue, with dynamic, submersible stages.</span></li>
-                <li className="flex items-start gap-4"><Hotel className="h-6 w-6 text-accent shrink-0 mt-1" /><span>Luxury hotels with 2,500 rooms.</span></li>
-                <li className="flex items-start gap-4"><ShoppingBag className="h-6 w-6 text-accent shrink-0 mt-1" /><span>200+ retail spaces and a 2-mile entertainment promenade.</span></li>
-              </ul>
-            </Card>
-            <Card className="p-6">
-              <h3 className="text-2xl font-headline text-primary">Zone 2: The Qatar Innovation Campus (QIC)</h3>
-              <ul className="mt-4 space-y-4">
-                <li className="flex items-start gap-4"><FlaskConical className="h-6 w-6 text-accent shrink-0 mt-1" /><span>State-of-the-art R&D facilities and secure data centers.</span></li>
-                <li className="flex items-start gap-4"><Bot className="h-6 w-6 text-accent shrink-0 mt-1" /><span>"Sandbox" environments for testing autonomous robots and AI systems.</span></li>
-                <li className="flex items-start gap-4"><Server className="h-6 w-6 text-accent shrink-0 mt-1" /><span>Corporate headquarters and startup incubators for global tech firms.</span></li>
-              </ul>
-            </Card>
+          <div className="container mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold">A Redefined Value Proposition</h2>
+              <p className="max-w-3xl mx-auto mt-3 text-muted-foreground">
+                A strategic return far greater than a standalone tourism project, delivering a multiplier effect on national value.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <Card><CardHeader><AreaChart className="h-8 w-8 text-primary mb-2" /><CardTitle>Economic Diversification</CardTitle></CardHeader><CardContent>$1.8B+ in annual revenue.</CardContent></Card>
+                <Card><CardHeader><ShieldCheck className="h-8 w-8 text-primary mb-2" /><CardTitle>Technological Sovereignty</CardTitle></CardHeader><CardContent>Fostering homegrown innovation and valuable IP.</CardContent></Card>
+                <Card><CardHeader><Globe className="h-8 w-8 text-primary mb-2" /><CardTitle>Global Influence</CardTitle></CardHeader><CardContent>The "Davos" of the next tech revolution.</CardContent></Card>
+                <Card><CardHeader><BrainCircuit className="h-8 w-8 text-primary mb-2" /><CardTitle>Human Capital</CardTitle></CardHeader><CardContent>A magnet for world-class scientific talent.</CardContent></Card>
+            </div>
           </div>
         </section>
 
-        {/* Slide 5: National & Cultural Impact */}
-        <section>
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-headline">National & Cultural Impact</h2>
-            <p className="text-muted-foreground mt-2 max-w-3xl mx-auto">A powerful catalyst for our national vision, creating parallel streams of human and economic development.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-7xl">
-            <GlassCard>
-              <Landmark className="h-10 w-10 text-accent mb-4" />
-              <h3 className="font-headline text-xl">Celebrate Heritage, Power the Future</h3>
-              <p className="mt-2 text-foreground/80">A unique brand of "Culture & Code" to define Qatar's global identity, from heritage pavilions to innovation campuses.</p>
-            </GlassCard>
-            <GlassCard>
-              <Users className="h-10 w-10 text-accent mb-4" />
-              <h3 className="font-headline text-xl">Build a Knowledge Workforce</h3>
-              <p className="mt-2 text-foreground/80">A National Technology Fellowship to develop elite Qatari talent in AI, quantum mechanics, and robotics.</p>
-            </GlassCard>
-            <GlassCard>
-              <HeartHandshake className="h-10 w-10 text-accent mb-4" />
-              <h3 className="font-headline text-xl">Enhance Community Well-being</h3>
-              <p className="mt-2 text-foreground/80">World-class, family-friendly public spaces and cultural programming for residents and a new source of national pride.</p>
-            </GlassCard>
-          </div>
-        </section>
-
-        {/* Slide 6: Redefined Value Proposition */}
-        <section className="bg-secondary/50">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-headline">A Redefined Value Proposition</h2>
-            <p className="text-muted-foreground mt-2 max-w-3xl mx-auto">A strategic return far greater than a standalone tourism project, delivering a multiplier effect on national value.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-7xl">
-            <Card><CardHeader><AreaChart className="h-8 w-8 text-primary mb-2" /><CardTitle className="font-body text-lg">Economic Diversification</CardTitle></CardHeader><CardContent>$1.8B+ in annual revenue from tourism, tech licensing, and corporate tenancies.</CardContent></Card>
-            <Card><CardHeader><ShieldCheck className="h-8 w-8 text-primary mb-2" /><CardTitle className="font-body text-lg">Technological Sovereignty</CardTitle></CardHeader><CardContent>Fostering homegrown innovation and valuable Intellectual Property.</CardContent></Card>
-            <Card><CardHeader><Globe className="h-8 w-8 text-primary mb-2" /><CardTitle className="font-body text-lg">Global Influence</CardTitle></CardHeader><CardContent>The "Davos" of the next tech revolution for governance, dialogues, and investment.</CardContent></Card>
-            <Card><CardHeader><BrainCircuit className="h-8 w-8 text-primary mb-2" /><CardTitle className="font-body text-lg">Human Capital</CardTitle></CardHeader><CardContent>A magnet for attracting and retaining world-class scientific talent.</CardContent></Card>
-          </div>
-        </section>
-
-        {/* Slide 7: Financial Overview */}
-        <section>
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-headline">Financial Overview</h2>
-            <p className="text-muted-foreground mt-2 max-w-3xl mx-auto">A sound and highly profitable national investment built on rigorous analysis and a resilient, diversified revenue strategy.</p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full max-w-6xl items-start">
+         {/* Financials Section */}
+        <section id="financials">
+          <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
+             <div>
+                <h2 className="text-3xl md:text-4xl font-bold">Financial Strength</h2>
+                <p className="mt-4 text-muted-foreground">A sound and highly profitable national investment built on rigorous analysis and a resilient, diversified revenue strategy. With a simple payback period of ~2.3 years, this project promises substantial returns.</p>
+                <div className="mt-8 grid grid-cols-2 gap-6">
+                    <div>
+                        <p className="text-4xl font-bold text-primary">$4.2B</p>
+                        <p className="text-sm text-muted-foreground">Total Investment</p>
+                    </div>
+                     <div>
+                        <p className="text-4xl font-bold text-primary">$1.8B</p>
+                        <p className="text-sm text-muted-foreground">Projected Annual Revenue</p>
+                    </div>
+                </div>
+                <Button size="lg" variant="outline" className="mt-8">View Detailed Financials</Button>
+            </div>
             <div className="grid grid-cols-2 gap-4">
-              {financialMetrics.map(metric => (
-                <Card key={metric.label}>
-                  <CardHeader><CardTitle className="text-base font-body">{metric.label}</CardTitle></CardHeader>
-                  <CardContent><p className="text-3xl font-bold text-primary">{metric.value}</p></CardContent>
+                <Card className="p-6 bg-secondary">
+                    <CardTitle className="text-lg">Sphere Venue</CardTitle>
+                    <CardDescription className="text-3xl font-bold text-primary mt-2">$2.8B</CardDescription>
                 </Card>
-              ))}
+                 <Card className="p-6">
+                    <CardTitle className="text-lg">Infrastructure</CardTitle>
+                    <CardDescription className="text-3xl font-bold text-primary mt-2">$1.4B</CardDescription>
+                </Card>
+                 <Card className="p-6">
+                    <CardTitle className="text-lg">Payback Period</CardTitle>
+                    <CardDescription className="text-3xl font-bold text-primary mt-2">~2.3 Yrs</CardDescription>
+                </Card>
+                 <Card className="p-6 bg-secondary">
+                    <CardTitle className="text-lg">Annual GDP</CardTitle>
+                    <CardDescription className="text-3xl font-bold text-primary mt-2">QAR 20-30B</CardDescription>
+                </Card>
             </div>
-            <GlassCard>
-                <h3 className="text-2xl font-headline text-accent mb-4">Investment Breakdown</h3>
-                <InvestmentChart />
-            </GlassCard>
           </div>
         </section>
 
-        {/* Slide 8: Implementation Roadmap */}
-        <section className="bg-secondary/50">
-            <div className="text-center mb-12">
-                <h2 className="text-4xl font-headline">Implementation Roadmap</h2>
-                <p className="text-muted-foreground mt-2">An aggressive yet achievable 36-month plan for a grand opening in Q4 2028.</p>
-            </div>
-            <div className="w-full max-w-5xl space-y-8">
-                <div className="flex items-center gap-4 animate-in fade-in slide-in-from-left-12 duration-700">
-                    <div className="bg-primary text-primary-foreground p-4 rounded-full flex items-center justify-center h-16 w-16">
-                        <ClipboardCheck className="h-8 w-8" />
-                    </div>
-                    <div>
-                        <h3 className="text-xl font-headline">Phase 1: Foundation (Year 1)</h3>
-                        <p className="text-muted-foreground">Finalize master plan, secure permits, formalize partnerships, and begin site preparation.</p>
-                    </div>
-                </div>
-                 <div className="flex items-center gap-4 animate-in fade-in slide-in-from-left-12 duration-700 [animation-delay:200ms]">
-                    <div className="bg-primary text-primary-foreground p-4 rounded-full flex items-center justify-center h-16 w-16">
-                        <Calendar className="h-8 w-8" />
-                    </div>
-                    <div>
-                        <h3 className="text-xl font-headline">Phase 2: Vertical Construction (Year 2-3)</h3>
-                        <p className="text-muted-foreground">Sphere structural completion, facade & tech integration, and development of Innovation Campus.</p>
-                    </div>
-                </div>
-                 <div className="flex items-center gap-4 animate-in fade-in slide-in-from-left-12 duration-700 [animation-delay:400ms]">
-                    <div className="bg-primary text-primary-foreground p-4 rounded-full flex items-center justify-center h-16 w-16">
-                        <Rocket className="h-8 w-8" />
-                    </div>
-                    <div>
-                        <h3 className="text-xl font-headline">Phase 3: Launch Readiness (Year 3-4)</h3>
-                        <p className="text-muted-foreground">Systems integration, testing, commissioning, staff training, and global marketing launch.</p>
-                    </div>
-                </div>
+        {/* Call to Action Section */}
+        <section className="bg-primary text-primary-foreground">
+            <div className="container mx-auto text-center">
+                <h2 className="text-3xl md:text-4xl font-bold">Build the Future of Qatar</h2>
+                 <p className="max-w-2xl mx-auto mt-4 text-lg text-primary-foreground/80">
+                    This landmark project is ready for activation. Its success will be a testament to Qatar's vision and ambition.
+                </p>
+                <Button size="lg" variant="secondary" className="mt-8">
+                    Partner With Us
+                </Button>
             </div>
         </section>
 
-        {/* Slide 9: Strategic Partnerships */}
-        <section>
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-headline">Strategic Partnerships</h2>
-            <p className="text-muted-foreground mt-2 max-w-3xl mx-auto">De-risking execution with a consortium of global leaders who are best-in-class in their respective fields.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-7xl">
-            {partners.map(partner => (
-                <GlassCard key={partner.name} className="text-center">
-                    <PartnerIcon className="h-12 w-12 text-accent mx-auto mb-4" />
-                    <h3 className="text-2xl font-headline">{partner.name}</h3>
-                    <p className="mt-2 text-foreground/80">{partner.description}</p>
-                </GlassCard>
-            ))}
-          </div>
-        </section>
-
-        {/* Slide 10: Risk Assessment */}
-        <section className="bg-secondary/50">
-            <div className="text-center mb-12">
-                <h2 className="text-4xl font-headline">Expanded Risk Assessment & Mitigation</h2>
-                <p className="text-muted-foreground mt-2">Proactive management for assured success with robust contingency plans.</p>
-            </div>
-            <Accordion type="single" collapsible className="w-full max-w-4xl">
-              <AccordionItem value="item-1">
-                <AccordionTrigger>Execution: Construction cost & timeline overruns.</AccordionTrigger>
-                <AccordionContent>Partnering with CSCEC, leveraging prefabrication, and securing a 15% contingency budget.</AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-2">
-                <AccordionTrigger>Market: Global economic downturn impacting travel.</AccordionTrigger>
-                <AccordionContent>Dual-engine model provides a hedge. The R&D/Tech sector is less correlated with consumer travel trends.</AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-3">
-                <AccordionTrigger>Technology: Rapid pace of change making investments obsolete.</AccordionTrigger>
-                <AccordionContent>Modular, open-architecture design for easy upgrades. The QIC's purpose is to drive change, not just react to it.</AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-4">
-                <AccordionTrigger>Geopolitical: Regional instability or tech transfer restrictions.</AccordionTrigger>
-                <AccordionContent>Diversified global partnerships (Europe, Asia, Americas). Position the QIC as a neutral, global "open-source" R&D hub.</AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-5">
-                <AccordionTrigger>Sustainability: High energy/water use from data centers & labs.</AccordionTrigger>
-                <AccordionContent>LEED Platinum design is non-negotiable. On-site solar generation and advanced water recycling to power the entire district.</AccordionContent>
-              </AccordionItem>
-            </Accordion>
-        </section>
-
-        {/* Slide 11: Call to Action */}
-        <section>
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-headline">A Call to Build the Future of Qatar</h2>
-            <p className="text-muted-foreground mt-2">This landmark project is ready for activation. Its success will be a testament to Qatar's vision and ambition.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
-            <GlassCard>
-              <h3 className="text-2xl font-headline text-accent">Our Request</h3>
-              <p className="mt-2 text-lg">We formally seek the strategic and financial backing of the Qatar Investment Authority to serve as the anchor investor for the QatarSphere District, committing the initial funding tranche to catalyze development.</p>
-            </GlassCard>
-            <GlassCard>
-              <h3 className="text-2xl font-headline text-accent">Immediate Next Steps</h3>
-              <ul className="mt-2 space-y-2 list-disc list-inside">
-                <li>Secure Board Approval from the QIA board.</li>
-                <li>Formalize Partnerships with strategic partners (90 Days).</li>
-                <li>Commence Phase 1: design, permitting, and site prep (6 Months).</li>
-              </ul>
-            </GlassCard>
-          </div>
-        </section>
-
-        {/* Slide 12: Conclusion */}
-        <section className="h-screen bg-cover bg-center" style={{ backgroundImage: "url('https://placehold.co/1920x1080.png')" }} data-ai-hint="futuristic city night data">
-          <div className="absolute inset-0 bg-primary/80" />
-          <GlassCard className="relative z-10 text-center max-w-4xl animate-in fade-in zoom-in-95 duration-1000">
-            <h2 className="text-3xl md:text-5xl font-headline text-white">Investing in the Future Sovereign Capability of Qatar</h2>
-            <p className="mt-6 text-lg text-white/90">The QatarSphere District is more than an investment in infrastructure; it is an investment in the future sovereign capability of our nation. A profitable and strategic venture that accelerates the highest aspirations of the Qatar National Vision 2030.</p>
-            <p className="mt-8 text-xl font-bold text-accent">Thank you.</p>
-          </GlassCard>
-        </section>
       </main>
-      
-      <footer className="bg-secondary/50 text-secondary-foreground py-6">
-        <div className="container mx-auto text-center">
-            <p>&copy; {new Date().getFullYear()} QatarSphere District. A project presented to the Qatar Investment Authority.</p>
+
+      <footer className="py-8 bg-secondary/50">
+        <div className="container mx-auto text-center text-muted-foreground">
+          <p>&copy; {new Date().getFullYear()} QatarSphere District. A project presented to the Qatar Investment Authority.</p>
         </div>
       </footer>
     </div>
