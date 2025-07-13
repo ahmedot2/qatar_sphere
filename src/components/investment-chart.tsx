@@ -1,8 +1,8 @@
 "use client"
 
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis, ResponsiveContainer, Tooltip } from "recharts"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ChartTooltipContent, type ChartConfig } from "@/components/ui/chart"
+import { Card, CardContent } from "@/components/ui/card"
+import { ChartContainer, ChartTooltipContent, type ChartConfig } from "@/components/ui/chart"
 
 const chartData = [
   { category: "Sphere Venue", investment: 2.8, fill: "var(--color-venue)" },
@@ -27,7 +27,7 @@ export function InvestmentChart() {
   return (
     <Card className="bg-transparent border-0 shadow-none">
       <CardContent>
-        <ResponsiveContainer width="100%" height={250}>
+        <ChartContainer config={chartConfig} className="min-h-[250px] w-full">
             <BarChart data={chartData} layout="vertical" margin={{ left: 10, right: 20 }}>
                 <CartesianGrid horizontal={false} />
                 <XAxis type="number" dataKey="investment" unit="B" />
@@ -35,7 +35,7 @@ export function InvestmentChart() {
                 <Tooltip cursor={{fill: 'hsl(var(--muted))'}} content={<ChartTooltipContent />} />
                 <Bar dataKey="investment" radius={5} />
             </BarChart>
-        </ResponsiveContainer>
+        </ChartContainer>
       </CardContent>
     </Card>
   )
