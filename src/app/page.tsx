@@ -13,6 +13,7 @@ import {
   Globe,
   Handshake,
   HeartHandshake,
+  Landmark,
   Layers,
   LineChart,
   Map,
@@ -31,7 +32,6 @@ import {
 import { InvestmentChart } from '@/components/investment-chart';
 import { cn } from '@/lib/utils';
 import DecryptedText from '@/components/decrypted-text';
-import { SphereIcon } from '@/components/icons';
 
 const FeatureCard = ({
   icon,
@@ -76,7 +76,7 @@ export default function Home() {
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
           <a className="flex items-center gap-2" href="/">
-            <SphereIcon className="h-6 w-6 text-accent" />
+            <Landmark className="h-6 w-6" />
             <span className="font-bold">QatarSphere</span>
           </a>
         </div>
