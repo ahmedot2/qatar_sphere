@@ -17,8 +17,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['"DM Sans"', 'sans-serif'],
-        headline: ['"Orbitron"', 'sans-serif'],
+        body: ['"Inter"', 'sans-serif'],
+        headline: ['"Michroma"', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',
