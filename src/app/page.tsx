@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import {
   BrainCircuit,
   Building,
@@ -89,13 +89,13 @@ export default function Home() {
             <h1 className="text-4xl font-headline font-bold md:text-6xl lg:text-7xl">
               The QatarSphere District
             </h1>
-            <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground md:text-xl">
+            <p className="mx-auto mt-6 max-w-3xl text-muted-foreground">
               A Landmark Investment in Qatar&apos;s Future: Building the World&apos;s First Cognitive
               City, a Hub for Technology, Tourism, and Talent.
             </p>
             <div className="mt-8">
               <p className="font-semibold">Presented by:</p>
-              <p className='text-muted-foreground'>His Excellency Sheikh Jabr bin Thani Al Thani</p>
+              <p className="text-muted-foreground">His Excellency Sheikh Jabr bin Thani Al Thani</p>
             </div>
           </div>
           <div className="absolute inset-0 -z-10 bg-grid-slate-100 [mask-image:linear-gradient(to_bottom,white,transparent)] dark:bg-grid-slate-700/30"></div>
@@ -144,7 +144,7 @@ export default function Home() {
               </h2>
               <p className="text-muted-foreground">
                 From an Entertainment Venue to a Cognitive Hub. While competitors focus on building
-                bigger screens, we will build a smarter city. The QatarSphere District's vision transcends entertainment to become a globally significant hub for technological innovation.
+                bigger screens, we will build a smarter city. The QatarSphere District&apos;s vision transcends entertainment to become a globally significant hub for technological innovation.
               </p>
               <div className="space-y-6 pt-4">
                 <div className="flex items-start gap-4">
@@ -243,7 +243,7 @@ export default function Home() {
                     <ul className="mt-4 space-y-4 text-muted-foreground">
                       <li className="flex items-start gap-3">
                         <FlaskConical className="h-5 w-5 text-primary shrink-0 mt-1" />
-                        <span>State-of-the-art R&D facilities and secure data centers.</span>
+                        <span>State-of-the-art R&amp;D facilities and secure data centers.</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <Bot className="h-5 w-5 text-primary shrink-0 mt-1" />
@@ -270,7 +270,7 @@ export default function Home() {
         <section id="impact">
           <div className="container space-y-12">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-3xl font-headline font-bold md:text-4xl">National & Cultural Impact</h2>
+              <h2 className="text-3xl font-headline font-bold md:text-4xl">National &amp; Cultural Impact</h2>
               <p className="mt-4 text-muted-foreground">
                 Fulfilling an Accelerated Vision for 2030, this project is a powerful catalyst for
                 our national vision, creating parallel streams of human and economic development.
@@ -278,7 +278,7 @@ export default function Home() {
             </div>
             <div className="mt-12 grid md:grid-cols-3 gap-8">
               <FeatureCard icon={<Book size={28} />} title="Celebrate Heritage, Power the Future">
-                A unique brand of &apos;Culture & Code&apos; to define Qatar&apos;s global
+                A unique brand of &apos;Culture &amp; Code&apos; to define Qatar&apos;s global
                 identity, featuring a Qatar Heritage Pavilion.
               </FeatureCard>
               <FeatureCard icon={<Users2 size={28} />} title="Build a Knowledge Workforce">
@@ -390,7 +390,7 @@ export default function Home() {
                     </CardHeader>
                     <CardContent>
                       <p className="text-muted-foreground">
-                        Sphere structural completion, facade & tech integration. Develop Innovation
+                        Sphere structural completion, facade &amp; tech integration. Develop Innovation
                         Campus.
                       </p>
                     </CardContent>
@@ -459,10 +459,10 @@ export default function Home() {
                 delivery.
               </FeatureCard>
               <FeatureCard icon={<Cpu size={28} />} title="Tencent">
-                Technology & AI partner to power immersive content and personalization engines.
+                Technology &amp; AI partner to power immersive content and personalization engines.
               </FeatureCard>
               <FeatureCard icon={<Database size={28} />} title="Alibaba">
-                Cloud & Data partner for robust, real-time smart city management.
+                Cloud &amp; Data partner for robust, real-time smart city management.
               </FeatureCard>
               <FeatureCard icon={<Layers size={28} />} title="Wanda Group">
                 Entertainment content partner for co-developing world-class shows.
@@ -476,7 +476,7 @@ export default function Home() {
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-3xl font-headline font-bold md:text-4xl">
-                Expanded Risk Assessment & Mitigation
+                Expanded Risk Assessment &amp; Mitigation
               </h2>
               <p className="mt-4 text-muted-foreground">
                 Proactive management for assured success with robust contingency plans.
@@ -488,7 +488,7 @@ export default function Home() {
                 15% contingency budget.
               </FeatureCard>
               <FeatureCard icon={<LineChart size={28} />} title="Market Risk">
-                <b>Mitigation:</b> Dual-engine model hedges risk, as the R&D/Tech sector is less
+                <b>Mitigation:</b> Dual-engine model hedges risk, as the R&amp;D/Tech sector is less
                 correlated with consumer travel.
               </FeatureCard>
               <FeatureCard icon={<Cpu size={28} />} title="Technology Risk">
@@ -497,7 +497,7 @@ export default function Home() {
               </FeatureCard>
               <FeatureCard icon={<Map size={28} />} title="Geopolitical Risk">
                 <b>Mitigation:</b> Diversified global partnerships. Position QIC as a neutral,
-                &quot;open-source&quot; R&D hub.
+                &quot;open-source&quot; R&amp;D hub.
               </FeatureCard>
               <FeatureCard icon={<Globe size={28} />} title="Sustainability Risk">
                 <b>Mitigation:</b> LEED Platinum design, on-site solar generation, and advanced
@@ -592,5 +592,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
