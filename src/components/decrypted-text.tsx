@@ -45,7 +45,6 @@ export default function DecryptedText({
   parentClassName = '',
   encryptedClassName = '',
   animateOn = 'hover',
-  ...props
 }: {
     text: string;
     speed?: number;
@@ -58,7 +57,6 @@ export default function DecryptedText({
     parentClassName?: string;
     encryptedClassName?: string;
     animateOn?: 'hover' | 'view';
-    [key: string]: any;
 }) {
   const [displayText, setDisplayText] = useState(text);
   const [isHovering, setIsHovering] = useState(false);
@@ -231,7 +229,7 @@ export default function DecryptedText({
        : {}
 
    return (
-     <motion.p className={parentClassName} ref={containerRef} style={styles.wrapper} {...hoverProps} {...props}>
+     <motion.p className={parentClassName} ref={containerRef} style={styles.wrapper} {...hoverProps}>
        <span style={styles.srOnly}>{text}</span>
        <span style={styles.hiddenText} aria-hidden="true">{text}</span>
        <span style={styles.visibleText} aria-hidden="true">
@@ -252,4 +250,3 @@ export default function DecryptedText({
      </motion.p>
    )
 }
-
