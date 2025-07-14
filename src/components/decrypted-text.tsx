@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useState, useRef } from 'react'
@@ -5,9 +6,21 @@ import { motion } from 'framer-motion'
 
 const styles = {
   wrapper: {
-    display: 'inline-block',
+    display: 'block', // Changed to block for stability
+    position: 'relative',
+  } as React.CSSProperties,
+  hiddenText: {
+    visibility: 'hidden',
     whiteSpace: 'pre-wrap',
-  },
+  } as React.CSSProperties,
+  visibleText: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    whiteSpace: 'pre-wrap',
+  } as React.CSSProperties,
   srOnly: {
     position: 'absolute' as const,
     width: '1px',
@@ -52,7 +65,7 @@ export default function DecryptedText({
   const [isScrambling, setIsScrambling] = useState(false);
   const [revealedIndices, setRevealedIndices] = useState(new Set());
   const [hasAnimated, setHasAnimated] = useState(false);
-  const containerRef = useRef<HTMLSpanElement>(null);
+  const containerRef = useRef<HTMLParagraphElement>(null);
 
    useEffect(() => {
      let interval: NodeJS.Timeout | undefined;
@@ -143,6 +156,7 @@ export default function DecryptedText({
              } else {
                if(interval) clearInterval(interval)
                setIsScrambling(false)
+               setDisplayText(text) // Ensure final text is set
                return prevRevealed
              }
            } else {
@@ -217,13 +231,13 @@ export default function DecryptedText({
        : {}
 
    return (
-     <motion.p className={parentClassName} ref={containerRef} style={styles.wrapper as React.CSSProperties} {...hoverProps} {...props}>
-       <span style={styles.srOnly as React.CSSProperties}>{displayText}</span>
-
-       <span aria-hidden="true">
+     <motion.p className={parentClassName} ref={containerRef} style={styles.wrapper} {...hoverProps} {...props}>
+       <span style={styles.srOnly}>{text}</span>
+       <span style={styles.hiddenText} aria-hidden="true">{text}</span>
+       <span style={styles.visibleText} aria-hidden="true">
          {displayText.split('').map((char, index) => {
            const isRevealedOrDone =
-            revealedIndices.has(index) || !isScrambling || !isHovering
+            revealedIndices.has(index) || (!isScrambling && displayText === text)
 
            return (
              <span
@@ -238,3 +252,4 @@ export default function DecryptedText({
      </motion.p>
    )
 }
+
