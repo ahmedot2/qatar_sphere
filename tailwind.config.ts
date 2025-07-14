@@ -17,7 +17,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['"Inter"', 'sans-serif'],
+        body: ['"DM Sans"', 'sans-serif'],
         headline: ['"Michroma"', 'sans-serif'],
       },
       colors: {
