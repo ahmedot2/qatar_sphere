@@ -41,7 +41,7 @@ const FeatureCard = ({
   children: React.ReactNode;
   className?: string;
 }) => (
-  <Card className={cn('bg-card/30 dark:bg-card/20', className)}>
+  <Card className={cn('bg-card/30 dark:bg-card/20 h-full', className)}>
     <CardHeader>
       <div className="flex items-center gap-4">
         <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
@@ -89,7 +89,7 @@ export default function Home() {
             <h1 className="text-4xl font-headline font-bold md:text-6xl lg:text-7xl">
               The QatarSphere District
             </h1>
-            <p className="mx-auto mt-6 max-w-3xl text-muted-foreground">
+            <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground md:text-xl">
               A Landmark Investment in Qatar&apos;s Future: Building the World&apos;s First Cognitive
               City, a Hub for Technology, Tourism, and Talent.
             </p>
@@ -108,7 +108,7 @@ export default function Home() {
               <h2 className="text-3xl font-headline font-bold md:text-4xl">
                 Executive Summary
               </h2>
-              <p className="mt-4 text-muted-foreground">
+              <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl">
                 A Vision for National Prosperity & Technological Sovereignty. We present the
                 QatarSphere District—a strategic national project designed not just to lead in
                 entertainment, but to become a global epicenter for the next industrial revolution.
@@ -142,7 +142,7 @@ export default function Home() {
               <h2 className="text-3xl font-headline font-bold">
                 A New Paradigm: Beyond Entertainment
               </h2>
-              <p className="text-muted-foreground">
+              <p className="text-lg text-muted-foreground md:text-xl">
                 From an Entertainment Venue to a Cognitive Hub. While competitors focus on building
                 bigger screens, we will build a smarter city. The QatarSphere District&apos;s vision transcends entertainment to become a globally significant hub for technological innovation.
               </p>
@@ -191,7 +191,7 @@ export default function Home() {
               <h2 className="text-3xl font-headline font-bold md:text-4xl">
                 Proposed Solution: A Dual-Purpose Ecosystem
               </h2>
-              <p className="mt-4 text-muted-foreground">
+              <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl">
                 Our 850,000-square-meter district is designed with two synergistic purposes,
                 creating a virtuous cycle of innovation and experience.
               </p>
@@ -271,7 +271,7 @@ export default function Home() {
           <div className="container space-y-12">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-3xl font-headline font-bold md:text-4xl">National &amp; Cultural Impact</h2>
-              <p className="mt-4 text-muted-foreground">
+              <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl">
                 Fulfilling an Accelerated Vision for 2030, this project is a powerful catalyst for
                 our national vision, creating parallel streams of human and economic development.
               </p>
@@ -298,7 +298,7 @@ export default function Home() {
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-3xl font-headline font-bold md:text-4xl">A Redefined Value Proposition</h2>
-              <p className="mt-4 text-muted-foreground">
+              <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl">
                 A multiplier effect on national value. The QatarSphere District delivers a strategic
                 return far greater than a standalone tourism project.
               </p>
@@ -317,7 +317,7 @@ export default function Home() {
           <div className="container grid items-center gap-12 md:grid-cols-2">
             <div className="space-y-4">
               <h2 className="text-3xl font-headline font-bold">Financial Overview</h2>
-              <p className="text-muted-foreground">
+              <p className="text-lg text-muted-foreground md:text-xl">
                 A sound and highly profitable national investment built on rigorous analysis and a
                 resilient, diversified revenue strategy.
               </p>
@@ -353,7 +353,7 @@ export default function Home() {
               <h2 className="text-3xl font-headline font-bold md:text-4xl">
                 Implementation Roadmap: 2025-2028
               </h2>
-              <p className="mt-4 text-muted-foreground">
+              <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl">
                 An aggressive yet achievable 36-month construction and development plan, ensuring a
                 grand opening in 2028.
               </p>
@@ -448,7 +448,7 @@ export default function Home() {
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-3xl font-headline font-bold md:text-4xl">Strategic Partnerships</h2>
-              <p className="mt-4 text-muted-foreground">
+              <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl">
                 De-risking execution with a consortium of world-class leaders in their respective
                 fields.
               </p>
@@ -478,7 +478,7 @@ export default function Home() {
               <h2 className="text-3xl font-headline font-bold md:text-4xl">
                 Expanded Risk Assessment &amp; Mitigation
               </h2>
-              <p className="mt-4 text-muted-foreground">
+              <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl">
                 Proactive management for assured success with robust contingency plans.
               </p>
             </div>
@@ -512,7 +512,7 @@ export default function Home() {
           <div className="container grid gap-12 md:grid-cols-2">
             <div className="space-y-4">
               <h2 className="text-3xl font-headline font-bold">Call to Action</h2>
-              <p className="text-muted-foreground">
+              <p className="text-lg text-muted-foreground md:text-xl">
                 This landmark project is ready for activation. Its success will be a testament to
                 Qatar&apos;s vision and ambition.
               </p>
@@ -566,7 +566,7 @@ export default function Home() {
             <h2 className="text-3xl font-headline font-bold md:text-4xl">
               Investing in the Future Sovereign Capability of Qatar
             </h2>
-            <p className="mt-4 max-w-3xl mx-auto text-lg text-primary-foreground/80">
+            <p className="mx-auto mt-4 max-w-3xl text-lg text-primary-foreground/80 md:text-xl">
               More than an investment in infrastructure, this is an investment in our nation&apos;s
               future. It is a powerful economic engine, a global symbol of innovation, and a
               profitable venture that accelerates the highest aspirations of the Qatar National
