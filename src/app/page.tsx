@@ -72,7 +72,7 @@ const ValuePropCard = ({ icon, title }: { icon: React.ReactNode; title: string }
   </Card>
 );
 
-export default function Home() {
+export default function Home({}) {
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -92,7 +92,14 @@ export default function Home() {
         >
           <div className="container">
             <h1 className="text-4xl font-headline font-bold md:text-6xl lg:text-7xl">
-              The QatarSphere District
+              <DecryptedText
+                text="The QatarSphere District"
+                animateOn="view"
+                sequential
+                revealDirection="start"
+                speed={50}
+                maxIterations={10}
+              />
             </h1>
             <p
               className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground md:text-xl"
@@ -115,7 +122,7 @@ export default function Home() {
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-3xl font-headline font-bold md:text-4xl">Executive Summary</h2>
               <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl">
-                A Vision for National Prosperity & Technological Sovereignty. We present the QatarSphere District—a strategic national project designed not just to lead in entertainment, but to become a global epicenter for the next industrial revolution.
+                A Vision for National Prosperity &amp; Technological Sovereignty. We present the QatarSphere District—a strategic national project designed not just to lead in entertainment, but to become a global epicenter for the next industrial revolution.
               </p>
             </div>
             <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
