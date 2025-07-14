@@ -72,7 +72,7 @@ const ValuePropCard = ({ icon, title }: { icon: React.ReactNode; title: string }
   </Card>
 );
 
-export default function Home() {
+export default function Home({}: {}) {
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
