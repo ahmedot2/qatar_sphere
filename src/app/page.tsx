@@ -1,3 +1,5 @@
+"use client";
+
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
@@ -29,6 +31,7 @@ import {
 } from 'lucide-react';
 import { InvestmentChart } from '@/components/investment-chart';
 import { cn } from '@/lib/utils';
+import DecryptedText from '@/components/decrypted-text';
 
 const FeatureCard = ({
   icon,
@@ -89,10 +92,13 @@ export default function Home() {
             <h1 className="text-4xl font-headline font-bold md:text-6xl lg:text-7xl">
               The QatarSphere District
             </h1>
-            <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground md:text-xl">
-              A Landmark Investment in Qatar&apos;s Future: Building the World&apos;s First Cognitive
-              City, a Hub for Technology, Tourism, and Talent.
-            </p>
+            <DecryptedText
+              text="A Landmark Investment in Qatar's Future: Building the World's First Cognitive City, a Hub for Technology, Tourism, and Talent."
+              animateOn="view"
+              sequential
+              speed={20}
+              parentClassName="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground md:text-xl"
+            />
             <div className="mt-8">
               <p className="font-semibold">Presented by:</p>
               <p className="text-muted-foreground">His Excellency Sheikh Jabr bin Thani Al Thani</p>
@@ -105,14 +111,14 @@ export default function Home() {
         <section id="executive-summary">
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-3xl font-headline font-bold md:text-4xl">
-                Executive Summary
-              </h2>
-              <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl">
-                A Vision for National Prosperity & Technological Sovereignty. We present the
-                QatarSphere District—a strategic national project designed not just to lead in
-                entertainment, but to become a global epicenter for the next industrial revolution.
-              </p>
+              <h2 className="text-3xl font-headline font-bold md:text-4xl">Executive Summary</h2>
+              <DecryptedText
+                text="A Vision for National Prosperity & Technological Sovereignty. We present the QatarSphere District—a strategic national project designed not just to lead in entertainment, but to become a global epicenter for the next industrial revolution."
+                animateOn="view"
+                sequential
+                speed={20}
+                parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl"
+              />
             </div>
             <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               <FeatureCard icon={<Cpu size={28} />} title="The Proposal">
@@ -142,10 +148,13 @@ export default function Home() {
               <h2 className="text-3xl font-headline font-bold">
                 A New Paradigm: Beyond Entertainment
               </h2>
-              <p className="text-lg text-muted-foreground md:text-xl">
-                From an Entertainment Venue to a Cognitive Hub. While competitors focus on building
-                bigger screens, we will build a smarter city. The QatarSphere District&apos;s vision transcends entertainment to become a globally significant hub for technological innovation.
-              </p>
+              <DecryptedText
+                text="From an Entertainment Venue to a Cognitive Hub. While competitors focus on building bigger screens, we will build a smarter city. The QatarSphere District's vision transcends entertainment to become a globally significant hub for technological innovation."
+                animateOn="view"
+                sequential
+                speed={20}
+                parentClassName="text-lg text-muted-foreground md:text-xl"
+              />
               <div className="space-y-6 pt-4">
                 <div className="flex items-start gap-4">
                   <div className="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary">
@@ -191,10 +200,13 @@ export default function Home() {
               <h2 className="text-3xl font-headline font-bold md:text-4xl">
                 Proposed Solution: A Dual-Purpose Ecosystem
               </h2>
-              <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl">
-                Our 850,000-square-meter district is designed with two synergistic purposes,
-                creating a virtuous cycle of innovation and experience.
-              </p>
+              <DecryptedText
+                text="Our 850,000-square-meter district is designed with two synergistic purposes, creating a virtuous cycle of innovation and experience."
+                animateOn="view"
+                sequential
+                speed={20}
+                parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl"
+              />
             </div>
             <div className="grid gap-8 md:grid-cols-2">
               <Card className="overflow-hidden bg-card/30 dark:bg-card/20">
@@ -270,11 +282,16 @@ export default function Home() {
         <section id="impact">
           <div className="container space-y-12">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-3xl font-headline font-bold md:text-4xl">National &amp; Cultural Impact</h2>
-              <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl">
-                Fulfilling an Accelerated Vision for 2030, this project is a powerful catalyst for
-                our national vision, creating parallel streams of human and economic development.
-              </p>
+              <h2 className="text-3xl font-headline font-bold md:text-4xl">
+                National &amp; Cultural Impact
+              </h2>
+              <DecryptedText
+                text="Fulfilling an Accelerated Vision for 2030, this project is a powerful catalyst for our national vision, creating parallel streams of human and economic development."
+                animateOn="view"
+                sequential
+                speed={20}
+                parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl"
+              />
             </div>
             <div className="mt-12 grid md:grid-cols-3 gap-8">
               <FeatureCard icon={<Book size={28} />} title="Celebrate Heritage, Power the Future">
@@ -297,11 +314,16 @@ export default function Home() {
         <section id="value-proposition">
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-3xl font-headline font-bold md:text-4xl">A Redefined Value Proposition</h2>
-              <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl">
-                A multiplier effect on national value. The QatarSphere District delivers a strategic
-                return far greater than a standalone tourism project.
-              </p>
+              <h2 className="text-3xl font-headline font-bold md:text-4xl">
+                A Redefined Value Proposition
+              </h2>
+              <DecryptedText
+                text="A multiplier effect on national value. The QatarSphere District delivers a strategic return far greater than a standalone tourism project."
+                animateOn="view"
+                sequential
+                speed={20}
+                parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl"
+              />
             </div>
             <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
               <ValuePropCard icon={<TrendingUp size={28} />} title="Economic Diversification" />
@@ -317,10 +339,13 @@ export default function Home() {
           <div className="container grid items-center gap-12 md:grid-cols-2">
             <div className="space-y-4">
               <h2 className="text-3xl font-headline font-bold">Financial Overview</h2>
-              <p className="text-lg text-muted-foreground md:text-xl">
-                A sound and highly profitable national investment built on rigorous analysis and a
-                resilient, diversified revenue strategy.
-              </p>
+              <DecryptedText
+                text="A sound and highly profitable national investment built on rigorous analysis and a resilient, diversified revenue strategy."
+                animateOn="view"
+                sequential
+                speed={20}
+                parentClassName="text-lg text-muted-foreground md:text-xl"
+              />
               <div className="mt-6 grid grid-cols-2 gap-6 text-center md:text-left">
                 <div>
                   <p className="text-3xl font-bold">$4.2B</p>
@@ -353,10 +378,13 @@ export default function Home() {
               <h2 className="text-3xl font-headline font-bold md:text-4xl">
                 Implementation Roadmap: 2025-2028
               </h2>
-              <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl">
-                An aggressive yet achievable 36-month construction and development plan, ensuring a
-                grand opening in 2028.
-              </p>
+              <DecryptedText
+                text="An aggressive yet achievable 36-month construction and development plan, ensuring a grand opening in 2028."
+                animateOn="view"
+                sequential
+                speed={20}
+                parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl"
+              />
             </div>
             <div className="relative mt-12">
               <div className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-border"></div>
@@ -390,8 +418,8 @@ export default function Home() {
                     </CardHeader>
                     <CardContent>
                       <p className="text-muted-foreground">
-                        Sphere structural completion, facade &amp; tech integration. Develop Innovation
-                        Campus.
+                        Sphere structural completion, facade &amp; tech integration. Develop
+                        Innovation Campus.
                       </p>
                     </CardContent>
                   </Card>
@@ -448,10 +476,13 @@ export default function Home() {
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-3xl font-headline font-bold md:text-4xl">Strategic Partnerships</h2>
-              <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl">
-                De-risking execution with a consortium of world-class leaders in their respective
-                fields.
-              </p>
+              <DecryptedText
+                text="De-risking execution with a consortium of world-class leaders in their respective fields."
+                animateOn="view"
+                sequential
+                speed={20}
+                parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl"
+              />
             </div>
             <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
               <FeatureCard icon={<Building size={28} />} title="CSCEC">
@@ -478,9 +509,13 @@ export default function Home() {
               <h2 className="text-3xl font-headline font-bold md:text-4xl">
                 Expanded Risk Assessment &amp; Mitigation
               </h2>
-              <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl">
-                Proactive management for assured success with robust contingency plans.
-              </p>
+              <DecryptedText
+                text="Proactive management for assured success with robust contingency plans."
+                animateOn="view"
+                sequential
+                speed={20}
+                parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl"
+              />
             </div>
             <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <FeatureCard icon={<DollarSign size={28} />} title="Execution Risk">
@@ -512,10 +547,13 @@ export default function Home() {
           <div className="container grid gap-12 md:grid-cols-2">
             <div className="space-y-4">
               <h2 className="text-3xl font-headline font-bold">Call to Action</h2>
-              <p className="text-lg text-muted-foreground md:text-xl">
-                This landmark project is ready for activation. Its success will be a testament to
-                Qatar&apos;s vision and ambition.
-              </p>
+              <DecryptedText
+                text="This landmark project is ready for activation. Its success will be a testament to Qatar's vision and ambition."
+                animateOn="view"
+                sequential
+                speed={20}
+                parentClassName="text-lg text-muted-foreground md:text-xl"
+              />
             </div>
             <div className="space-y-6">
               <Card className="bg-card/30">
@@ -566,12 +604,13 @@ export default function Home() {
             <h2 className="text-3xl font-headline font-bold md:text-4xl">
               Investing in the Future Sovereign Capability of Qatar
             </h2>
-            <p className="mx-auto mt-4 max-w-3xl text-lg text-primary-foreground/80 md:text-xl">
-              More than an investment in infrastructure, this is an investment in our nation&apos;s
-              future. It is a powerful economic engine, a global symbol of innovation, and a
-              profitable venture that accelerates the highest aspirations of the Qatar National
-              Vision 2030.
-            </p>
+            <DecryptedText
+              text="More than an investment in infrastructure, this is an investment in our nation's future. It is a powerful economic engine, a global symbol of innovation, and a profitable venture that accelerates the highest aspirations of the Qatar National Vision 2030."
+              animateOn="view"
+              sequential
+              speed={20}
+              parentClassName="mx-auto mt-4 max-w-3xl text-lg text-primary-foreground/80 md:text-xl"
+            />
             <div className="mt-8">
               <Button size="lg" variant="secondary">
                 We Welcome Your Questions
