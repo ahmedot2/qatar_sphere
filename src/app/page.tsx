@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import {
   BrainCircuit,
   Building,
@@ -95,7 +95,7 @@ export default function Home() {
             </p>
             <div className="mt-8">
               <p className="font-semibold">Presented by:</p>
-              <p>His Excellency Sheikh Jabr bin Thani Al Thani</p>
+              <p className='text-muted-foreground'>His Excellency Sheikh Jabr bin Thani Al Thani</p>
             </div>
           </div>
           <div className="absolute inset-0 -z-10 bg-grid-slate-100 [mask-image:linear-gradient(to_bottom,white,transparent)] dark:bg-grid-slate-700/30"></div>
@@ -104,7 +104,7 @@ export default function Home() {
         {/* Slide 2: Executive Summary */}
         <section id="executive-summary">
           <div className="container">
-            <div className="mx-auto max-w-2xl text-center">
+            <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-3xl font-headline font-bold md:text-4xl">
                 Executive Summary
               </h2>
@@ -144,7 +144,7 @@ export default function Home() {
               </h2>
               <p className="text-muted-foreground">
                 From an Entertainment Venue to a Cognitive Hub. While competitors focus on building
-                bigger screens, we will build a smarter city.
+                bigger screens, we will build a smarter city. The QatarSphere District's vision transcends entertainment to become a globally significant hub for technological innovation.
               </p>
               <div className="space-y-6 pt-4">
                 <div className="flex items-start gap-4">
@@ -187,11 +187,11 @@ export default function Home() {
         {/* Slide 4: Proposed Solution */}
         <section id="solution">
           <div className="container space-y-12">
-            <div className="text-center">
-              <h2 className="mt-2 text-3xl font-headline font-bold">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-3xl font-headline font-bold md:text-4xl">
                 Proposed Solution: A Dual-Purpose Ecosystem
               </h2>
-              <p className="mt-4 max-w-3xl mx-auto text-muted-foreground">
+              <p className="mt-4 text-muted-foreground">
                 Our 850,000-square-meter district is designed with two synergistic purposes,
                 creating a virtuous cycle of innovation and experience.
               </p>
@@ -269,14 +269,14 @@ export default function Home() {
         {/* Slide 5: National & Cultural Impact */}
         <section id="impact">
           <div className="container space-y-12">
-            <div className="text-center">
-              <h2 className="mt-2 text-3xl font-headline font-bold">National & Cultural Impact</h2>
-              <p className="mt-4 max-w-3xl mx-auto text-muted-foreground">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-3xl font-headline font-bold md:text-4xl">National & Cultural Impact</h2>
+              <p className="mt-4 text-muted-foreground">
                 Fulfilling an Accelerated Vision for 2030, this project is a powerful catalyst for
                 our national vision, creating parallel streams of human and economic development.
               </p>
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="mt-12 grid md:grid-cols-3 gap-8">
               <FeatureCard icon={<Book size={28} />} title="Celebrate Heritage, Power the Future">
                 A unique brand of &apos;Culture & Code&apos; to define Qatar&apos;s global
                 identity, featuring a Qatar Heritage Pavilion.
@@ -296,8 +296,8 @@ export default function Home() {
         {/* Slide 6: Redefined Value Proposition */}
         <section id="value-proposition">
           <div className="container">
-            <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-3xl font-headline font-bold">A Redefined Value Proposition</h2>
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-3xl font-headline font-bold md:text-4xl">A Redefined Value Proposition</h2>
               <p className="mt-4 text-muted-foreground">
                 A multiplier effect on national value. The QatarSphere District delivers a strategic
                 return far greater than a standalone tourism project.
@@ -349,11 +349,11 @@ export default function Home() {
         {/* Slide 8: Implementation Roadmap */}
         <section id="roadmap">
           <div className="container">
-            <div className="text-center">
-              <h2 className="mt-2 text-3xl font-headline font-bold">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-3xl font-headline font-bold md:text-4xl">
                 Implementation Roadmap: 2025-2028
               </h2>
-              <p className="mt-4 max-w-3xl mx-auto text-muted-foreground">
+              <p className="mt-4 text-muted-foreground">
                 An aggressive yet achievable 36-month construction and development plan, ensuring a
                 grand opening in 2028.
               </p>
@@ -446,9 +446,9 @@ export default function Home() {
         {/* Slide 9: Strategic Partnerships */}
         <section id="partnerships">
           <div className="container">
-            <div className="text-center">
-              <h2 className="mt-2 text-3xl font-headline font-bold">Strategic Partnerships</h2>
-              <p className="mt-4 max-w-3xl mx-auto text-muted-foreground">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-3xl font-headline font-bold md:text-4xl">Strategic Partnerships</h2>
+              <p className="mt-4 text-muted-foreground">
                 De-risking execution with a consortium of world-class leaders in their respective
                 fields.
               </p>
@@ -474,11 +474,11 @@ export default function Home() {
         {/* Slide 10: Risk Assessment */}
         <section id="risk">
           <div className="container">
-            <div className="text-center">
-              <h2 className="mt-2 text-3xl font-headline font-bold">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-3xl font-headline font-bold md:text-4xl">
                 Expanded Risk Assessment & Mitigation
               </h2>
-              <p className="mt-4 max-w-3xl mx-auto text-muted-foreground">
+              <p className="mt-4 text-muted-foreground">
                 Proactive management for assured success with robust contingency plans.
               </p>
             </div>
@@ -563,7 +563,7 @@ export default function Home() {
         {/* Slide 12: Conclusion */}
         <section id="conclusion" className="bg-primary text-primary-foreground">
           <div className="container text-center">
-            <h2 className="mt-2 text-3xl font-headline font-bold">
+            <h2 className="text-3xl font-headline font-bold md:text-4xl">
               Investing in the Future Sovereign Capability of Qatar
             </h2>
             <p className="mt-4 max-w-3xl mx-auto text-lg text-primary-foreground/80">
@@ -592,3 +592,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
