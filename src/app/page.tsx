@@ -37,6 +37,7 @@ import {
 import { InvestmentChart } from '@/components/investment-chart';
 import { cn } from '@/lib/utils';
 import DecryptedText from '@/components/decrypted-text';
+import AnimatedCounter from '@/components/animated-counter';
 
 const FeatureCard = ({
   icon,
@@ -79,11 +80,15 @@ const FinancialMetricCard = ({
   icon,
   label,
   value,
+  prefix,
+  postfix,
   className,
 }: {
   icon: React.ReactNode;
   label: string;
-  value: string;
+  value: number | string;
+  prefix?: string;
+  postfix?: string;
   className?: string;
 }) => (
   <GlassCard className={cn("flex flex-col justify-between p-6", className)}>
@@ -91,7 +96,13 @@ const FinancialMetricCard = ({
       <span>{label}</span>
       {icon}
     </div>
-    <p className="text-3xl font-bold md:text-4xl">{value}</p>
+    <div className="text-3xl font-bold md:text-4xl">
+        {typeof value === 'number' ? (
+          <AnimatedCounter value={value} prefix={prefix} postfix={postfix} />
+        ) : (
+            <span>{value}</span>
+        )}
+    </div>
   </GlassCard>
 );
 
@@ -463,17 +474,23 @@ export default function Home({}) {
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-1">
                     <FinancialMetricCard
                         label="Total Investment"
-                        value="$4.2B"
+                        value={4.2}
+                        prefix="$"
+                        postfix="B"
                         icon={<DollarSign size={24} />}
                     />
                     <FinancialMetricCard
                         label="Projected Annual Revenue"
-                        value="$1.8B"
+                        value={1.8}
+                        prefix="$"
+                        postfix="B"
                         icon={<Target size={24} />}
                     />
                     <FinancialMetricCard
                         label="Payback Period"
-                        value="~2.3 Yrs"
+                        value={2.3}
+                        prefix="~"
+                        postfix=" Yrs"
                         icon={<RefreshCw size={24} />}
                     />
                     <FinancialMetricCard
