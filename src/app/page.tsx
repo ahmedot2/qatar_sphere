@@ -119,7 +119,7 @@ export default function Home({}) {
       </header>
 
       <main className="flex-1">
-        {/* Video Section 1 */}
+        {/* Video Section */}
         <section id="video-intro" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4">
           <GlassCard className="w-full max-w-6xl">
             <div className="aspect-video w-full bg-muted/30 rounded-lg">
@@ -470,39 +470,41 @@ export default function Home({}) {
                     text="A sound and highly profitable national investment built on rigorous analysis and a resilient, diversified revenue strategy."
                 />
             </div>
-            <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
-                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-1">
-                    <FinancialMetricCard
-                        label="Total Investment"
-                        value={4.2}
-                        prefix="$"
-                        postfix="B"
-                        icon={<DollarSign size={24} />}
-                    />
-                    <FinancialMetricCard
-                        label="Projected Annual Revenue"
-                        value={1.8}
-                        prefix="$"
-                        postfix="B"
-                        icon={<Target size={24} />}
-                    />
-                    <FinancialMetricCard
-                        label="Payback Period"
-                        value={2.3}
-                        prefix="~"
-                        postfix=" Yrs"
-                        icon={<RefreshCw size={24} />}
-                    />
-                    <FinancialMetricCard
-                        label="Annual GDP Contribution"
-                        value="QAR 20-30B"
-                        icon={<AreaChart size={24} />}
-                    />
-                </div>
-                <GlassCard className="lg:col-span-2 min-h-[300px] p-6">
-                    <h3 className="mb-4 text-lg font-semibold">Investment Breakdown</h3>
-                    <InvestmentChart />
-                </GlassCard>
+            <div className="grid grid-cols-1 grid-rows-2 gap-6 md:grid-cols-4 md:grid-rows-2 lg:grid-cols-3">
+              <FinancialMetricCard
+                label="Total Investment"
+                value={4.2}
+                prefix="$"
+                postfix="B"
+                icon={<DollarSign size={24} />}
+                className="md:col-span-2"
+              />
+              <FinancialMetricCard
+                label="Projected Annual Revenue"
+                value={1.8}
+                prefix="$"
+                postfix="B"
+                icon={<Target size={24} />}
+                className="md:col-span-2"
+              />
+              <GlassCard className="md:col-span-4 lg:col-span-2 lg:row-span-2 min-h-[300px] p-6">
+                <h3 className="mb-4 text-lg font-semibold">Investment Breakdown</h3>
+                <InvestmentChart />
+              </GlassCard>
+              <FinancialMetricCard
+                label="Payback Period"
+                value={2.3}
+                prefix="~"
+                postfix=" Yrs"
+                icon={<RefreshCw size={24} />}
+                className="md:col-span-2 lg:col-span-1"
+              />
+              <FinancialMetricCard
+                label="Annual GDP Contribution"
+                value="QAR 20-30B"
+                icon={<AreaChart size={24} />}
+                className="md:col-span-2 lg:col-span-1"
+              />
             </div>
           </div>
         </section>
