@@ -85,11 +85,11 @@ export default function Home({}) {
       </header>
 
       <main className="flex-1">
-        {/* Video Section */}
+        {/* Video Section 1 */}
         <section id="video-intro" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4">
           <GlassCard className="w-full max-w-6xl">
             <div className="aspect-video w-full bg-muted/30 rounded-lg">
-              <video className="w-full h-full rounded-lg" controls src="/videos/intro.mp4">
+              <video className="w-full h-full rounded-lg" controls src="/videos/intro-1.mp4">
                   Your browser does not support the video tag.
               </video>
             </div>
@@ -126,6 +126,17 @@ export default function Home({}) {
           <div className="absolute inset-0 -z-10 bg-grid-slate-100 [mask-image:linear-gradient(to_bottom,white,transparent)] dark:bg-grid-slate-700/30"></div>
         </section>
 
+        {/* Video Section 2 */}
+        <section id="video-2" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4">
+          <GlassCard className="w-full max-w-6xl">
+            <div className="aspect-video w-full bg-muted/30 rounded-lg">
+              <video className="w-full h-full rounded-lg" controls src="/videos/intro-2.mp4">
+                  Your browser does not support the video tag.
+              </video>
+            </div>
+          </GlassCard>
+        </section>
+
         {/* Slide 2: Executive Summary */}
         <section id="executive-summary">
           <div className="container">
@@ -159,6 +170,17 @@ export default function Home({}) {
               </FeatureCard>
             </div>
           </div>
+        </section>
+
+        {/* Video Section 3 */}
+        <section id="video-3" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4">
+          <GlassCard className="w-full max-w-6xl">
+            <div className="aspect-video w-full bg-muted/30 rounded-lg">
+              <video className="w-full h-full rounded-lg" controls src="/videos/intro-3.mp4">
+                  Your browser does not support the video tag.
+              </video>
+            </div>
+          </GlassCard>
         </section>
 
         {/* Slide 3: A New Paradigm */}
@@ -212,6 +234,17 @@ export default function Home({}) {
               data-ai-hint="futuristic laboratory"
             />
           </div>
+        </section>
+
+        {/* Video Section 4 */}
+        <section id="video-4" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4">
+          <GlassCard className="w-full max-w-6xl">
+            <div className="aspect-video w-full bg-muted/30 rounded-lg">
+              <video className="w-full h-full rounded-lg" controls src="/videos/intro-4.mp4">
+                  Your browser does not support the video tag.
+              </video>
+            </div>
+          </GlassCard>
         </section>
 
         {/* Slide 4: Proposed Solution */}
@@ -300,6 +333,17 @@ export default function Home({}) {
           </div>
         </section>
 
+        {/* Video Section 5 */}
+        <section id="video-5" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4">
+          <GlassCard className="w-full max-w-6xl">
+            <div className="aspect-video w-full bg-muted/30 rounded-lg">
+              <video className="w-full h-full rounded-lg" controls src="/videos/intro-5.mp4">
+                  Your browser does not support the video tag.
+              </video>
+            </div>
+          </GlassCard>
+        </section>
+
         {/* Slide 5: National & Cultural Impact */}
         <section id="impact">
           <div className="container space-y-12">
@@ -333,6 +377,17 @@ export default function Home({}) {
           </div>
         </section>
 
+        {/* Video Section 6 */}
+        <section id="video-6" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4">
+          <GlassCard className="w-full max-w-6xl">
+            <div className="aspect-video w-full bg-muted/30 rounded-lg">
+              <video className="w-full h-full rounded-lg" controls src="/videos/intro-6.mp4">
+                  Your browser does not support the video tag.
+              </video>
+            </div>
+          </GlassCard>
+        </section>
+
         {/* Slide 6: Redefined Value Proposition */}
         <section id="value-proposition">
           <div className="container">
@@ -356,6 +411,17 @@ export default function Home({}) {
               <ValuePropCard icon={<BrainCircuit size={28} />} title="Human Capital" />
             </div>
           </div>
+        </section>
+
+        {/* Video Section 7 */}
+        <section id="video-7" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4">
+          <GlassCard className="w-full max-w-6xl">
+            <div className="aspect-video w-full bg-muted/30 rounded-lg">
+              <video className="w-full h-full rounded-lg" controls src="/videos/intro-7.mp4">
+                  Your browser does not support the video tag.
+              </video>
+            </div>
+          </GlassCard>
         </section>
 
         {/* Slide 7: Financial Overview */}
@@ -394,6 +460,17 @@ export default function Home({}) {
               <InvestmentChart />
             </div>
           </div>
+        </section>
+
+        {/* Video Section 8 */}
+        <section id="video-8" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4">
+          <GlassCard className="w-full max-w-6xl">
+            <div className="aspect-video w-full bg-muted/30 rounded-lg">
+              <video className="w-full h-full rounded-lg" controls src="/videos/intro-8.mp4">
+                  Your browser does not support the video tag.
+              </video>
+            </div>
+          </GlassCard>
         </section>
 
         {/* Slide 8: Implementation Roadmap */}
@@ -497,6 +574,17 @@ export default function Home({}) {
           </div>
         </section>
 
+        {/* Video Section 9 */}
+        <section id="video-9" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4">
+          <GlassCard className="w-full max-w-6xl">
+            <div className="aspect-video w-full bg-muted/30 rounded-lg">
+              <video className="w-full h-full rounded-lg" controls src="/videos/intro-9.mp4">
+                  Your browser does not support the video tag.
+              </video>
+            </div>
+          </GlassCard>
+        </section>
+        
         {/* Slide 9: Strategic Partnerships */}
         <section id="partnerships">
           <div className="container">
@@ -527,6 +615,17 @@ export default function Home({}) {
               </FeatureCard>
             </div>
           </div>
+        </section>
+
+        {/* Video Section 10 */}
+        <section id="video-10" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4">
+          <GlassCard className="w-full max-w-6xl">
+            <div className="aspect-video w-full bg-muted/30 rounded-lg">
+              <video className="w-full h-full rounded-lg" controls src="/videos/intro-10.mp4">
+                  Your browser does not support the video tag.
+              </video>
+            </div>
+          </GlassCard>
         </section>
 
         {/* Slide 10: Risk Assessment */}
