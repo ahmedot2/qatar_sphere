@@ -92,20 +92,19 @@ export default function Home({}: {}) {
         >
           <div className="container">
             <h1 className="text-4xl font-headline font-bold md:text-6xl lg:text-7xl">
+              The QatarSphere District
+            </h1>
+            <div className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground md:text-xl">
               <DecryptedText
-                text="The QatarSphere District"
+                text="A Landmark Investment in Qatar's Future: Building the World's First Cognitive City, a Hub for Technology, Tourism, and Talent."
                 animateOn="view"
                 sequential
                 revealDirection="start"
-                speed={50}
+                speed={20}
                 maxIterations={10}
+                parentClassName="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground md:text-xl"
               />
-            </h1>
-            <p
-              className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground md:text-xl"
-            >
-              A Landmark Investment in Qatar's Future: Building the World's First Cognitive City, a Hub for Technology, Tourism, and Talent.
-            </p>
+            </div>
             <GlassCard className="mt-8 inline-block py-3 px-6 text-sm">
               <p className="font-semibold">Presented by:</p>
               <p className="text-muted-foreground">
