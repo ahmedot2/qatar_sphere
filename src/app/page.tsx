@@ -90,8 +90,8 @@ export default function Home() {
           id="title"
           className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center text-center"
         >
-          <div className="container">
-            <GlassCard className="max-w-4xl mx-auto">
+          <div className="w-full">
+            <GlassCard className="w-full">
               <h1 className="text-4xl font-headline font-bold md:text-6xl lg:text-7xl">
                 The QatarSphere District
               </h1>
