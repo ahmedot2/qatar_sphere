@@ -17,8 +17,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['"DM Sans"', 'sans-serif'],
-        headline: ['"Michroma"', 'sans-serif'],
+        body: ['"PT Sans"', 'sans-serif'],
+        headline: ['"Playfair Display"', 'serif'],
       },
       colors: {
         background: 'hsl(var(--background))',
