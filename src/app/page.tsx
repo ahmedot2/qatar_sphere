@@ -30,6 +30,9 @@ import {
   Bot,
   Server,
   CircleCheckBig,
+  Target,
+  RefreshCw,
+  AreaChart,
 } from 'lucide-react';
 import { InvestmentChart } from '@/components/investment-chart';
 import { cn } from '@/lib/utils';
@@ -72,6 +75,26 @@ const ValuePropCard = ({ icon, title }: { icon: React.ReactNode; title: string }
   </Card>
 );
 
+const FinancialMetricCard = ({
+  icon,
+  label,
+  value,
+  className,
+}: {
+  icon: React.ReactNode;
+  label: string;
+  value: string;
+  className?: string;
+}) => (
+  <GlassCard className={cn("flex flex-col justify-between p-6", className)}>
+    <div className="flex items-center justify-between text-muted-foreground">
+      <span>{label}</span>
+      {icon}
+    </div>
+    <p className="text-3xl font-bold md:text-4xl">{value}</p>
+  </GlassCard>
+);
+
 export default function Home({}) {
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
@@ -99,30 +122,28 @@ export default function Home({}) {
         {/* Slide 1: Title */}
         <section
           id="title"
-          className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center text-center"
+          className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center text-center p-4"
         >
-          <div className="w-full">
-            <GlassCard className="w-full">
-               <h1 className="text-4xl font-headline font-bold md:text-6xl lg:text-7xl">
-                The QatarSphere District
-              </h1>
-              <DecryptedText
-                text="A Landmark Investment in Qatar's Future: Building the World's First Cognitive City, a Hub for Technology, Tourism, and Talent."
-                animateOn="view"
-                sequential={true}
-                revealDirection="start"
-                speed={20}
-                maxIterations={10}
-                parentClassName="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground md:text-xl"
-              />
-              <div className="mt-6 text-sm">
-                <p className="font-semibold">Presented by:</p>
-                <p className="text-muted-foreground">
-                  His Excellency Sheikh Jabr bin Thani Al Thani
-                </p>
-              </div>
-            </GlassCard>
-          </div>
+          <GlassCard className="w-full">
+            <h1 className="text-4xl font-headline font-bold md:text-6xl lg:text-7xl">
+              The QatarSphere District
+            </h1>
+            <DecryptedText
+              text="A Landmark Investment in Qatar's Future: Building the World's First Cognitive City, a Hub for Technology, Tourism, and Talent."
+              animateOn="view"
+              sequential={true}
+              revealDirection="start"
+              speed={20}
+              maxIterations={10}
+              parentClassName="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground md:text-xl"
+            />
+            <div className="mt-6 text-sm">
+              <p className="font-semibold">Presented by:</p>
+              <p className="text-muted-foreground">
+                His Excellency Sheikh Jabr bin Thani Al Thani
+              </p>
+            </div>
+          </GlassCard>
           <div className="absolute inset-0 -z-10 bg-grid-slate-100 [mask-image:linear-gradient(to_bottom,white,transparent)] dark:bg-grid-slate-700/30"></div>
         </section>
 
@@ -426,38 +447,45 @@ export default function Home({}) {
 
         {/* Slide 7: Financial Overview */}
         <section id="financials">
-          <div className="container grid items-center gap-12 md:grid-cols-2">
-            <div className="space-y-4">
-              <h2 className="text-3xl font-headline font-bold">Financial Overview</h2>
-              <DecryptedText
-                parentClassName="text-lg text-muted-foreground md:text-xl"
-                animateOn="view"
-                sequential={true}
-                speed={20}
-                maxIterations={10}
-                text="A sound and highly profitable national investment built on rigorous analysis and a resilient, diversified revenue strategy."
-              />
-              <div className="mt-6 grid grid-cols-2 gap-6 text-center md:text-left">
-                <div>
-                  <p className="text-3xl font-bold">$4.2B</p>
-                  <p className="text-sm text-muted-foreground">Total Investment</p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold">$1.8B</p>
-                  <p className="text-sm text-muted-foreground">Projected Annual Revenue</p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold">~2.3 Yrs</p>
-                  <p className="text-sm text-muted-foreground">Payback Period</p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold">QAR 20-30B</p>
-                  <p className="text-sm text-muted-foreground">Annual GDP Contribution</p>
-                </div>
-              </div>
+          <div className="container">
+            <div className="mx-auto mb-12 max-w-3xl text-center">
+                <h2 className="text-3xl font-headline font-bold md:text-4xl">Financial Overview</h2>
+                <DecryptedText
+                    parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl"
+                    animateOn="view"
+                    sequential={true}
+                    speed={20}
+                    maxIterations={10}
+                    text="A sound and highly profitable national investment built on rigorous analysis and a resilient, diversified revenue strategy."
+                />
             </div>
-            <div className="min-h-[300px] rounded-2xl bg-card/30 p-4">
-              <InvestmentChart />
+            <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-1">
+                    <FinancialMetricCard
+                        label="Total Investment"
+                        value="$4.2B"
+                        icon={<DollarSign size={24} />}
+                    />
+                    <FinancialMetricCard
+                        label="Projected Annual Revenue"
+                        value="$1.8B"
+                        icon={<Target size={24} />}
+                    />
+                    <FinancialMetricCard
+                        label="Payback Period"
+                        value="~2.3 Yrs"
+                        icon={<RefreshCw size={24} />}
+                    />
+                    <FinancialMetricCard
+                        label="Annual GDP Contribution"
+                        value="QAR 20-30B"
+                        icon={<AreaChart size={24} />}
+                    />
+                </div>
+                <GlassCard className="lg:col-span-2 min-h-[300px] p-6">
+                    <h3 className="mb-4 text-lg font-semibold">Investment Breakdown</h3>
+                    <InvestmentChart />
+                </GlassCard>
             </div>
           </div>
         </section>

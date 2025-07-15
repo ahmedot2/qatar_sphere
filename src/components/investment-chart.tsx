@@ -15,28 +15,24 @@ const chartConfig = {
   },
   venue: {
     label: "Sphere Venue",
-    color: "hsl(var(--chart-1))",
+    color: "hsl(var(--primary))",
   },
   infra: {
     label: "District Infrastructure",
-    color: "hsl(var(--chart-2))",
+    color: "hsl(var(--accent))",
   },
 } satisfies ChartConfig
 
 export function InvestmentChart() {
   return (
-    <Card className="bg-transparent border-0 shadow-none">
-      <CardContent>
-        <ChartContainer config={chartConfig} className="min-h-[250px] w-full">
-            <BarChart data={chartData} layout="vertical" margin={{ left: 10, right: 20 }}>
-                <CartesianGrid horizontal={false} />
-                <XAxis type="number" dataKey="investment" unit="B" />
-                <YAxis dataKey="category" type="category" tickLine={false} axisLine={false} width={80}/>
-                <Tooltip cursor={{fill: 'hsl(var(--muted))'}} content={<ChartTooltipContent />} />
-                <Bar dataKey="investment" radius={5} />
-            </BarChart>
-        </ChartContainer>
-      </CardContent>
-    </Card>
+    <ChartContainer config={chartConfig} className="h-full w-full">
+        <BarChart data={chartData} layout="vertical" margin={{ left: 10, right: 20 }}>
+            <CartesianGrid horizontal={false} stroke="hsl(var(--border) / 0.5)" />
+            <XAxis type="number" dataKey="investment" unit="B" axisLine={false} tickLine={false} />
+            <YAxis dataKey="category" type="category" tickLine={false} axisLine={false} width={80}/>
+            <Tooltip cursor={{fill: 'hsl(var(--muted) / 0.5)'}} content={<ChartTooltipContent />} />
+            <Bar dataKey="investment" radius={[0, 5, 5, 0]} />
+        </BarChart>
+    </ChartContainer>
   )
 }
