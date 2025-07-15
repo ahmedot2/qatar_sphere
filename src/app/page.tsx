@@ -85,6 +85,15 @@ export default function Home() {
       </header>
 
       <main className="flex-1">
+        {/* Video Section */}
+        <section id="video-intro" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4">
+          <GlassCard className="w-full max-w-6xl">
+            <div className="aspect-video w-full bg-muted/30 rounded-lg flex items-center justify-center">
+              <p className="text-muted-foreground">Video player placeholder</p>
+            </div>
+          </GlassCard>
+        </section>
+
         {/* Slide 1: Title */}
         <section
           id="title"
@@ -92,13 +101,13 @@ export default function Home() {
         >
           <div className="w-full">
             <GlassCard className="w-full">
-              <h1 className="text-4xl font-headline font-bold md:text-6xl lg:text-7xl">
+               <h1 className="text-4xl font-headline font-bold md:text-6xl lg:text-7xl">
                 The QatarSphere District
               </h1>
               <DecryptedText
                 text="A Landmark Investment in Qatar's Future: Building the World's First Cognitive City, a Hub for Technology, Tourism, and Talent."
                 animateOn="view"
-                sequential
+                sequential={true}
                 revealDirection="start"
                 speed={20}
                 maxIterations={10}
@@ -160,7 +169,7 @@ export default function Home() {
               <DecryptedText
                 parentClassName="text-lg text-muted-foreground md:text-xl"
                 animateOn="view"
-                sequential
+                sequential={true}
                 speed={20}
                 maxIterations={10}
                 text="From an Entertainment Venue to a Cognitive Hub. While competitors focus on building bigger screens, we will build a smarter city. The QatarSphere District's vision transcends entertainment to become a globally significant hub for technological innovation."
@@ -213,7 +222,7 @@ export default function Home() {
               <DecryptedText
                 parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl"
                 animateOn="view"
-                sequential
+                sequential={true}
                 speed={20}
                 maxIterations={10}
                 text="Our 850,000-square-meter district is designed with two synergistic purposes, creating a virtuous cycle of innovation and experience."
@@ -299,7 +308,7 @@ export default function Home() {
               <DecryptedText
                 parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl"
                 animateOn="view"
-                sequential
+                sequential={true}
                 speed={20}
                 maxIterations={10}
                 text="Fulfilling an Accelerated Vision for 2030, this project is a powerful catalyst for our national vision, creating parallel streams of human and economic development."
@@ -332,7 +341,7 @@ export default function Home() {
               <DecryptedText
                 parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl"
                 animateOn="view"
-                sequential
+                sequential={true}
                 speed={20}
                 maxIterations={10}
                 text="A multiplier effect on national value. The QatarSphere District delivers a strategic return far greater than a standalone tourism project."
@@ -355,7 +364,7 @@ export default function Home() {
               <DecryptedText
                 parentClassName="text-lg text-muted-foreground md:text-xl"
                 animateOn="view"
-                sequential
+                sequential={true}
                 speed={20}
                 maxIterations={10}
                 text="A sound and highly profitable national investment built on rigorous analysis and a resilient, diversified revenue strategy."
@@ -395,7 +404,7 @@ export default function Home() {
               <DecryptedText
                 parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl"
                 animateOn="view"
-                sequential
+                sequential={true}
                 speed={20}
                 maxIterations={10}
                 text="An aggressive yet achievable 36-month construction and development plan, ensuring a grand opening in 2028."
@@ -494,7 +503,7 @@ export default function Home() {
               <DecryptedText
                 parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl"
                 animateOn="view"
-                sequential
+                sequential={true}
                 speed={20}
                 maxIterations={10}
                 text="De-risking execution with a consortium of world-class leaders in their respective fields."
@@ -528,7 +537,7 @@ export default function Home() {
               <DecryptedText
                 parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl"
                 animateOn="view"
-                sequential
+                sequential={true}
                 speed={20}
                 maxIterations={10}
                 text="Proactive management for assured success with robust contingency plans."
@@ -567,7 +576,7 @@ export default function Home() {
               <DecryptedText
                 parentClassName="text-lg text-muted-foreground md:text-xl"
                 animateOn="view"
-                sequential
+                sequential={true}
                 speed={20}
                 maxIterations={10}
                 text="This landmark project is ready for activation. Its success will be a testament to Qatar's vision and ambition."
@@ -625,7 +634,7 @@ export default function Home() {
             <DecryptedText
               parentClassName="mx-auto mt-4 max-w-3xl text-lg text-primary-foreground/80 md:text-xl"
               animateOn="view"
-              sequential
+              sequential={true}
               speed={20}
               maxIterations={10}
               text="More than an investment in infrastructure, this is an investment in our nation's future. It is a powerful economic engine, a global symbol of innovation, and a profitable venture that accelerates the highest aspirations of the Qatar National Vision 2030."
