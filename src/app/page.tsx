@@ -94,7 +94,7 @@ export default function Home({}: {}) {
             <h1 className="text-4xl font-headline font-bold md:text-6xl lg:text-7xl">
               The QatarSphere District
             </h1>
-            <div className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground md:text-xl">
+            <GlassCard className="mt-8 max-w-4xl mx-auto">
               <DecryptedText
                 text="A Landmark Investment in Qatar's Future: Building the World's First Cognitive City, a Hub for Technology, Tourism, and Talent."
                 animateOn="view"
@@ -102,14 +102,14 @@ export default function Home({}: {}) {
                 revealDirection="start"
                 speed={20}
                 maxIterations={10}
-                parentClassName="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground md:text-xl"
+                parentClassName="mx-auto max-w-3xl text-lg text-muted-foreground md:text-xl"
               />
-            </div>
-            <GlassCard className="mt-8 inline-block py-3 px-6 text-sm">
-              <p className="font-semibold">Presented by:</p>
-              <p className="text-muted-foreground">
-                His Excellency Sheikh Jabr bin Thani Al Thani
-              </p>
+              <div className="mt-6 text-sm">
+                <p className="font-semibold">Presented by:</p>
+                <p className="text-muted-foreground">
+                  His Excellency Sheikh Jabr bin Thani Al Thani
+                </p>
+              </div>
             </GlassCard>
           </div>
           <div className="absolute inset-0 -z-10 bg-grid-slate-100 [mask-image:linear-gradient(to_bottom,white,transparent)] dark:bg-grid-slate-700/30"></div>
