@@ -182,10 +182,6 @@ export default function DecryptedText({
             if (!isAnimating) {
                 setIsAnimating(true);
             }
-         } else {
-            if (isAnimating) {
-                setIsAnimating(false);
-            }
          }
        })
      }
