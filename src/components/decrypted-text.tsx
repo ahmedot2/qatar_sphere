@@ -45,24 +45,10 @@ export default function DecryptedText({
   parentClassName = '',
   encryptedClassName = '',
   animateOn = 'hover',
-}: {
-    text: string;
-    speed?: number;
-    maxIterations?: number;
-    sequential?: boolean;
-    revealDirection?: 'start' | 'end' | 'center';
-    useOriginalCharsOnly?: boolean;
-    characters?: string;
-    className?: string;
-    parentClassName?: string;
-    encryptedClassName?: string;
-    animateOn?: 'hover' | 'view';
 }) {
   const [displayText, setDisplayText] = useState(text);
-  const [isHovering, setIsHovering] = useState(false);
-  const [isScrambling, setIsScrambling] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
   const [revealedIndices, setRevealedIndices] = useState(new Set());
-  const [hasAnimated, setHasAnimated] = useState(false);
   const containerRef = useRef<HTMLParagraphElement>(null);
 
    useEffect(() => {
@@ -140,8 +126,7 @@ export default function DecryptedText({
        }
      }
 
-     if (isHovering) {
-       setIsScrambling(true)
+     if (isAnimating) {
        interval = setInterval(() => {
          setRevealedIndices((prevRevealed) => {
            if (sequential) {
@@ -153,7 +138,7 @@ export default function DecryptedText({
                return newRevealed
              } else {
                if(interval) clearInterval(interval)
-               setIsScrambling(false)
+               setIsAnimating(false)
                setDisplayText(text) // Ensure final text is set
                return prevRevealed
              }
@@ -162,7 +147,7 @@ export default function DecryptedText({
              currentIteration++
              if (currentIteration >= maxIterations) {
                 if(interval) clearInterval(interval)
-               setIsScrambling(false)
+               setIsAnimating(false)
                setDisplayText(text)
              }
              return prevRevealed
@@ -172,14 +157,13 @@ export default function DecryptedText({
      } else {
        setDisplayText(text)
        setRevealedIndices(new Set())
-       setIsScrambling(false)
      }
 
      return () => {
        if (interval) clearInterval(interval)
      }
    }, [
-     isHovering,
+     isAnimating,
      text,
      speed,
      maxIterations,
@@ -194,9 +178,14 @@ export default function DecryptedText({
 
      const observerCallback = (entries: IntersectionObserverEntry[]) => {
        entries.forEach((entry) => {
-         if (entry.isIntersecting && !hasAnimated) {
-           setIsHovering(true)
-           setHasAnimated(true)
+         if (entry.isIntersecting) {
+            if (!isAnimating) {
+                setIsAnimating(true);
+            }
+         } else {
+            if (isAnimating) {
+                setIsAnimating(false);
+            }
          }
        })
      }
@@ -218,13 +207,13 @@ export default function DecryptedText({
          observer.unobserve(currentRef)
        }
      }
-   }, [animateOn, hasAnimated])
+   }, [animateOn, isAnimating])
 
    const hoverProps =
      animateOn === 'hover'
        ? {
-         onMouseEnter: () => setIsHovering(true),
-         onMouseLeave: () => setIsHovering(false),
+         onMouseEnter: () => setIsAnimating(true),
+         onMouseLeave: () => setIsAnimating(false),
        }
        : {}
 
@@ -235,7 +224,7 @@ export default function DecryptedText({
        <span style={styles.visibleText} aria-hidden="true">
          {displayText.split('').map((char, index) => {
            const isRevealedOrDone =
-            revealedIndices.has(index) || (!isScrambling && displayText === text)
+            revealedIndices.has(index) || (!isAnimating && displayText === text)
 
            return (
              <span
