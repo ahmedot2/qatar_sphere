@@ -72,7 +72,7 @@ const ValuePropCard = ({ icon, title }: { icon: React.ReactNode; title: string }
   </Card>
 );
 
-export default function Home() {
+export default function Home({}) {
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -88,8 +88,10 @@ export default function Home() {
         {/* Video Section */}
         <section id="video-intro" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4">
           <GlassCard className="w-full max-w-6xl">
-            <div className="aspect-video w-full bg-muted/30 rounded-lg flex items-center justify-center">
-              <p className="text-muted-foreground">Video player placeholder</p>
+            <div className="aspect-video w-full bg-muted/30 rounded-lg">
+              <video className="w-full h-full rounded-lg" controls src="/videos/intro.mp4">
+                  Your browser does not support the video tag.
+              </video>
             </div>
           </GlassCard>
         </section>
