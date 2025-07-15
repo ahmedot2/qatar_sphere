@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 const styles = {
   wrapper: {
-    display: 'block', // Changed to block for stability
+    display: 'block', 
     position: 'relative',
   } as React.CSSProperties,
   hiddenText: {
@@ -50,6 +50,7 @@ export default function DecryptedText({
   const [isAnimating, setIsAnimating] = useState(false);
   const [revealedIndices, setRevealedIndices] = useState(new Set());
   const containerRef = useRef<HTMLParagraphElement>(null);
+  const hasAnimated = useRef(false);
 
    useEffect(() => {
      let interval: NodeJS.Timeout | undefined;
@@ -139,7 +140,7 @@ export default function DecryptedText({
              } else {
                if(interval) clearInterval(interval)
                setIsAnimating(false)
-               setDisplayText(text) // Ensure final text is set
+               setDisplayText(text) 
                return prevRevealed
              }
            } else {
@@ -178,10 +179,9 @@ export default function DecryptedText({
 
      const observerCallback = (entries: IntersectionObserverEntry[]) => {
        entries.forEach((entry) => {
-         if (entry.isIntersecting) {
-            if (!isAnimating) {
-                setIsAnimating(true);
-            }
+         if (entry.isIntersecting && !hasAnimated.current) {
+            setIsAnimating(true);
+            hasAnimated.current = true;
          }
        })
      }
@@ -203,7 +203,7 @@ export default function DecryptedText({
          observer.unobserve(currentRef)
        }
      }
-   }, [animateOn, isAnimating])
+   }, [animateOn])
 
    const hoverProps =
      animateOn === 'hover'
