@@ -72,7 +72,7 @@ const ValuePropCard = ({ icon, title }: { icon: React.ReactNode; title: string }
   </Card>
 );
 
-export default function Home({}: {}) {
+export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -91,10 +91,10 @@ export default function Home({}: {}) {
           className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center text-center"
         >
           <div className="container">
-            <h1 className="text-4xl font-headline font-bold md:text-6xl lg:text-7xl">
-              The QatarSphere District
-            </h1>
-            <GlassCard className="mt-8 max-w-4xl mx-auto">
+            <GlassCard className="max-w-4xl mx-auto">
+              <h1 className="text-4xl font-headline font-bold md:text-6xl lg:text-7xl">
+                The QatarSphere District
+              </h1>
               <DecryptedText
                 text="A Landmark Investment in Qatar's Future: Building the World's First Cognitive City, a Hub for Technology, Tourism, and Talent."
                 animateOn="view"
@@ -102,7 +102,7 @@ export default function Home({}: {}) {
                 revealDirection="start"
                 speed={20}
                 maxIterations={10}
-                parentClassName="mx-auto max-w-3xl text-lg text-muted-foreground md:text-xl"
+                parentClassName="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground md:text-xl"
               />
               <div className="mt-6 text-sm">
                 <p className="font-semibold">Presented by:</p>
