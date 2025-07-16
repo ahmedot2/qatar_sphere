@@ -151,7 +151,7 @@ export default function Home({}) {
             />
             <div className="mt-6 text-sm">
               <p className="font-semibold">Presented by:</p>
-              <p className="text-accent">
+              <p className="text-muted-foreground">
                 His Excellency Sheikh Jabr bin Thani Al Thani
               </p>
             </div>
@@ -712,7 +712,7 @@ export default function Home({}) {
               <FeatureCard icon={<Globe size={28} />} title="Sustainability Risk">
                 <b>Mitigation:</b> LEED Platinum design, on-site solar generation, and advanced
                 water recycling.
-              </FeatureCard>
+              </faded>
             </div>
           </div>
         </section>
