@@ -712,7 +712,7 @@ export default function Home({}) {
               <FeatureCard icon={<Globe size={28} />} title="Sustainability Risk">
                 <b>Mitigation:</b> LEED Platinum design, on-site solar generation, and advanced
                 water recycling.
-              </faded>
+              </FeatureCard>
             </div>
           </div>
         </section>
