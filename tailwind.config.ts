@@ -20,6 +20,7 @@ export default {
         body: ['"PT Sans"', 'sans-serif'],
         headline: ['"Playfair Display"', 'serif'],
         display: ['"Audiowide"', 'sans-serif'],
+        logo: ['"Zen Dots"', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',

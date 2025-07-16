@@ -114,7 +114,7 @@ export default function Home({}) {
         <div className="container flex h-16 items-center justify-between">
           <a className="flex items-center gap-2" href="/">
             <Orbit className="h-6 w-6" />
-            <span className="font-bold">QatarSphere</span>
+            <span className="font-logo">QatarSphere</span>
           </a>
         </div>
       </header>
