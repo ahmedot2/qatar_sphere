@@ -176,7 +176,7 @@ export default function Home({}) {
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-3xl font-headline font-bold md:text-4xl">Executive Summary</h2>
               <DecryptedText
-                parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl"
+                parentClassName="mx-auto mt-4 max-w-3xl text-xl text-muted-foreground md:text-2xl"
                 animateOn="view"
                 sequential
                 speed={20}
@@ -224,7 +224,7 @@ export default function Home({}) {
                 A New Paradigm: Beyond Entertainment
               </h2>
               <DecryptedText
-                parentClassName="text-lg text-muted-foreground md:text-xl"
+                parentClassName="text-xl text-muted-foreground md:text-2xl"
                 animateOn="view"
                 sequential={true}
                 speed={20}
@@ -288,7 +288,7 @@ export default function Home({}) {
                 Proposed Solution: A Dual-Purpose Ecosystem
               </h2>
               <DecryptedText
-                parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl"
+                parentClassName="mx-auto mt-4 max-w-3xl text-xl text-muted-foreground md:text-2xl"
                 animateOn="view"
                 sequential={true}
                 speed={20}
@@ -385,7 +385,7 @@ export default function Home({}) {
                 National &amp; Cultural Impact
               </h2>
               <DecryptedText
-                parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl"
+                parentClassName="mx-auto mt-4 max-w-3xl text-xl text-muted-foreground md:text-2xl"
                 animateOn="view"
                 sequential={true}
                 speed={20}
@@ -429,7 +429,7 @@ export default function Home({}) {
                 A Redefined Value Proposition
               </h2>
               <DecryptedText
-                parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl"
+                parentClassName="mx-auto mt-4 max-w-3xl text-xl text-muted-foreground md:text-2xl"
                 animateOn="view"
                 sequential={true}
                 speed={20}
@@ -463,7 +463,7 @@ export default function Home({}) {
             <div className="mx-auto mb-12 max-w-3xl text-center">
                 <h2 className="text-3xl font-headline font-bold md:text-4xl">Financial Overview</h2>
                 <DecryptedText
-                    parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl"
+                    parentClassName="mx-auto mt-4 max-w-3xl text-xl text-muted-foreground md:text-2xl"
                     animateOn="view"
                     sequential={true}
                     speed={20}
@@ -529,7 +529,7 @@ export default function Home({}) {
                 Implementation Roadmap: 2025-2028
               </h2>
               <DecryptedText
-                parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl"
+                parentClassName="mx-auto mt-4 max-w-3xl text-xl text-muted-foreground md:text-2xl"
                 animateOn="view"
                 sequential={true}
                 speed={20}
@@ -639,7 +639,7 @@ export default function Home({}) {
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-3xl font-headline font-bold md:text-4xl">Strategic Partnerships</h2>
               <DecryptedText
-                parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl"
+                parentClassName="mx-auto mt-4 max-w-3xl text-xl text-muted-foreground md:text-2xl"
                 animateOn="view"
                 sequential={true}
                 speed={20}
@@ -684,7 +684,7 @@ export default function Home({}) {
                 Expanded Risk Assessment &amp; Mitigation
               </h2>
               <DecryptedText
-                parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl"
+                parentClassName="mx-auto mt-4 max-w-3xl text-xl text-muted-foreground md:text-2xl"
                 animateOn="view"
                 sequential={true}
                 speed={20}
@@ -723,7 +723,7 @@ export default function Home({}) {
             <div className="space-y-4">
               <h2 className="text-3xl font-headline font-bold">Call to Action</h2>
               <DecryptedText
-                parentClassName="text-lg text-muted-foreground md:text-xl"
+                parentClassName="text-xl text-muted-foreground md:text-2xl"
                 animateOn="view"
                 sequential={true}
                 speed={20}
