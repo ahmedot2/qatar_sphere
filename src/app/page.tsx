@@ -151,7 +151,7 @@ export default function Home({}) {
             />
             <div className="mt-6 text-sm">
               <p className="font-semibold">Presented by:</p>
-              <p className="text-muted-foreground">
+              <p className="text-accent">
                 His Excellency Sheikh Jabr bin Thani Al Thani
               </p>
             </div>
