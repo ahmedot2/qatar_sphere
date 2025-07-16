@@ -121,14 +121,14 @@ export default function Home({}) {
 
       <main className="flex-1">
         {/* Video Section */}
-        <section id="video-intro" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-0">
-          <div className="w-full max-w-screen-2xl">
-            <div className="aspect-video w-full bg-muted/30">
-              <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-1.mp4">
-                  Your browser does not support the video tag.
-              </video>
+        <section id="video-intro" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center px-4 sm:px-8 md:px-12">
+            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden">
+                <div className="aspect-video w-full bg-muted/30">
+                    <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-1.mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
-          </div>
         </section>
 
         {/* Slide 1: Title */}
@@ -160,14 +160,14 @@ export default function Home({}) {
         </section>
 
         {/* Video Section 2 */}
-        <section id="video-2" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-0">
-          <div className="w-full max-w-screen-2xl">
-            <div className="aspect-video w-full bg-muted/30">
-              <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-2.mp4">
-                  Your browser does not support the video tag.
-              </video>
+        <section id="video-2" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center px-4 sm:px-8 md:px-12">
+            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden">
+                <div className="aspect-video w-full bg-muted/30">
+                    <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-2.mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
-          </div>
         </section>
 
         {/* Slide 2: Executive Summary */}
@@ -206,14 +206,14 @@ export default function Home({}) {
         </section>
 
         {/* Video Section 3 */}
-        <section id="video-3" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-0">
-          <div className="w-full max-w-screen-2xl">
-            <div className="aspect-video w-full bg-muted/30">
-              <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-3.mp4">
-                  Your browser does not support the video tag.
-              </video>
+        <section id="video-3" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center px-4 sm:px-8 md:px-12">
+            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden">
+                <div className="aspect-video w-full bg-muted/30">
+                    <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-3.mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
-          </div>
         </section>
 
         {/* Slide 3: A New Paradigm */}
@@ -270,14 +270,14 @@ export default function Home({}) {
         </section>
 
         {/* Video Section 4 */}
-        <section id="video-4" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-0">
-          <div className="w-full max-w-screen-2xl">
-            <div className="aspect-video w-full bg-muted/30">
-              <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-4.mp4">
-                  Your browser does not support the video tag.
-              </video>
+        <section id="video-4" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center px-4 sm:px-8 md:px-12">
+            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden">
+                <div className="aspect-video w-full bg-muted/30">
+                    <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-4.mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
-          </div>
         </section>
 
         {/* Slide 4: Proposed Solution */}
@@ -367,14 +367,14 @@ export default function Home({}) {
         </section>
 
         {/* Video Section 5 */}
-        <section id="video-5" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-0">
-          <div className="w-full max-w-screen-2xl">
-            <div className="aspect-video w-full bg-muted/30">
-              <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-5.mp4">
-                  Your browser does not support the video tag.
-              </video>
+        <section id="video-5" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center px-4 sm:px-8 md:px-12">
+            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden">
+                <div className="aspect-video w-full bg-muted/30">
+                    <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-5.mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
-          </div>
         </section>
 
         {/* Slide 5: National & Cultural Impact */}
@@ -411,14 +411,14 @@ export default function Home({}) {
         </section>
 
         {/* Video Section 6 */}
-        <section id="video-6" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-0">
-          <div className="w-full max-w-screen-2xl">
-            <div className="aspect-video w-full bg-muted/30">
-              <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-6.mp4">
-                  Your browser does not support the video tag.
-              </video>
+        <section id="video-6" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center px-4 sm:px-8 md:px-12">
+            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden">
+                <div className="aspect-video w-full bg-muted/30">
+                    <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-6.mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
-          </div>
         </section>
 
         {/* Slide 6: Redefined Value Proposition */}
@@ -447,14 +447,14 @@ export default function Home({}) {
         </section>
 
         {/* Video Section 7 */}
-        <section id="video-7" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-0">
-          <div className="w-full max-w-screen-2xl">
-            <div className="aspect-video w-full bg-muted/30">
-              <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-7.mp4">
-                  Your browser does not support the video tag.
-              </video>
+        <section id="video-7" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center px-4 sm:px-8 md:px-12">
+            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden">
+                <div className="aspect-video w-full bg-muted/30">
+                    <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-7.mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
-          </div>
         </section>
 
         {/* Slide 7: Financial Overview */}
@@ -511,14 +511,14 @@ export default function Home({}) {
         </section>
 
         {/* Video Section 8 */}
-        <section id="video-8" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-0">
-          <div className="w-full max-w-screen-2xl">
-            <div className="aspect-video w-full bg-muted/30">
-              <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-8.mp4">
-                  Your browser does not support the video tag.
-              </video>
+        <section id="video-8" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center px-4 sm:px-8 md:px-12">
+            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden">
+                <div className="aspect-video w-full bg-muted/30">
+                    <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-8.mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
-          </div>
         </section>
 
         {/* Slide 8: Implementation Roadmap */}
@@ -623,14 +623,14 @@ export default function Home({}) {
         </section>
 
         {/* Video Section 9 */}
-        <section id="video-9" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-0">
-          <div className="w-full max-w-screen-2xl">
-            <div className="aspect-video w-full bg-muted/30">
-              <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-9.mp4">
-                  Your browser does not support the video tag.
-              </video>
+        <section id="video-9" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center px-4 sm:px-8 md:px-12">
+            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden">
+                <div className="aspect-video w-full bg-muted/30">
+                    <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-9.mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
-          </div>
         </section>
         
         {/* Slide 9: Strategic Partnerships */}
@@ -666,14 +666,14 @@ export default function Home({}) {
         </section>
 
         {/* Video Section 10 */}
-        <section id="video-10" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-0">
-          <div className="w-full max-w-screen-2xl">
-            <div className="aspect-video w-full bg-muted/30">
-              <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-10.mp4">
-                  Your browser does not support the video tag.
-              </video>
+        <section id="video-10" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center px-4 sm:px-8 md:px-12">
+            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden">
+                <div className="aspect-video w-full bg-muted/30">
+                    <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-10.mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
-          </div>
         </section>
 
         {/* Slide 10: Risk Assessment */}
