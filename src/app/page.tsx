@@ -136,7 +136,7 @@ export default function Home({}) {
           className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center text-center p-4"
         >
           <GlassCard className="w-full">
-            <h1 className="font-display text-4xl font-bold md:text-6xl lg:text-7xl">
+            <h1 className="font-display text-4xl font-bold tracking-wider md:text-6xl lg:text-7xl">
               QatarSphere District
             </h1>
             <DecryptedText
@@ -780,7 +780,7 @@ export default function Home({}) {
               Investing in the Future Sovereign Capability of Qatar
             </h2>
             <DecryptedText
-              parentClassName="mx-auto mt-4 max-w-3xl text-lg text-primary-foreground/80 md:text-xl"
+              parentClassName="mx-auto mt-4 max-w-3xl text-primary-foreground/80 md:text-xl"
               animateOn="view"
               sequential={true}
               speed={20}
