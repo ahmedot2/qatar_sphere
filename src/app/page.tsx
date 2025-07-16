@@ -136,8 +136,8 @@ export default function Home({}) {
           className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center text-center p-4"
         >
           <GlassCard className="w-full">
-            <h1 className="text-4xl font-headline font-bold md:text-6xl lg:text-7xl">
-              The QatarSphere District
+            <h1 className="font-display text-4xl font-bold md:text-6xl lg:text-7xl">
+              QatarSphere District
             </h1>
             <DecryptedText
               text="A Landmark Investment in Qatar's Future: Building the World's First Cognitive City, a Hub for Technology, Tourism, and Talent."
