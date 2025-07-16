@@ -232,30 +232,34 @@ export default function Home({}) {
                 text="From an Entertainment Venue to a Cognitive Hub. While competitors focus on building bigger screens, we will build a smarter city. The QatarSphere District's vision transcends entertainment to become a globally significant hub for technological innovation."
               />
               <div className="space-y-6 pt-4">
-                <div className="flex items-start gap-4">
-                  <div className="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary">
-                    <Globe size={20} />
+                 <GlassCard>
+                  <div className="flex items-start gap-4">
+                    <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                      <Globe size={24} />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold">The Entertainment Layer</h3>
+                      <p className="text-muted-foreground">
+                        A world-class destination attracting 3.2 million visitors annually, serving
+                        as the public face and a key revenue driver.
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold">The Entertainment Layer</h3>
-                    <p className="text-muted-foreground">
-                      A world-class destination attracting 3.2 million visitors annually, serving
-                      as the public face and a key revenue driver.
-                    </p>
+                </GlassCard>
+                <GlassCard>
+                  <div className="flex items-start gap-4">
+                    <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                      <BrainCircuit size={24} />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold">The Technology Core</h3>
+                      <p className="text-muted-foreground">
+                        A Special Economic and Technology Zone (SET-Zone) to attract leaders in AI,
+                        Quantum Computing, Advanced Robotics, and Blockchain.
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary">
-                    <BrainCircuit size={20} />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold">The Technology Core</h3>
-                    <p className="text-muted-foreground">
-                      A Special Economic and Technology Zone (SET-Zone) to attract leaders in AI,
-                      Quantum Computing, Advanced Robotics, and Blockchain.
-                    </p>
-                  </div>
-                </div>
+                </GlassCard>
               </div>
             </div>
             <Image
