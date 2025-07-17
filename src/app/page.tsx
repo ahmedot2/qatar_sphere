@@ -598,14 +598,14 @@ export default function Home({}) {
                     text="A sound and highly profitable national investment built on rigorous analysis and a resilient, diversified revenue strategy."
                 />
             </div>
-            <div className="grid grid-cols-1 grid-rows-2 gap-6 md:grid-cols-4 md:grid-rows-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-4">
               <FinancialMetricCard
                 label="Total Investment"
                 value={4.2}
                 prefix="$"
                 postfix="B"
                 icon={<DollarSign size={24} />}
-                className="md:col-span-2"
+                className="lg:col-span-2"
               />
               <FinancialMetricCard
                 label="Projected Annual Revenue"
@@ -613,9 +613,9 @@ export default function Home({}) {
                 prefix="$"
                 postfix="B"
                 icon={<Target size={24} />}
-                className="md:col-span-2"
+                className="lg:col-span-2"
               />
-              <GlassCard className="md:col-span-4 lg:col-span-2 lg:row-span-2 min-h-[300px] p-6">
+              <GlassCard className="md:col-span-3 lg:col-span-2 lg:row-span-2 min-h-[300px] p-6">
                 <h3 className="mb-4 text-lg font-semibold">Investment Breakdown</h3>
                 <InvestmentChart />
               </GlassCard>
@@ -625,13 +625,13 @@ export default function Home({}) {
                 prefix="~"
                 postfix=" Yrs"
                 icon={<RefreshCw size={24} />}
-                className="md:col-span-2 lg:col-span-1"
+                className="md:col-span-1 lg:col-span-2"
               />
               <FinancialMetricCard
                 label="Annual GDP Contribution"
                 value="QAR 20-30B"
                 icon={<AreaChart size={24} />}
-                className="md:col-span-2 lg:col-span-1"
+                className="md:col-span-2 lg:col-span-2"
               />
             </div>
           </div>
