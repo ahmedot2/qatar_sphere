@@ -183,14 +183,24 @@ const FeatureCard = ({
 );
 
 const ValuePropCard = ({ icon, title }: { icon: React.ReactNode; title: string }) => (
-  <Card className="p-6 text-center bg-card/30 dark:bg-card/20">
-    <div className="flex flex-col items-center gap-2">
-      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+  <div className={cn(
+    'group relative rounded-2xl bg-white/50 dark:bg-black/20 p-6 shadow-soft-light dark:shadow-soft-dark text-center',
+    'transition-all duration-300 ease-in-out',
+    'hover:shadow-soft-light-hover dark:hover:shadow-soft-dark-hover hover:-translate-y-1'
+  )}>
+    <div className="flex flex-col items-center gap-4">
+      <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gray-200/70 dark:bg-gray-800/60 transition-colors duration-300 group-hover:bg-primary/10 group-hover:text-primary">
         {icon}
       </div>
-      <h3 className="text-lg font-semibold">{title}</h3>
+      <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">{title}</h3>
     </div>
-  </Card>
+     <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+         style={{
+           background:
+             'radial-gradient(400px circle at 50% 0%, hsl(var(--primary) / 0.1), transparent 80%)',
+         }}
+    />
+  </div>
 );
 
 const FinancialMetricCard = ({
@@ -554,7 +564,7 @@ export default function Home({}) {
                 text="A multiplier effect on national value. The QatarSphere District delivers a strategic return far greater than a standalone tourism project."
               />
             </div>
-            <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+            <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
               <ValuePropCard icon={<TrendingUp size={28} />} title="Economic Diversification" />
               <ValuePropCard icon={<ShieldCheck size={28} />} title="Technological Sovereignty" />
               <ValuePropCard icon={<Globe size={28} />} title="Global Influence" />
