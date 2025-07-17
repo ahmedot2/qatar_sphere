@@ -164,30 +164,41 @@ const ImpactCard = ({
   </div>
 );
 
-const FeatureCard = ({
+const PartnerCard = ({
   icon,
   title,
   children,
-  className,
 }: {
   icon: React.ReactNode;
   title: string;
   children: React.ReactNode;
-  className?: string;
 }) => (
-  <Card className={cn('bg-card/30 dark:bg-card/20 h-full', className)}>
-    <CardHeader>
-      <div className="flex items-center gap-4">
-        <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
-          {icon}
-        </div>
-        <CardTitle className="text-xl font-semibold">{title}</CardTitle>
+  <div
+    className={cn(
+      'group relative rounded-2xl bg-white/50 dark:bg-black/20 p-6 shadow-soft-light dark:shadow-soft-dark h-full',
+      'transition-all duration-300 ease-in-out',
+      'hover:shadow-soft-light-hover dark:hover:shadow-soft-dark-hover hover:-translate-y-1'
+    )}
+  >
+    <div className="flex items-center gap-4">
+      <div
+        className={cn(
+          'flex h-11 w-11 items-center justify-center rounded-lg bg-gray-200/70 dark:bg-gray-800/60',
+          'transition-colors duration-300 group-hover:bg-primary/10 group-hover:text-primary'
+        )}
+      >
+        {icon}
       </div>
-    </CardHeader>
-    <CardContent>
-      <p className="text-muted-foreground">{children}</p>
-    </CardContent>
-  </Card>
+      <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">{title}</h3>
+    </div>
+    <p className="mt-4 text-gray-600 dark:text-gray-400">{children}</p>
+    <div
+      className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+      style={{
+        background: 'radial-gradient(400px circle at 50% 50%, hsl(var(--primary) / 0.1), transparent 80%)',
+      }}
+    />
+  </div>
 );
 
 const ValuePropCard = ({ icon, title }: { icon: React.ReactNode; title: string }) => (
@@ -874,19 +885,19 @@ export default function Home({}) {
               />
             </div>
             <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-              <FeatureCard icon={<Building size={28} />} title="CSCEC">
+              <PartnerCard icon={<Building size={28} />} title="CSCEC">
                 Construction partner, the world&apos;s largest contractor, ensuring on-time
                 delivery.
-              </FeatureCard>
-              <FeatureCard icon={<Cpu size={28} />} title="Tencent">
+              </PartnerCard>
+              <PartnerCard icon={<Cpu size={28} />} title="Tencent">
                 Technology &amp; AI partner to power immersive content and personalization engines.
-              </FeatureCard>
-              <FeatureCard icon={<Database size={28} />} title="Alibaba">
+              </PartnerCard>
+              <PartnerCard icon={<Database size={28} />} title="Alibaba">
                 Cloud &amp; Data partner for robust, real-time smart city management.
-              </FeatureCard>
-              <FeatureCard icon={<Layers size={28} />} title="Wanda Group">
+              </PartnerCard>
+              <PartnerCard icon={<Layers size={28} />} title="Wanda Group">
                 Entertainment content partner for co-developing world-class shows.
-              </FeatureCard>
+              </PartnerCard>
             </div>
           </div>
         </section>
@@ -919,26 +930,26 @@ export default function Home({}) {
               />
             </div>
             <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              <FeatureCard icon={<DollarSign size={28} />} title="Execution Risk">
+              <GlassCard icon={<DollarSign size={28} />} title="Execution Risk">
                 <b>Mitigation:</b> Partnering with CSCEC, leveraging prefabrication, and securing a
                 15% contingency budget.
-              </FeatureCard>
-              <FeatureCard icon={<LineChart size={28} />} title="Market Risk">
+              </GlassCard>
+              <GlassCard icon={<LineChart size={28} />} title="Market Risk">
                 <b>Mitigation:</b> Dual-engine model hedges risk, as the R&amp;D/Tech sector is less
                 correlated with consumer travel.
-              </FeatureCard>
-              <FeatureCard icon={<Cpu size={28} />} title="Technology Risk">
+              </GlassCard>
+              <GlassCard icon={<Cpu size={28} />} title="Technology Risk">
                 <b>Mitigation:</b> Modular, open-architecture design for easy upgrades. The
                 QIC&apos;s purpose is to drive change.
-              </FeatureCard>
-              <FeatureCard icon={<Map size={28} />} title="Geopolitical Risk">
+              </GlassCard>
+              <GlassCard icon={<Map size={28} />} title="Geopolitical Risk">
                 <b>Mitigation:</b> Diversified global partnerships. Position QIC as a neutral,
                 &quot;open-source&quot; R&amp;D hub.
-              </FeatureCard>
-              <FeatureCard icon={<Globe size={28} />} title="Sustainability Risk">
+              </GlassCard>
+              <GlassCard icon={<Globe size={28} />} title="Sustainability Risk">
                 <b>Mitigation:</b> LEED Platinum design, on-site solar generation, and advanced
                 water recycling.
-              </FeatureCard>
+              </GlassCard>
             </div>
           </div>
         </section>
