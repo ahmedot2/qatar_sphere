@@ -64,6 +64,12 @@ export default {
           '5': 'hsl(var(--chart-5))',
         },
       },
+      boxShadow: {
+        'soft-light': '0px 4px 12px rgba(0,0,0,0.02), 0px 1px 3px rgba(0,0,0,0.06)',
+        'soft-light-hover': '0px 6px 16px rgba(0,0,0,0.04), 0px 2px 5px rgba(0,0,0,0.08)',
+        'soft-dark': '0px 4px 12px rgba(255,255,255,0.03), 0px 1px 3px rgba(255,255,255,0.07)',
+        'soft-dark-hover': '0px 6px 16px rgba(255,255,255,0.05), 0px 2px 5px rgba(255,255,255,0.1)',
+      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',

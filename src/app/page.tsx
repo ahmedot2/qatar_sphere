@@ -40,6 +40,45 @@ import { cn } from '@/lib/utils';
 import DecryptedText from '@/components/decrypted-text';
 import AnimatedCounter from '@/components/animated-counter';
 
+const ExecutiveSummaryCard = ({
+  icon,
+  title,
+  children,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  children: React.ReactNode;
+}) => (
+  <div
+    className={cn(
+      'group relative rounded-2xl bg-white/50 dark:bg-black/20 p-6 shadow-soft-light dark:shadow-soft-dark',
+      'transition-all duration-300 ease-in-out',
+      'hover:shadow-soft-light-hover dark:hover:shadow-soft-dark-hover hover:scale-[1.02]'
+    )}
+  >
+    <div className="flex items-center gap-4">
+      <div
+        className={cn(
+          'flex h-11 w-11 items-center justify-center rounded-lg bg-gray-200/70 dark:bg-gray-800/60',
+          'transition-colors duration-300 group-hover:bg-primary/10 group-hover:text-primary'
+        )}
+      >
+        {icon}
+      </div>
+      <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">{title}</h3>
+    </div>
+    <div className="mt-4 text-gray-600 dark:text-gray-400">
+      <p>{children}</p>
+    </div>
+    <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+         style={{
+           background:
+             'radial-gradient(400px circle at 50% 50%, hsl(var(--primary) / 0.1), transparent 80%)',
+         }}
+    />
+  </div>
+);
+
 const FeatureCard = ({
   icon,
   title,
@@ -151,7 +190,7 @@ export default function Home({}) {
             />
             <div className="mt-6 text-lg">
               <p className="font-semibold">Presented by:</p>
-              <p className="text-accent">
+              <p className="text-accent text-lg">
                 His Excellency Sheikh Jabr bin Thani Al Thani
               </p>
             </div>
@@ -185,22 +224,22 @@ export default function Home({}) {
               />
             </div>
             <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-              <FeatureCard icon={<Cpu size={28} />} title="The Proposal">
+              <ExecutiveSummaryCard icon={<Cpu size={24} />} title="The Proposal">
                 A <b>$4.2 billion total investment</b> to develop the world&apos;s first
                 &quot;cognitive city&quot; district.
-              </FeatureCard>
-              <FeatureCard icon={<TrendingUp size={28} />} title="The Dual Engine">
+              </ExecutiveSummaryCard>
+              <ExecutiveSummaryCard icon={<TrendingUp size={24} />} title="The Dual Engine">
                 Adds <b>QAR 20-30B ($5.5-8.2B USD)</b> annually to GDP, creating a powerful new
                 economic driver.
-              </FeatureCard>
-              <FeatureCard icon={<ShieldCheck size={28} />} title="Strategic Imperative">
+              </ExecutiveSummaryCard>
+              <ExecutiveSummaryCard icon={<ShieldCheck size={24} />} title="Strategic Imperative">
                 Moves beyond tourism to create a living laboratory for AI, Quantum Computing, and
                 Robotics, aligning with QNV 2030.
-              </FeatureCard>
-              <FeatureCard icon={<Handshake size={28} />} title="The Ask">
+              </ExecutiveSummaryCard>
+              <ExecutiveSummaryCard icon={<Handshake size={24} />} title="The Ask">
                 Seeking QIA&apos;s backing to anchor this nation-building project and secure
                 Qatar&apos;s position as a global leader.
-              </FeatureCard>
+              </ExecutiveSummaryCard>
             </div>
           </div>
         </section>
