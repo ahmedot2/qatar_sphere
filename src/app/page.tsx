@@ -271,34 +271,50 @@ export default function Home({}) {
                 text="From an Entertainment Venue to a Cognitive Hub. While competitors focus on building bigger screens, we will build a smarter city. The QatarSphere District's vision transcends entertainment to become a globally significant hub for technological innovation."
               />
               <div className="space-y-6 pt-4">
-                 <GlassCard>
-                  <div className="flex items-start gap-4">
-                    <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-                      <Globe size={24} />
+                <div className="group relative transition-all duration-300 ease-in-out hover:scale-[1.02]">
+                  <GlassCard>
+                    <div className="flex items-start gap-4">
+                      <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                        <Globe size={24} />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold">The Entertainment Layer</h3>
+                        <p className="text-muted-foreground">
+                          A world-class destination attracting 3.2 million visitors annually, serving
+                          as the public face and a key revenue driver.
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-lg font-semibold">The Entertainment Layer</h3>
-                      <p className="text-muted-foreground">
-                        A world-class destination attracting 3.2 million visitors annually, serving
-                        as the public face and a key revenue driver.
-                      </p>
+                  </GlassCard>
+                   <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                       style={{
+                         background:
+                           'radial-gradient(400px circle at 50% 50%, hsl(var(--primary) / 0.1), transparent 80%)',
+                       }}
+                  />
+                </div>
+                <div className="group relative transition-all duration-300 ease-in-out hover:scale-[1.02]">
+                  <GlassCard>
+                    <div className="flex items-start gap-4">
+                      <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                        <BrainCircuit size={24} />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold">The Technology Core</h3>
+                        <p className="text-muted-foreground">
+                          A Special Economic and Technology Zone (SET-Zone) to attract leaders in AI,
+                          Quantum Computing, Advanced Robotics, and Blockchain.
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </GlassCard>
-                <GlassCard>
-                  <div className="flex items-start gap-4">
-                    <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-                      <BrainCircuit size={24} />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold">The Technology Core</h3>
-                      <p className="text-muted-foreground">
-                        A Special Economic and Technology Zone (SET-Zone) to attract leaders in AI,
-                        Quantum Computing, Advanced Robotics, and Blockchain.
-                      </p>
-                    </div>
-                  </div>
-                </GlassCard>
+                  </GlassCard>
+                  <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                     style={{
+                       background:
+                         'radial-gradient(400px circle at 50% 50%, hsl(var(--primary) / 0.1), transparent 80%)',
+                     }}
+                  />
+                </div>
               </div>
             </div>
             <Image
