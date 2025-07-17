@@ -257,8 +257,8 @@ export default function Home({}) {
 
         {/* Slide 3: A New Paradigm */}
         <section id="new-paradigm">
-          <div className="container grid items-center gap-12 md:grid-cols-2">
-            <div className="space-y-4">
+          <div className="container flex flex-col md:flex-row items-center gap-12">
+            <div className="md:w-1/2 space-y-4">
               <h2 className="text-3xl font-headline font-bold">
                 A New Paradigm: Beyond Entertainment
               </h2>
@@ -317,14 +317,16 @@ export default function Home({}) {
                 </div>
               </div>
             </div>
-            <Image
-              src="https://placehold.co/600x700.png"
-              width={600}
-              height={700}
-              alt="Futuristic Laboratory"
-              className="rounded-2xl object-cover"
-              data-ai-hint="futuristic laboratory"
-            />
+            <div className="md:w-1/2">
+                <Image
+                  src="https://placehold.co/600x700.png"
+                  width={600}
+                  height={700}
+                  alt="Futuristic Laboratory"
+                  className="rounded-2xl object-cover"
+                  data-ai-hint="futuristic laboratory"
+                />
+            </div>
           </div>
         </section>
 
