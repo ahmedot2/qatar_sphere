@@ -259,12 +259,12 @@ export default function Home({}) {
         <section id="new-paradigm">
           <div className="container flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2">
-              <div>
+              <div className="space-y-4">
                   <h2 className="text-3xl font-headline font-bold">
                     A New Paradigm: Beyond Entertainment
                   </h2>
                   <DecryptedText
-                    parentClassName="text-xl text-muted-foreground md:text-2xl mt-4"
+                    parentClassName="text-xl text-muted-foreground md:text-2xl"
                     animateOn="view"
                     sequential={true}
                     speed={20}
@@ -272,7 +272,7 @@ export default function Home({}) {
                     text="From an Entertainment Venue to a Cognitive Hub. While competitors focus on building bigger screens, we will build a smarter city. The QatarSphere District's vision transcends entertainment to become a globally significant hub for technological innovation."
                   />
               </div>
-              <div className="mt-8 space-y-4">
+              <div className="mt-8 space-y-6">
                 <div className="group relative transition-all duration-300 ease-in-out hover:scale-[1.02]">
                   <GlassCard>
                     <div className="flex items-start gap-4 p-4">
@@ -360,71 +360,76 @@ export default function Home({}) {
               />
             </div>
             <div className="grid gap-8 md:grid-cols-2">
-              <Card className="overflow-hidden bg-card/30 dark:bg-card/20">
-                <CardContent className="p-0">
-                  <Image
-                    src="https://placehold.co/600x400.png"
-                    width={600}
-                    height={400}
-                    alt="Public Experience"
-                    className="w-full object-cover"
-                    data-ai-hint="modern entertainment venue"
-                  />
-                  <div className="p-6">
-                    <h3 className="text-2xl font-bold">Zone 1: The Public Experience</h3>
-                    <ul className="mt-4 space-y-4 text-muted-foreground">
-                      <li className="flex items-start gap-3">
-                        <Building2 className="h-5 w-5 text-primary shrink-0 mt-1" />
-                        <span>
-                          The QatarSphere venue, with dynamic, submersible stages.
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <Hotel className="h-5 w-5 text-primary shrink-0 mt-1" />
-                        <span>Luxury hotels with 2,500 rooms.</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <ShoppingBag className="h-5 w-5 text-primary shrink-0 mt-1" />
-                        <span>200+ retail spaces and a 2-mile entertainment promenade.</span>
-                      </li>
-                    </ul>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card className="overflow-hidden bg-card/30 dark:bg-card/20">
-                <CardContent className="p-0">
-                  <Image
-                    src="https://placehold.co/600x400.png"
-                    width={600}
-                    height={400}
-                    alt="Innovation Campus"
-                    className="w-full object-cover"
-                    data-ai-hint="futuristic research lab"
-                  />
-                  <div className="p-6">
-                    <h3 className="text-2xl font-bold">Zone 2: The Qatar Innovation Campus</h3>
-                    <ul className="mt-4 space-y-4 text-muted-foreground">
-                      <li className="flex items-start gap-3">
-                        <FlaskConical className="h-5 w-5 text-primary shrink-0 mt-1" />
-                        <span>State-of-the-art R&amp;D facilities and secure data centers.</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <Bot className="h-5 w-5 text-primary shrink-0 mt-1" />
-                        <span>
-                          &quot;Sandbox&quot; environments for testing autonomous robots and AI
-                          systems.
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <Server className="h-5 w-5 text-primary shrink-0 mt-1" />
-                        <span>
-                          Corporate headquarters and startup incubators for global tech firms.
-                        </span>
-                      </li>
-                    </ul>
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="group relative overflow-hidden rounded-2xl bg-white/50 p-0 shadow-soft-light transition-all duration-300 ease-in-out hover:shadow-soft-light-hover hover:scale-[1.02] dark:bg-black/20 dark:shadow-soft-dark dark:hover:shadow-soft-dark-hover">
+                <Image
+                  src="https://placehold.co/600x400.png"
+                  width={600}
+                  height={400}
+                  alt="Public Experience"
+                  className="w-full object-cover"
+                  data-ai-hint="modern entertainment venue"
+                />
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold">Zone 1: The Public Experience</h3>
+                  <ul className="mt-4 space-y-4 text-muted-foreground">
+                    <li className="flex items-start gap-3">
+                      <Building2 className="mt-1 h-5 w-5 shrink-0 text-primary" />
+                      <span>The QatarSphere venue, with dynamic, submersible stages.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Hotel className="mt-1 h-5 w-5 shrink-0 text-primary" />
+                      <span>Luxury hotels with 2,500 rooms.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <ShoppingBag className="mt-1 h-5 w-5 shrink-0 text-primary" />
+                      <span>200+ retail spaces and a 2-mile entertainment promenade.</span>
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  style={{
+                    background:
+                      'radial-gradient(600px circle at 50% 50%, hsl(var(--primary) / 0.1), transparent 80%)',
+                  }}
+                />
+              </div>
+              <div className="group relative overflow-hidden rounded-2xl bg-white/50 p-0 shadow-soft-light transition-all duration-300 ease-in-out hover:shadow-soft-light-hover hover:scale-[1.02] dark:bg-black/20 dark:shadow-soft-dark dark:hover:shadow-soft-dark-hover">
+                <Image
+                  src="https://placehold.co/600x400.png"
+                  width={600}
+                  height={400}
+                  alt="Innovation Campus"
+                  className="w-full object-cover"
+                  data-ai-hint="futuristic research lab"
+                />
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold">Zone 2: The Qatar Innovation Campus</h3>
+                  <ul className="mt-4 space-y-4 text-muted-foreground">
+                    <li className="flex items-start gap-3">
+                      <FlaskConical className="mt-1 h-5 w-5 shrink-0 text-primary" />
+                      <span>State-of-the-art R&amp;D facilities and secure data centers.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Bot className="mt-1 h-5 w-5 shrink-0 text-primary" />
+                      <span>
+                        &quot;Sandbox&quot; environments for testing autonomous robots and AI systems.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Server className="mt-1 h-5 w-5 shrink-0 text-primary" />
+                      <span>Corporate headquarters and startup incubators for global tech firms.</span>
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  style={{
+                    background:
+                      'radial-gradient(600px circle at 50% 50%, hsl(var(--primary) / 0.1), transparent 80%)',
+                  }}
+                />
+              </div>
             </div>
           </div>
         </section>
