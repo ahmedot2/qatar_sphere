@@ -34,6 +34,11 @@ import {
   RefreshCw,
   AreaChart,
   Orbit,
+  Wrench,
+  Activity,
+  Replace,
+  Globe2,
+  Recycle,
 } from 'lucide-react';
 import { InvestmentChart } from '@/components/investment-chart';
 import { cn } from '@/lib/utils';
@@ -381,7 +386,7 @@ const RoadmapTimelineItem = ({
   );
 };
 
-const RiskCard = ({ children }: { children: React.ReactNode }) => (
+const RiskCard = ({ icon, children }: { icon: React.ReactNode; children: React.ReactNode }) => (
   <div
     className={cn(
       'group relative rounded-2xl bg-white/50 dark:bg-black/20 p-6 shadow-soft-light dark:shadow-soft-dark',
@@ -389,11 +394,21 @@ const RiskCard = ({ children }: { children: React.ReactNode }) => (
       'hover:shadow-soft-light-hover dark:hover:shadow-soft-dark-hover hover:-translate-y-1'
     )}
   >
-    <p className="text-gray-600 dark:text-gray-400">{children}</p>
+    <div className="flex items-start gap-4">
+      <div
+        className={cn(
+          'flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-gray-200/70 dark:bg-gray-800/60 transition-colors duration-300 group-hover:bg-primary/10 group-hover:text-primary'
+        )}
+      >
+        {icon}
+      </div>
+      <p className="text-gray-600 dark:text-gray-400">{children}</p>
+    </div>
     <div
       className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
       style={{
-        background: 'radial-gradient(400px circle at 50% 50%, hsl(var(--primary) / 0.1), transparent 80%)',
+        background:
+          'radial-gradient(400px circle at 20% 50%, hsl(var(--primary) / 0.1), transparent 80%)',
       }}
     />
   </div>
@@ -949,35 +964,28 @@ export default function Home({}) {
               />
             </div>
             <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              <RiskCard>
-                <p>
-                  <span className="font-bold">Mitigation:</span> Partnering with CSCEC, leveraging
-                  prefabrication, and securing a 15% contingency budget.
-                </p>
+              <RiskCard icon={<Wrench size={24} />}>
+                Partnering with CSCEC, leveraging prefabrication, and securing a 15% contingency
+                budget.
               </RiskCard>
-              <RiskCard>
-                <p>
-                  <span className="font-bold">Mitigation:</span> Dual-engine model hedges risk, as
-                  the R&amp;D/Tech sector is less correlated with consumer travel.
-                </p>
+              <RiskCard icon={<Activity size={24} />}>
+                Dual-engine model hedges risk, as the R&amp;D/Tech sector is less correlated with
+                consumer travel.
               </RiskCard>
-              <RiskCard>
-                <p>
-                  <span className="font-bold">Mitigation:</span> Modular, open-architecture design
-                  for easy upgrades. The QIC&apos;s purpose is to drive change.
-                </p>
+              <RiskCard icon={<Replace size={24} />}>
+                Modular, open-architecture design for easy upgrades. The QIC&apos;s purpose is to
+                drive change.
               </RiskCard>
-              <RiskCard>
-                <p>
-                  <span className="font-bold">Mitigation:</span> Diversified global partnerships.
-                  Position QIC as a neutral, &quot;open-source&quot; R&amp;D hub.
-                </p>
+              <RiskCard icon={<Globe2 size={24} />}>
+                Diversified global partnerships. Position QIC as a neutral, &quot;open-source&quot;
+                R&amp;D hub.
               </RiskCard>
-              <RiskCard>
-                <p>
-                  <span className="font-bold">Mitigation:</span> LEED Platinum design, on-site solar
-                  generation, and advanced water recycling.
-                </p>
+              <RiskCard icon={<Recycle size={24} />}>
+                LEED Platinum design, on-site solar generation, and advanced water recycling.
+              </RiskCard>
+              <RiskCard icon={<ShieldCheck size={24} />}>
+                Robust cybersecurity protocols and physical security designed in partnership with
+                global experts.
               </RiskCard>
             </div>
           </div>
@@ -1074,3 +1082,4 @@ export default function Home({}) {
     </div>
   );
 }
+
