@@ -331,9 +331,12 @@ const RoadmapTimelineItem = ({
         animate={isInView ? 'visible' : 'hidden'}
         variants={variants}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className={cn('w-full md:max-w-md', side === 'left' ? 'md:w-1/2 md:pr-8 md:text-right' : 'md:w-1/2 md:pl-8')}
+        className={cn('w-full md:max-w-md group', side === 'left' ? 'md:w-1/2 md:pr-8 md:text-right' : 'md:w-1/2 md:pl-8')}
       >
-         <GlassCard className={cn(isTarget && 'border-green-500/50')}>
+         <GlassCard className={cn(
+            'transition-all duration-300 ease-in-out group-hover:scale-[1.02]',
+            isTarget && 'border-green-500/50'
+          )}>
           <CardHeader>
             <CardTitle className={cn(isTarget && 'text-green-500')}>{title}</CardTitle>
           </CardHeader>
@@ -342,6 +345,12 @@ const RoadmapTimelineItem = ({
             <p className="text-muted-foreground">{description}</p>
           </CardContent>
           )}
+          <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+            style={{
+              background:
+                'radial-gradient(400px circle at 50% 50%, hsl(var(--primary) / 0.1), transparent 80%)',
+            }}
+          />
         </GlassCard>
       </motion.div>
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
