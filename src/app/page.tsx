@@ -39,6 +39,8 @@ import { InvestmentChart } from '@/components/investment-chart';
 import { cn } from '@/lib/utils';
 import DecryptedText from '@/components/decrypted-text';
 import AnimatedCounter from '@/components/animated-counter';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 
 const ExecutiveSummaryCard = ({
   icon,
@@ -94,7 +96,13 @@ const SolutionCard = ({
   imageAlt: string;
   imageHint: string;
 }) => (
-  <div className="group relative overflow-hidden rounded-2xl bg-white/50 p-0 shadow-soft-light transition-all duration-300 ease-in-out hover:shadow-soft-light-hover hover:scale-[1.02] dark:bg-black/20 dark:shadow-soft-dark dark:hover:shadow-soft-dark-hover">
+  <div
+    className={cn(
+      'group relative overflow-hidden rounded-2xl bg-white/50 dark:bg-black/20 shadow-soft-light dark:shadow-soft-dark',
+      'transition-all duration-300 ease-in-out',
+      'hover:shadow-soft-light-hover dark:hover:shadow-soft-dark-hover hover:scale-[1.02]'
+    )}
+  >
     <Image
       src={imageSrc}
       width={600}
@@ -218,12 +226,11 @@ const FinancialMetricCard = ({
   postfix?: string;
   className?: string;
 }) => (
-  <div
+  <GlassCard
     className={cn(
-      'group relative rounded-2xl bg-white/50 dark:bg-black/20 p-6 shadow-soft-light dark:shadow-soft-dark',
-      'transition-all duration-300 ease-in-out',
-      'hover:shadow-soft-light-hover dark:hover:shadow-soft-dark-hover hover:scale-[1.02]',
-      'flex flex-col justify-between',
+      'group relative transition-all duration-300 ease-in-out',
+      'hover:scale-[1.02]',
+      'flex flex-col justify-between p-6',
       className
     )}
   >
@@ -244,8 +251,115 @@ const FinancialMetricCard = ({
         background: 'radial-gradient(600px circle at 50% 100%, hsl(var(--primary) / 0.1), transparent 80%)',
       }}
     />
-  </div>
+  </GlassCard>
 );
+
+const TimelineItem = ({
+  side,
+  children,
+}: {
+  side: 'left' | 'right';
+  children: React.ReactNode;
+}) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: '-100px' });
+
+  const variants = {
+    hidden: { opacity: 0, x: side === 'left' ? -100 : 100 },
+    visible: { opacity: 1, x: 0 },
+  };
+
+  return (
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={isInView ? 'visible' : 'hidden'}
+      variants={variants}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
+      className="relative flex justify-center"
+    >
+      <div
+        className={cn(
+          'flex w-full items-center',
+          side === 'left' ? 'justify-end md:w-1/2 md:pr-8' : 'justify-start md:w-1/2 md:pl-8'
+        )}
+      >
+        {children}
+      </div>
+      {side === 'right' && <div className="hidden w-1/2 md:block"></div>}
+      <div
+        className={cn(
+          'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform'
+        )}
+      >
+        <div className="z-10 flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary bg-background text-primary shadow-lg ring-4 ring-background">
+          {side === 'right' ? 2 : (side === 'left' ? 1 : 3) }
+        </div>
+      </div>
+      {side === 'left' && <div className="hidden w-1/2 md:block"></div>}
+    </motion.div>
+  );
+};
+
+
+const RoadmapTimelineItem = ({
+  side,
+  phase,
+  title,
+  description,
+  isTarget = false,
+}: {
+  side: 'left' | 'right';
+  phase?: number;
+  title: string;
+  description?: string;
+  isTarget?: boolean;
+}) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: '-100px' });
+
+  const variants = {
+    hidden: { opacity: 0, x: side === 'left' ? -50 : 50 },
+    visible: { opacity: 1, x: 0 },
+  };
+
+  return (
+    <div ref={ref} className="relative mt-8 flex justify-center">
+      {side === 'right' && <div className="hidden w-1/2 md:block"></div>}
+      <motion.div
+        initial="hidden"
+        animate={isInView ? 'visible' : 'hidden'}
+        variants={variants}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+        className={cn('w-full md:max-w-md', side === 'left' ? 'md:w-1/2 md:pr-8 md:text-right' : 'md:w-1/2 md:pl-8')}
+      >
+         <GlassCard className={cn(isTarget && 'border-green-500/50')}>
+          <CardHeader>
+            <CardTitle className={cn(isTarget && 'text-green-500')}>{title}</CardTitle>
+          </CardHeader>
+          {description && (
+          <CardContent>
+            <p className="text-muted-foreground">{description}</p>
+          </CardContent>
+          )}
+        </GlassCard>
+      </motion.div>
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
+        <div className={cn(
+            "z-10 flex h-10 w-10 items-center justify-center rounded-full border-2 bg-background shadow-lg",
+            isTarget
+              ? "border-green-500 bg-green-500/20 text-green-500 animate-pulse"
+              : "border-primary text-primary"
+          )}
+        >
+          {isTarget ? <CircleCheckBig /> : <span className="font-bold">{phase}</span>}
+        </div>
+      </div>
+      {side === 'left' && <div className="hidden w-1/2 md:block"></div>}
+    </div>
+  );
+};
+
 
 export default function Home({}) {
   return (
@@ -629,12 +743,11 @@ export default function Home({}) {
                 icon={<Target size={24} />}
                 className="lg:col-span-2"
               />
-              <div
+              <GlassCard
                 className={cn(
-                  'group relative rounded-2xl bg-white/50 dark:bg-black/20 p-6 shadow-soft-light dark:shadow-soft-dark',
-                  'transition-all duration-300 ease-in-out',
-                  'hover:shadow-soft-light-hover dark:hover:shadow-soft-dark-hover hover:scale-[1.02]',
-                  'md:col-span-3 lg:col-span-2 lg:row-span-2 min-h-[300px]'
+                  'group relative transition-all duration-300 ease-in-out',
+                  'hover:scale-[1.02]',
+                  'md:col-span-3 lg:col-span-2 lg:row-span-2 min-h-[300px] p-6'
                 )}
               >
                   <h3 className="mb-4 text-lg font-semibold">Investment Breakdown</h3>
@@ -646,7 +759,7 @@ export default function Home({}) {
                         'radial-gradient(800px circle at 50% 50%, hsl(var(--primary) / 0.1), transparent 80%)',
                     }}
                   />
-              </div>
+              </GlassCard>
               <FinancialMetricCard
                 label="Payback Period"
                 value={2.3}
@@ -693,86 +806,35 @@ export default function Home({}) {
               />
             </div>
             <div className="relative mt-12">
-              <div className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-border"></div>
-              <div className="relative flex justify-center">
-                <div className="flex w-full items-center justify-end md:w-1/2 md:pr-8">
-                  <Card className="w-full md:max-w-md bg-card/30">
-                    <CardHeader>
-                      <CardTitle>Phase 1: Foundation (Year 1)</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">
-                        Finalize master plan, secure permits, formalize partnerships, and begin
-                        site preparation.
-                      </p>
-                    </CardContent>
-                  </Card>
-                </div>
-                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
-                  <div className="z-10 flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary bg-background text-primary font-bold">
-                    1
-                  </div>
-                </div>
-                <div className="hidden w-1/2 md:block"></div>
-              </div>
-              <div className="relative mt-8 flex justify-center">
-                <div className="hidden w-1/2 md:block"></div>
-                <div className="flex w-full items-center justify-start md:w-1/2 md:pl-8">
-                  <Card className="w-full md:max-w-md bg-card/30">
-                    <CardHeader>
-                      <CardTitle>Phase 2: Vertical Construction (Year 2-3)</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">
-                        Sphere structural completion, facade &amp; tech integration. Develop
-                        Innovation Campus.
-                      </p>
-                    </CardContent>
-                  </Card>
-                </div>
-                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
-                  <div className="z-10 flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary bg-background text-primary font-bold">
-                    2
-                  </div>
-                </div>
-              </div>
-              <div className="relative mt-8 flex justify-center">
-                <div className="flex w-full items-center justify-end md:w-1/2 md:pr-8">
-                  <Card className="w-full md:max-w-md bg-card/30">
-                    <CardHeader>
-                      <CardTitle>Phase 3: Launch Readiness (Year 3-4)</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">
-                        Systems integration, testing, commissioning, and global marketing launch.
-                      </p>
-                    </CardContent>
-                  </Card>
-                </div>
-                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
-                  <div className="z-10 flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary bg-background text-primary font-bold">
-                    3
-                  </div>
-                </div>
-                <div className="hidden w-1/2 md:block"></div>
-              </div>
-              <div className="relative mt-8 flex justify-center">
-                <div className="hidden w-1/2 md:block"></div>
-                <div className="flex w-full items-center justify-start md:w-1/2 md:pl-8">
-                  <Card className="w-full border-green-500/50 md:max-w-md bg-card/30">
-                    <CardHeader>
-                      <CardTitle className="text-green-600">
-                        TARGET: GRAND OPENING Q4 2028
-                      </CardTitle>
-                    </CardHeader>
-                  </Card>
-                </div>
-                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
-                  <div className="z-10 flex h-10 w-10 items-center justify-center rounded-full border-2 border-green-500 bg-green-500/20 text-green-500">
-                    <CircleCheckBig />
-                  </div>
-                </div>
-              </div>
+              <div className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-border/50"></div>
+              
+              <RoadmapTimelineItem 
+                side="left"
+                phase={1}
+                title="Phase 1: Foundation (Year 1)"
+                description="Finalize master plan, secure permits, formalize partnerships, and begin site preparation."
+              />
+              
+              <RoadmapTimelineItem 
+                side="right"
+                phase={2}
+                title="Phase 2: Vertical Construction (Year 2-3)"
+                description="Sphere structural completion, facade &amp; tech integration. Develop Innovation Campus."
+              />
+
+              <RoadmapTimelineItem 
+                side="left"
+                phase={3}
+                title="Phase 3: Launch Readiness (Year 3-4)"
+                description="Systems integration, testing, commissioning, and global marketing launch."
+              />
+              
+              <RoadmapTimelineItem 
+                side="right"
+                isTarget={true}
+                title="TARGET: GRAND OPENING Q4 2028"
+              />
+
             </div>
           </div>
         </section>
