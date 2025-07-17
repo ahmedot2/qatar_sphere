@@ -1049,21 +1049,31 @@ export default function Home({}) {
         </section>
 
         {/* Slide 12: Conclusion */}
-        <section id="conclusion" className="bg-primary text-primary-foreground">
+        <section id="conclusion">
           <div className="container text-center">
-            <h2 className="text-3xl font-headline font-bold md:text-4xl">
-              Investing in the Future Sovereign Capability of Qatar
-            </h2>
-            <p className="mx-auto mt-4 max-w-3xl text-primary-foreground/80 md:text-xl">
-              More than an investment in infrastructure, this is an investment in our nation&apos;s
-              future. It is a powerful economic engine, a global symbol of innovation, and a
-              profitable venture that accelerates the highest aspirations of the Qatar National
-              Vision 2030.
-            </p>
-            <div className="mt-8">
-              <Button size="lg" variant="secondary">
-                We Welcome Your Questions
-              </Button>
+            <div className="group relative transition-all duration-300 ease-in-out hover:scale-[1.02]">
+              <GlassCard className="text-center">
+                <h2 className="text-3xl font-headline font-bold md:text-4xl">
+                  Investing in the Future Sovereign Capability of Qatar
+                </h2>
+                <p className="mx-auto mt-4 max-w-3xl text-muted-foreground md:text-xl">
+                  More than an investment in infrastructure, this is an investment in our nation&apos;s
+                  future. It is a powerful economic engine, a global symbol of innovation, and a
+                  profitable venture that accelerates the highest aspirations of the Qatar National
+                  Vision 2030.
+                </p>
+                <div className="mt-8">
+                  <Button size="lg" variant="secondary">
+                    We Welcome Your Questions
+                  </Button>
+                </div>
+              </GlassCard>
+              <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  style={{
+                    background:
+                      'radial-gradient(800px circle at 50% 50%, hsl(var(--primary) / 0.1), transparent 80%)',
+                  }}
+              />
             </div>
           </div>
         </section>
@@ -1080,6 +1090,7 @@ export default function Home({}) {
     </div>
   );
 }
+
 
 
 
