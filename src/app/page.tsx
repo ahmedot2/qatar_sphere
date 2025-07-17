@@ -79,6 +79,83 @@ const ExecutiveSummaryCard = ({
   </div>
 );
 
+const SolutionCard = ({
+  icon,
+  title,
+  children,
+  imageSrc,
+  imageAlt,
+  imageHint,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  children: React.ReactNode;
+  imageSrc: string;
+  imageAlt: string;
+  imageHint: string;
+}) => (
+  <div className="group relative overflow-hidden rounded-2xl bg-white/50 p-0 shadow-soft-light transition-all duration-300 ease-in-out hover:shadow-soft-light-hover hover:scale-[1.02] dark:bg-black/20 dark:shadow-soft-dark dark:hover:shadow-soft-dark-hover">
+    <Image
+      src={imageSrc}
+      width={600}
+      height={400}
+      alt={imageAlt}
+      className="w-full object-cover"
+      data-ai-hint={imageHint}
+    />
+    <div className="p-6">
+      <h3 className="text-2xl font-bold">{title}</h3>
+      <ul className="mt-4 space-y-4 text-muted-foreground">{children}</ul>
+    </div>
+    <div
+      className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+      style={{
+        background: 'radial-gradient(600px circle at 50% 50%, hsl(var(--primary) / 0.1), transparent 80%)',
+      }}
+    />
+  </div>
+);
+
+
+const ImpactCard = ({
+  icon,
+  title,
+  children,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  children: React.ReactNode;
+}) => (
+  <div
+    className={cn(
+      'group relative rounded-2xl bg-white/50 dark:bg-black/20 p-6 shadow-soft-light dark:shadow-soft-dark',
+      'transition-all duration-300 ease-in-out h-full',
+      'hover:shadow-soft-light-hover dark:hover:shadow-soft-dark-hover hover:scale-[1.02]'
+    )}
+  >
+    <div className="flex items-start gap-6">
+      <div
+        className={cn(
+          'flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-gray-200/70 dark:bg-gray-800/60',
+          'transition-colors duration-300 group-hover:bg-primary/10 group-hover:text-primary'
+        )}
+      >
+        {icon}
+      </div>
+      <div className="flex flex-col">
+        <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200" dangerouslySetInnerHTML={{ __html: title }} />
+        <p className="mt-2 text-gray-600 dark:text-gray-400">{children}</p>
+      </div>
+    </div>
+    <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+         style={{
+           background:
+             'radial-gradient(400px circle at 50% 50%, hsl(var(--primary) / 0.1), transparent 80%)',
+         }}
+    />
+  </div>
+);
+
 const FeatureCard = ({
   icon,
   title,
@@ -360,76 +437,48 @@ export default function Home({}) {
               />
             </div>
             <div className="grid gap-8 md:grid-cols-2">
-              <div className="group relative overflow-hidden rounded-2xl bg-white/50 p-0 shadow-soft-light transition-all duration-300 ease-in-out hover:shadow-soft-light-hover hover:scale-[1.02] dark:bg-black/20 dark:shadow-soft-dark dark:hover:shadow-soft-dark-hover">
-                <Image
-                  src="https://placehold.co/600x400.png"
-                  width={600}
-                  height={400}
-                  alt="Public Experience"
-                  className="w-full object-cover"
-                  data-ai-hint="modern entertainment venue"
-                />
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold">Zone 1: The Public Experience</h3>
-                  <ul className="mt-4 space-y-4 text-muted-foreground">
-                    <li className="flex items-start gap-3">
-                      <Building2 className="mt-1 h-5 w-5 shrink-0 text-primary" />
-                      <span>The QatarSphere venue, with dynamic, submersible stages.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Hotel className="mt-1 h-5 w-5 shrink-0 text-primary" />
-                      <span>Luxury hotels with 2,500 rooms.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <ShoppingBag className="mt-1 h-5 w-5 shrink-0 text-primary" />
-                      <span>200+ retail spaces and a 2-mile entertainment promenade.</span>
-                    </li>
-                  </ul>
-                </div>
-                <div
-                  className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                  style={{
-                    background:
-                      'radial-gradient(600px circle at 50% 50%, hsl(var(--primary) / 0.1), transparent 80%)',
-                  }}
-                />
-              </div>
-              <div className="group relative overflow-hidden rounded-2xl bg-white/50 p-0 shadow-soft-light transition-all duration-300 ease-in-out hover:shadow-soft-light-hover hover:scale-[1.02] dark:bg-black/20 dark:shadow-soft-dark dark:hover:shadow-soft-dark-hover">
-                <Image
-                  src="https://placehold.co/600x400.png"
-                  width={600}
-                  height={400}
-                  alt="Innovation Campus"
-                  className="w-full object-cover"
-                  data-ai-hint="futuristic research lab"
-                />
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold">Zone 2: The Qatar Innovation Campus</h3>
-                  <ul className="mt-4 space-y-4 text-muted-foreground">
-                    <li className="flex items-start gap-3">
-                      <FlaskConical className="mt-1 h-5 w-5 shrink-0 text-primary" />
-                      <span>State-of-the-art R&amp;D facilities and secure data centers.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Bot className="mt-1 h-5 w-5 shrink-0 text-primary" />
-                      <span>
-                        &quot;Sandbox&quot; environments for testing autonomous robots and AI systems.
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Server className="mt-1 h-5 w-5 shrink-0 text-primary" />
-                      <span>Corporate headquarters and startup incubators for global tech firms.</span>
-                    </li>
-                  </ul>
-                </div>
-                <div
-                  className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                  style={{
-                    background:
-                      'radial-gradient(600px circle at 50% 50%, hsl(var(--primary) / 0.1), transparent 80%)',
-                  }}
-                />
-              </div>
+              <SolutionCard
+                imageSrc="https://placehold.co/600x400.png"
+                imageAlt="Public Experience"
+                imageHint="modern entertainment venue"
+                icon={<Building2 className="mt-1 h-5 w-5 shrink-0 text-primary" />}
+                title="Zone 1: The Public Experience"
+              >
+                <li className="flex items-start gap-3">
+                  <Building2 className="mt-1 h-5 w-5 shrink-0 text-primary" />
+                  <span>The QatarSphere venue, with dynamic, submersible stages.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Hotel className="mt-1 h-5 w-5 shrink-0 text-primary" />
+                  <span>Luxury hotels with 2,500 rooms.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <ShoppingBag className="mt-1 h-5 w-5 shrink-0 text-primary" />
+                  <span>200+ retail spaces and a 2-mile entertainment promenade.</span>
+                </li>
+              </SolutionCard>
+              <SolutionCard
+                imageSrc="https://placehold.co/600x400.png"
+                imageAlt="Innovation Campus"
+                imageHint="futuristic research lab"
+                icon={<FlaskConical className="mt-1 h-5 w-5 shrink-0 text-primary" />}
+                title="Zone 2: The Qatar Innovation Campus"
+              >
+                <li className="flex items-start gap-3">
+                  <FlaskConical className="mt-1 h-5 w-5 shrink-0 text-primary" />
+                  <span>State-of-the-art R&amp;D facilities and secure data centers.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Bot className="mt-1 h-5 w-5 shrink-0 text-primary" />
+                  <span>
+                    &quot;Sandbox&quot; environments for testing autonomous robots and AI systems.
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Server className="mt-1 h-5 w-5 shrink-0 text-primary" />
+                  <span>Corporate headquarters and startup incubators for global tech firms.</span>
+                </li>
+              </SolutionCard>
             </div>
           </div>
         </section>
@@ -462,18 +511,18 @@ export default function Home({}) {
               />
             </div>
             <div className="mt-12 grid md:grid-cols-3 gap-8">
-              <FeatureCard icon={<Book size={28} />} title="Celebrate Heritage, Power the Future">
+              <ImpactCard icon={<Book size={28} />} title="Celebrate Heritage,<br/>Power the Future">
                 A unique brand of &apos;Culture &amp; Code&apos; to define Qatar&apos;s global
                 identity, featuring a Qatar Heritage Pavilion.
-              </FeatureCard>
-              <FeatureCard icon={<Users2 size={28} />} title="Build a Knowledge Workforce">
+              </ImpactCard>
+              <ImpactCard icon={<Users2 size={28} />} title="Build a<br/>Knowledge Workforce">
                 A National Technology Fellowship to develop elite Qatari talent in AI, quantum
                 mechanics, and robotics.
-              </FeatureCard>
-              <FeatureCard icon={<HeartHandshake size={28} />} title="Enhance Community Well-being">
+              </ImpactCard>
+              <ImpactCard icon={<HeartHandshake size={28} />} title="Enhance Community<br/>Well-being">
                 World-class public spaces, family-friendly programming, and a new source of
                 national pride.
-              </FeatureCard>
+              </ImpactCard>
             </div>
           </div>
         </section>
