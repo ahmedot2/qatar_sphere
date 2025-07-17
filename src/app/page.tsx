@@ -1054,14 +1054,12 @@ export default function Home({}) {
             <h2 className="text-3xl font-headline font-bold md:text-4xl">
               Investing in the Future Sovereign Capability of Qatar
             </h2>
-            <DecryptedText
-              parentClassName="mx-auto mt-4 max-w-3xl text-primary-foreground/80 md:text-xl"
-              animateOn="view"
-              sequential={true}
-              speed={20}
-              maxIterations={10}
-              text="More than an investment in infrastructure, this is an investment in our nation's future. It is a powerful economic engine, a global symbol of innovation, and a profitable venture that accelerates the highest aspirations of the Qatar National Vision 2030."
-            />
+            <p className="mx-auto mt-4 max-w-3xl text-primary-foreground/80 md:text-xl">
+              More than an investment in infrastructure, this is an investment in our nation&apos;s
+              future. It is a powerful economic engine, a global symbol of innovation, and a
+              profitable venture that accelerates the highest aspirations of the Qatar National
+              Vision 2030.
+            </p>
             <div className="mt-8">
               <Button size="lg" variant="secondary">
                 We Welcome Your Questions
@@ -1082,6 +1080,7 @@ export default function Home({}) {
     </div>
   );
 }
+
 
 
 
