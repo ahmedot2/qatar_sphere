@@ -1006,9 +1006,9 @@ export default function Home({}) {
               />
             </div>
             <div className="space-y-6">
-              <GlassCard>
+              <GlassCard className="bg-white/80 dark:bg-black/30 shadow-soft-light dark:shadow-soft-dark">
                 <CardHeader>
-                  <CardTitle>Our Request</CardTitle>
+                  <CardTitle className="text-gray-800 dark:text-gray-200">Our Request</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
@@ -1017,28 +1017,28 @@ export default function Home({}) {
                   </p>
                 </CardContent>
               </GlassCard>
-              <GlassCard>
+              <GlassCard className="bg-white/80 dark:bg-black/30 shadow-soft-light dark:shadow-soft-dark">
                 <CardHeader>
-                  <CardTitle>Immediate Next Steps</CardTitle>
+                  <CardTitle className="text-gray-800 dark:text-gray-200">Immediate Next Steps</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-4 text-muted-foreground">
                     <li className="flex items-start gap-3">
                       <CircleCheckBig className="h-5 w-5 text-primary shrink-0 mt-1" />
                       <span>
-                        <span className="font-bold">Secure Board Approval</span>
+                        <span className="font-bold text-foreground">Secure Board Approval</span>
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CircleCheckBig className="h-5 w-5 text-primary shrink-0 mt-1" />
                       <span>
-                        <span className="font-bold">Formalize Partnerships (90 Days)</span>
+                        <span className="font-bold text-foreground">Formalize Partnerships (90 Days)</span>
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CircleCheckBig className="h-5 w-5 text-primary shrink-0 mt-1" />
                       <span>
-                        <span className="font-bold">Commence Phase 1 (6 Months)</span>
+                        <span className="font-bold text-foreground">Commence Phase 1 (6 Months)</span>
                       </span>
                     </li>
                   </ul>
@@ -1082,4 +1082,5 @@ export default function Home({}) {
     </div>
   );
 }
+
 
