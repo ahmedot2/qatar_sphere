@@ -218,7 +218,15 @@ const FinancialMetricCard = ({
   postfix?: string;
   className?: string;
 }) => (
-  <GlassCard className={cn("flex flex-col justify-between p-6", className)}>
+  <div
+    className={cn(
+      'group relative rounded-2xl bg-white/50 dark:bg-black/20 p-6 shadow-soft-light dark:shadow-soft-dark',
+      'transition-all duration-300 ease-in-out',
+      'hover:shadow-soft-light-hover dark:hover:shadow-soft-dark-hover hover:scale-[1.02]',
+      'flex flex-col justify-between',
+      className
+    )}
+  >
     <div className="flex items-center justify-between text-muted-foreground">
       <span>{label}</span>
       {icon}
@@ -230,7 +238,13 @@ const FinancialMetricCard = ({
         <span>{value}</span>
       )}
     </div>
-  </GlassCard>
+    <div
+      className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+      style={{
+        background: 'radial-gradient(600px circle at 50% 100%, hsl(var(--primary) / 0.1), transparent 80%)',
+      }}
+    />
+  </div>
 );
 
 export default function Home({}) {
@@ -615,10 +629,24 @@ export default function Home({}) {
                 icon={<Target size={24} />}
                 className="lg:col-span-2"
               />
-              <GlassCard className="md:col-span-3 lg:col-span-2 lg:row-span-2 min-h-[300px] p-6">
-                <h3 className="mb-4 text-lg font-semibold">Investment Breakdown</h3>
-                <InvestmentChart />
-              </GlassCard>
+              <div
+                className={cn(
+                  'group relative rounded-2xl bg-white/50 dark:bg-black/20 p-6 shadow-soft-light dark:shadow-soft-dark',
+                  'transition-all duration-300 ease-in-out',
+                  'hover:shadow-soft-light-hover dark:hover:shadow-soft-dark-hover hover:scale-[1.02]',
+                  'md:col-span-3 lg:col-span-2 lg:row-span-2 min-h-[300px]'
+                )}
+              >
+                  <h3 className="mb-4 text-lg font-semibold">Investment Breakdown</h3>
+                  <InvestmentChart />
+                  <div
+                    className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                    style={{
+                      background:
+                        'radial-gradient(800px circle at 50% 50%, hsl(var(--primary) / 0.1), transparent 80%)',
+                    }}
+                  />
+              </div>
               <FinancialMetricCard
                 label="Payback Period"
                 value={2.3}
