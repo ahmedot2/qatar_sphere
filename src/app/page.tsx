@@ -160,8 +160,8 @@ export default function Home({}) {
 
       <main className="flex-1">
         {/* Video Section */}
-        <section id="video-intro" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center">
-            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto px-4 sm:px-8 md:px-12">
+        <section id="video-intro" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4 sm:p-8 md:p-12">
+            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto">
                 <div className="aspect-video w-full bg-muted/30">
                     <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-1.mp4">
                         Your browser does not support the video tag.
@@ -199,8 +199,8 @@ export default function Home({}) {
         </section>
 
         {/* Video Section 2 */}
-        <section id="video-2" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center">
-            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto px-4 sm:px-8 md:px-12">
+        <section id="video-2" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4 sm:p-8 md:p-12">
+            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto">
                 <div className="aspect-video w-full bg-muted/30">
                     <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-2.mp4">
                         Your browser does not support the video tag.
@@ -245,8 +245,8 @@ export default function Home({}) {
         </section>
 
         {/* Video Section 3 */}
-        <section id="video-3" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center">
-            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto px-4 sm:px-8 md:px-12">
+        <section id="video-3" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4 sm:p-8 md:p-12">
+            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto">
                 <div className="aspect-video w-full bg-muted/30">
                     <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-3.mp4">
                         Your browser does not support the video tag.
@@ -259,12 +259,12 @@ export default function Home({}) {
         <section id="new-paradigm">
           <div className="container flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2">
-              <div className="space-y-4">
+              <div>
                   <h2 className="text-3xl font-headline font-bold">
                     A New Paradigm: Beyond Entertainment
                   </h2>
                   <DecryptedText
-                    parentClassName="text-xl text-muted-foreground md:text-2xl"
+                    parentClassName="text-xl text-muted-foreground md:text-2xl mt-4"
                     animateOn="view"
                     sequential={true}
                     speed={20}
@@ -272,10 +272,10 @@ export default function Home({}) {
                     text="From an Entertainment Venue to a Cognitive Hub. While competitors focus on building bigger screens, we will build a smarter city. The QatarSphere District's vision transcends entertainment to become a globally significant hub for technological innovation."
                   />
               </div>
-              <div className="space-y-6 pt-4 mt-4">
+              <div className="mt-8 space-y-4">
                 <div className="group relative transition-all duration-300 ease-in-out hover:scale-[1.02]">
                   <GlassCard>
-                    <div className="flex items-start gap-4 p-2">
+                    <div className="flex items-start gap-4 p-4">
                       <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
                         <Globe size={24} />
                       </div>
@@ -297,7 +297,7 @@ export default function Home({}) {
                 </div>
                 <div className="group relative transition-all duration-300 ease-in-out hover:scale-[1.02]">
                   <GlassCard>
-                    <div className="flex items-start gap-4 p-2">
+                    <div className="flex items-start gap-4 p-4">
                       <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
                         <BrainCircuit size={24} />
                       </div>
@@ -333,8 +333,8 @@ export default function Home({}) {
         </section>
 
         {/* Video Section 4 */}
-        <section id="video-4" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center">
-            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto px-4 sm:px-8 md:px-12">
+        <section id="video-4" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4 sm:p-8 md:p-12">
+            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto">
                 <div className="aspect-video w-full bg-muted/30">
                     <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-4.mp4">
                         Your browser does not support the video tag.
@@ -430,8 +430,8 @@ export default function Home({}) {
         </section>
 
         {/* Video Section 5 */}
-        <section id="video-5" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center">
-            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto px-4 sm:px-8 md:px-12">
+        <section id="video-5" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4 sm:p-8 md:p-12">
+            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto">
                 <div className="aspect-video w-full bg-muted/30">
                     <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-5.mp4">
                         Your browser does not support the video tag.
@@ -474,8 +474,8 @@ export default function Home({}) {
         </section>
 
         {/* Video Section 6 */}
-        <section id="video-6" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center">
-            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto px-4 sm:px-8 md:px-12">
+        <section id="video-6" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4 sm:p-8 md:p-12">
+            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto">
                 <div className="aspect-video w-full bg-muted/30">
                     <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-6.mp4">
                         Your browser does not support the video tag.
@@ -510,8 +510,8 @@ export default function Home({}) {
         </section>
 
         {/* Video Section 7 */}
-        <section id="video-7" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center">
-            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto px-4 sm:px-8 md:px-12">
+        <section id="video-7" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4 sm:p-8 md:p-12">
+            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto">
                 <div className="aspect-video w-full bg-muted/30">
                     <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-7.mp4">
                         Your browser does not support the video tag.
@@ -574,8 +574,8 @@ export default function Home({}) {
         </section>
 
         {/* Video Section 8 */}
-        <section id="video-8" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center">
-            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto px-4 sm:px-8 md:px-12">
+        <section id="video-8" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4 sm:p-8 md:p-12">
+            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto">
                 <div className="aspect-video w-full bg-muted/30">
                     <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-8.mp4">
                         Your browser does not support the video tag.
@@ -686,8 +686,8 @@ export default function Home({}) {
         </section>
 
         {/* Video Section 9 */}
-        <section id="video-9" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center">
-            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto px-4 sm:px-8 md:px-12">
+        <section id="video-9" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4 sm:p-8 md:p-12">
+            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto">
                 <div className="aspect-video w-full bg-muted/30">
                     <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-9.mp4">
                         Your browser does not support the video tag.
@@ -729,8 +729,8 @@ export default function Home({}) {
         </section>
 
         {/* Video Section 10 */}
-        <section id="video-10" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center">
-            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto px-4 sm:px-8 md:px-12">
+        <section id="video-10" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4 sm:p-8 md:p-12">
+            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto">
                 <div className="aspect-video w-full bg-muted/30">
                     <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-10.mp4">
                         Your browser does not support the video tag.
