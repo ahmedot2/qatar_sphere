@@ -762,8 +762,8 @@ export default function Home({}) {
 
         {/* Slide 11: Call to Action */}
         <section id="cta">
-          <div className="container grid gap-12 md:grid-cols-2">
-            <div className="space-y-4">
+          <div className="container grid items-center gap-12 md:grid-cols-2">
+            <div className="flex flex-col justify-center space-y-4">
               <h2 className="text-3xl font-headline font-bold">Call to Action</h2>
               <DecryptedText
                 parentClassName="text-xl text-muted-foreground md:text-2xl"
@@ -775,7 +775,7 @@ export default function Home({}) {
               />
             </div>
             <div className="space-y-6">
-              <Card className="bg-card/30">
+              <GlassCard>
                 <CardHeader>
                   <CardTitle>Our Request</CardTitle>
                 </CardHeader>
@@ -785,8 +785,8 @@ export default function Home({}) {
                     Authority to serve as the anchor investor for the QatarSphere District.
                   </p>
                 </CardContent>
-              </Card>
-              <Card className="bg-card/30">
+              </GlassCard>
+              <GlassCard>
                 <CardHeader>
                   <CardTitle>Immediate Next Steps</CardTitle>
                 </CardHeader>
@@ -812,7 +812,7 @@ export default function Home({}) {
                     </li>
                   </ul>
                 </CardContent>
-              </Card>
+              </GlassCard>
             </div>
           </div>
         </section>
