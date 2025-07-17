@@ -342,10 +342,11 @@ const RoadmapTimelineItem = ({
         animate={isInView ? 'visible' : 'hidden'}
         variants={variants}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className={cn('w-full md:max-w-md group', side === 'left' ? 'md:w-1/2 md:pr-8 md:text-right' : 'md:w-1/2 md:pl-8')}
+        className={cn('w-full md:max-w-md group', 
+          'transition-all duration-300 ease-in-out hover:scale-[1.02]',
+          side === 'left' ? 'md:w-1/2 md:pr-8 md:text-right' : 'md:w-1/2 md:pl-8')}
       >
          <GlassCard className={cn(
-            'transition-all duration-300 ease-in-out group-hover:scale-[1.02]',
             isTarget && 'border-green-500/50'
           )}>
           <CardHeader>
@@ -379,6 +380,24 @@ const RoadmapTimelineItem = ({
     </div>
   );
 };
+
+const RiskCard = ({ children }: { children: React.ReactNode }) => (
+  <div
+    className={cn(
+      'group relative rounded-2xl bg-white/50 dark:bg-black/20 p-6 shadow-soft-light dark:shadow-soft-dark',
+      'transition-all duration-300 ease-in-out',
+      'hover:shadow-soft-light-hover dark:hover:shadow-soft-dark-hover hover:-translate-y-1'
+    )}
+  >
+    <p className="text-gray-600 dark:text-gray-400">{children}</p>
+    <div
+      className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+      style={{
+        background: 'radial-gradient(400px circle at 50% 50%, hsl(var(--primary) / 0.1), transparent 80%)',
+      }}
+    />
+  </div>
+);
 
 
 export default function Home({}) {
@@ -930,26 +949,36 @@ export default function Home({}) {
               />
             </div>
             <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              <GlassCard icon={<DollarSign size={28} />} title="Execution Risk">
-                <b>Mitigation:</b> Partnering with CSCEC, leveraging prefabrication, and securing a
-                15% contingency budget.
-              </GlassCard>
-              <GlassCard icon={<LineChart size={28} />} title="Market Risk">
-                <b>Mitigation:</b> Dual-engine model hedges risk, as the R&amp;D/Tech sector is less
-                correlated with consumer travel.
-              </GlassCard>
-              <GlassCard icon={<Cpu size={28} />} title="Technology Risk">
-                <b>Mitigation:</b> Modular, open-architecture design for easy upgrades. The
-                QIC&apos;s purpose is to drive change.
-              </GlassCard>
-              <GlassCard icon={<Map size={28} />} title="Geopolitical Risk">
-                <b>Mitigation:</b> Diversified global partnerships. Position QIC as a neutral,
-                &quot;open-source&quot; R&amp;D hub.
-              </GlassCard>
-              <GlassCard icon={<Globe size={28} />} title="Sustainability Risk">
-                <b>Mitigation:</b> LEED Platinum design, on-site solar generation, and advanced
-                water recycling.
-              </GlassCard>
+              <RiskCard>
+                <p>
+                  <span className="font-bold">Mitigation:</span> Partnering with CSCEC, leveraging
+                  prefabrication, and securing a 15% contingency budget.
+                </p>
+              </RiskCard>
+              <RiskCard>
+                <p>
+                  <span className="font-bold">Mitigation:</span> Dual-engine model hedges risk, as
+                  the R&amp;D/Tech sector is less correlated with consumer travel.
+                </p>
+              </RiskCard>
+              <RiskCard>
+                <p>
+                  <span className="font-bold">Mitigation:</span> Modular, open-architecture design
+                  for easy upgrades. The QIC&apos;s purpose is to drive change.
+                </p>
+              </RiskCard>
+              <RiskCard>
+                <p>
+                  <span className="font-bold">Mitigation:</span> Diversified global partnerships.
+                  Position QIC as a neutral, &quot;open-source&quot; R&amp;D hub.
+                </p>
+              </RiskCard>
+              <RiskCard>
+                <p>
+                  <span className="font-bold">Mitigation:</span> LEED Platinum design, on-site solar
+                  generation, and advanced water recycling.
+                </p>
+              </RiskCard>
             </div>
           </div>
         </section>
