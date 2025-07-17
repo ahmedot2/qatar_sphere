@@ -65,6 +65,11 @@
   }
   body {
     @apply bg-background text-foreground;
+    background-image: url('/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
   }
   section {
     @apply w-full p-8 sm:p-12 md:p-16 flex flex-col items-center justify-center relative overflow-hidden;
