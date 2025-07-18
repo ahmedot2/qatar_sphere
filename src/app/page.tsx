@@ -386,7 +386,7 @@ export default function Home({}) {
       </header>
       
       <motion.div
-        className="fixed inset-x-0 top-0 h-screen w-full -z-10 bg-black"
+        className="fixed inset-x-0 top-0 h-screen w-full -z-10 bg-black hidden md:block"
         style={{ opacity: videoOpacity, scale: videoScale }}
       >
         <video
@@ -1052,5 +1052,3 @@ export default function Home({}) {
     </div>
   );
 }
-
-    
