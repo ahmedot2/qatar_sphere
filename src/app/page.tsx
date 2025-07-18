@@ -443,7 +443,7 @@ export default function Home({}) {
         <section id="executive-summary">
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="font-display text-3xl font-bold md:text-4xl">Executive Summary</h2>
+              <h2 className="font-display text-3xl font-bold md:text-4xl bg-gradient-to-r from-yellow-400 to-amber-600 bg-clip-text text-transparent">Executive Summary</h2>
               <DecryptedText
                 parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-2xl"
                 animateOn="view"
@@ -490,7 +490,7 @@ export default function Home({}) {
           <div className="container flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2">
               <div className="space-y-4">
-                  <h2 className="font-display text-3xl font-bold md:text-4xl">
+                  <h2 className="font-display text-3xl font-bold md:text-4xl bg-gradient-to-r from-yellow-400 to-amber-600 bg-clip-text text-transparent">
                     A New Paradigm: Beyond Entertainment
                   </h2>
                   <DecryptedText
@@ -577,7 +577,7 @@ export default function Home({}) {
         <section id="solution">
           <div className="container space-y-12">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="font-display text-3xl font-bold md:text-4xl">
+              <h2 className="font-display text-3xl font-bold md:text-4xl bg-gradient-to-r from-yellow-400 to-amber-600 bg-clip-text text-transparent">
                 Proposed Solution: A Dual-Purpose Ecosystem
               </h2>
               <DecryptedText
@@ -651,7 +651,7 @@ export default function Home({}) {
         <section id="impact">
           <div className="container space-y-12">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="font-display text-3xl font-bold md:text-4xl">
+              <h2 className="font-display text-3xl font-bold md:text-4xl bg-gradient-to-r from-yellow-400 to-amber-600 bg-clip-text text-transparent">
                 National &amp; Cultural Impact
               </h2>
               <DecryptedText
@@ -695,7 +695,7 @@ export default function Home({}) {
         <section id="value-proposition">
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="font-display text-3xl font-bold md:text-4xl">
+              <h2 className="font-display text-3xl font-bold md:text-4xl bg-gradient-to-r from-yellow-400 to-amber-600 bg-clip-text text-transparent">
                 A Redefined Value Proposition
               </h2>
               <DecryptedText
@@ -731,7 +731,7 @@ export default function Home({}) {
         <section id="financials">
           <div className="container">
             <div className="mx-auto mb-12 max-w-3xl text-center">
-                <h2 className="font-display text-3xl font-bold md:text-4xl">Financial Overview</h2>
+                <h2 className="font-display text-3xl font-bold md:text-4xl bg-gradient-to-r from-yellow-400 to-amber-600 bg-clip-text text-transparent">Financial Overview</h2>
                 <DecryptedText
                     parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-2xl"
                     animateOn="view"
@@ -808,7 +808,7 @@ export default function Home({}) {
         <section id="roadmap">
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="font-display text-3xl font-bold md:text-4xl">
+              <h2 className="font-display text-3xl font-bold md:text-4xl bg-gradient-to-r from-yellow-400 to-amber-600 bg-clip-text text-transparent">
                 Implementation Roadmap: 2025-2028
               </h2>
               <DecryptedText
@@ -863,7 +863,7 @@ export default function Home({}) {
         <section id="partnerships">
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="font-display text-3xl font-bold md:text-4xl">Strategic Partnerships</h2>
+              <h2 className="font-display text-3xl font-bold md:text-4xl bg-gradient-to-r from-yellow-400 to-amber-600 bg-clip-text text-transparent">Strategic Partnerships</h2>
               <DecryptedText
                 parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-2xl"
                 animateOn="view"
@@ -906,7 +906,7 @@ export default function Home({}) {
         <section id="risk">
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="font-display text-3xl font-bold md:text-4xl">
+              <h2 className="font-display text-3xl font-bold md:text-4xl bg-gradient-to-r from-yellow-400 to-amber-600 bg-clip-text text-transparent">
                 Expanded Risk Assessment &amp; Mitigation
               </h2>
               <DecryptedText
@@ -950,7 +950,7 @@ export default function Home({}) {
         <section id="cta">
           <div className="container grid items-center gap-12 md:grid-cols-2">
             <div className="flex flex-col justify-center space-y-4">
-              <h2 className="font-display text-3xl font-bold md:text-4xl">Call to Action</h2>
+              <h2 className="font-display text-3xl font-bold md:text-4xl bg-gradient-to-r from-yellow-400 to-amber-600 bg-clip-text text-transparent">Call to Action</h2>
               <DecryptedText
                 parentClassName="text-lg text-muted-foreground md:text-2xl"
                 animateOn="view"
@@ -1045,5 +1045,7 @@ export default function Home({}) {
     </div>
   );
 }
+
+    
 
     
