@@ -403,7 +403,7 @@ export default function Home({}) {
         {/* Slide 1: Title */}
         <section
           id="title"
-          className="relative flex h-screen flex-col items-center justify-center text-center pt-16"
+          className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center text-center"
         >
           <GlassCard className="w-full max-w-4xl">
             <h1 className="font-display text-4xl font-bold tracking-wider md:text-6xl lg:text-7xl uppercase text-red-800">
