@@ -374,29 +374,12 @@ export default function Home({}) {
   return (
     <div className="flex min-h-screen flex-col text-foreground">
       <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl">
-        <div className="mx-auto grid h-16 grid-cols-3 items-center rounded-full bg-background/80 px-4 shadow-lg backdrop-blur-md sm:px-6">
-          <div className="flex items-center gap-2 sm:gap-4">
-            <Button variant="ghost" size="icon" className="h-10 w-10">
-              <Menu className="h-5 w-5" />
-            </Button>
-            <a href="#solution" className="hidden text-sm font-medium hover:text-primary sm:block">
-              Solution
-            </a>
-            <a href="#impact" className="hidden text-sm font-medium hover:text-primary sm:block">
-              Impact
-            </a>
-          </div>
+        <div className="mx-auto flex h-16 items-center justify-center rounded-full bg-background/80 px-4 shadow-lg backdrop-blur-md sm:px-6">
           <div className="flex justify-center">
             <a className="flex items-center gap-2" href="/">
               <Orbit className="h-6 w-6" />
-              <span className="font-logo text-lg">QatarSphere</span>
+              <span className="font-logo text-lg tracking-widest">QatarSphere</span>
             </a>
-          </div>
-          <div className="hidden items-center justify-end gap-2 sm:flex">
-             <Button variant="ghost" size="icon" className="h-10 w-10">
-              <User className="h-5 w-5" />
-            </Button>
-            <Button>Contact</Button>
           </div>
         </div>
       </header>
