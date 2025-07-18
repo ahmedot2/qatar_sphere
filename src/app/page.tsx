@@ -386,7 +386,7 @@ export default function Home({}) {
       </header>
       
       <motion.div
-        className="fixed inset-x-0 top-0 h-screen w-full -z-10 bg-black hidden md:block"
+        className="fixed inset-x-0 top-0 h-screen w-full -z-10 bg-black"
         style={{ opacity: videoOpacity, scale: videoScale }}
       >
         <video
@@ -394,7 +394,7 @@ export default function Home({}) {
           loop
           muted
           playsInline
-          className="h-full w-full object-cover"
+          className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2"
           src="/videos/intro-1.mp4"
         />
       </motion.div>
