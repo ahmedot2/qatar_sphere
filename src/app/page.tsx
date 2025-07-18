@@ -62,7 +62,7 @@ const ExecutiveSummaryCard = ({
     className={cn(
       'group relative rounded-2xl bg-white/50 dark:bg-black/20 p-6 shadow-soft-light dark:shadow-soft-dark',
       'transition-all duration-300 ease-in-out',
-      'hover:shadow-soft-light-hover dark:hover:shadow-soft-dark-hover hover:scale-[1.02]'
+      'hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)] hover:scale-[1.02]'
     )}
   >
     <div className="flex items-center gap-4">
@@ -79,12 +79,6 @@ const ExecutiveSummaryCard = ({
     <div className="mt-4 text-foreground">
       <p>{children}</p>
     </div>
-    <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-         style={{
-           background:
-             'radial-gradient(400px circle at 50% 50%, hsl(var(--primary) / 0.1), transparent 80%)',
-         }}
-    />
   </div>
 );
 
@@ -107,7 +101,7 @@ const SolutionCard = ({
     className={cn(
       'group relative overflow-hidden rounded-2xl bg-white/50 dark:bg-black/20 shadow-soft-light dark:shadow-soft-dark',
       'transition-all duration-300 ease-in-out',
-      'hover:shadow-soft-light-hover dark:hover:shadow-soft-dark-hover hover:scale-[1.02]'
+      'hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)] hover:scale-[1.02]'
     )}
   >
     <Image
@@ -122,12 +116,6 @@ const SolutionCard = ({
       <h3 className="text-2xl font-bold">{title}</h3>
       <ul className="mt-4 space-y-4 text-foreground">{children}</ul>
     </div>
-    <div
-      className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-      style={{
-        background: 'radial-gradient(600px circle at 50% 50%, hsl(var(--primary) / 0.1), transparent 80%)',
-      }}
-    />
   </div>
 );
 
@@ -145,7 +133,7 @@ const ImpactCard = ({
     className={cn(
       'group relative rounded-2xl bg-white/50 dark:bg-black/20 p-6 shadow-soft-light dark:shadow-soft-dark',
       'transition-all duration-300 ease-in-out h-full',
-      'hover:shadow-soft-light-hover dark:hover:shadow-soft-dark-hover hover:scale-[1.02]'
+      'hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)] hover:scale-[1.02]'
     )}
   >
     <div className="flex items-start gap-6">
@@ -162,12 +150,6 @@ const ImpactCard = ({
         <p className="mt-2 text-foreground">{children}</p>
       </div>
     </div>
-    <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-         style={{
-           background:
-             'radial-gradient(400px circle at 50% 50%, hsl(var(--primary) / 0.1), transparent 80%)',
-         }}
-    />
   </div>
 );
 
@@ -184,7 +166,7 @@ const PartnerCard = ({
     className={cn(
       'group relative rounded-2xl bg-white/50 dark:bg-black/20 p-6 shadow-soft-light dark:shadow-soft-dark h-full',
       'transition-all duration-300 ease-in-out',
-      'hover:shadow-soft-light-hover dark:hover:shadow-soft-dark-hover hover:-translate-y-1'
+      'hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)] hover:-translate-y-1'
     )}
   >
     <div className="flex items-center gap-4">
@@ -199,12 +181,6 @@ const PartnerCard = ({
       <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">{title}</h3>
     </div>
     <p className="mt-4 text-foreground">{children}</p>
-    <div
-      className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-      style={{
-        background: 'radial-gradient(400px circle at 50% 50%, hsl(var(--primary) / 0.1), transparent 80%)',
-      }}
-    />
   </div>
 );
 
@@ -212,7 +188,7 @@ const ValuePropCard = ({ icon, title }: { icon: React.ReactNode; title: string }
   <div className={cn(
     'group relative rounded-2xl bg-white/50 dark:bg-black/20 p-6 shadow-soft-light dark:shadow-soft-dark text-center',
     'transition-all duration-300 ease-in-out',
-    'hover:shadow-soft-light-hover dark:hover:shadow-soft-dark-hover hover:-translate-y-1'
+    'hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)] hover:-translate-y-1'
   )}>
     <div className="flex flex-col items-center gap-4">
       <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gray-200/70 dark:bg-gray-800/60 transition-colors duration-300 group-hover:bg-primary/10 group-hover:text-primary">
@@ -220,12 +196,6 @@ const ValuePropCard = ({ icon, title }: { icon: React.ReactNode; title: string }
       </div>
       <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">{title}</h3>
     </div>
-     <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-         style={{
-           background:
-             'radial-gradient(400px circle at 50% 0%, hsl(var(--primary) / 0.1), transparent 80%)',
-         }}
-    />
   </div>
 );
 
@@ -247,7 +217,7 @@ const FinancialMetricCard = ({
   <GlassCard
     className={cn(
       'group relative transition-all duration-300 ease-in-out',
-      'hover:scale-[1.02]',
+      'hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)] hover:scale-[1.02]',
       'flex flex-col p-6 min-h-[9rem]',
       className
     )}
@@ -263,12 +233,6 @@ const FinancialMetricCard = ({
         <span>{value}</span>
       )}
     </div>
-    <div
-      className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-      style={{
-        background: 'radial-gradient(600px circle at 50% 100%, hsl(var(--primary) / 0.1), transparent 80%)',
-      }}
-    />
   </GlassCard>
 );
 
@@ -316,7 +280,7 @@ const RoadmapTimelineItem = ({
         {!isLast && <div className="mt-2 w-0.5 grow bg-border/50" />}
       </div>
       <div className={cn('pb-12 pt-1 group w-full transition-all duration-300 ease-in-out hover:scale-[1.02]')}>
-        <GlassCard className={cn(isTarget && 'border-green-500/50')}>
+        <GlassCard className={cn('hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]', isTarget && 'border-green-500/50')}>
           <CardHeader>
             <CardTitle className={cn(isTarget && 'text-green-500')}>{title}</CardTitle>
           </CardHeader>
@@ -325,12 +289,6 @@ const RoadmapTimelineItem = ({
               <p className="text-foreground">{description}</p>
             </CardContent>
           )}
-           <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-            style={{
-              background:
-                'radial-gradient(400px circle at 50% 50%, hsl(var(--primary) / 0.1), transparent 80%)',
-            }}
-          />
         </GlassCard>
       </div>
     </motion.div>
@@ -342,7 +300,7 @@ const RiskCard = ({ icon, children }: { icon: React.ReactNode; children: React.R
     className={cn(
       'group relative rounded-2xl bg-white/50 dark:bg-black/20 p-6 shadow-soft-light dark:shadow-soft-dark',
       'transition-all duration-300 ease-in-out',
-      'hover:shadow-soft-light-hover dark:hover:shadow-soft-dark-hover hover:-translate-y-1'
+      'hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)] hover:-translate-y-1'
     )}
   >
     <div className="flex items-start gap-4">
@@ -355,13 +313,6 @@ const RiskCard = ({ icon, children }: { icon: React.ReactNode; children: React.R
       </div>
       <p className="text-foreground">{children}</p>
     </div>
-    <div
-      className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-      style={{
-        background:
-          'radial-gradient(400px circle at 20% 50%, hsl(var(--primary) / 0.1), transparent 80%)',
-      }}
-    />
   </div>
 );
 
@@ -503,7 +454,7 @@ export default function Home({}) {
                   />
               </div>
               <div className="mt-8 space-y-6">
-                <div className="group relative transition-all duration-300 ease-in-out hover:scale-[1.02]">
+                <div className="group relative transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)] hover:scale-[1.02]">
                   <GlassCard>
                     <div className="flex items-start gap-4 p-4">
                       <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
@@ -518,14 +469,8 @@ export default function Home({}) {
                       </div>
                     </div>
                   </GlassCard>
-                   <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                       style={{
-                         background:
-                           'radial-gradient(400px circle at 50% 50%, hsl(var(--primary) / 0.1), transparent 80%)',
-                       }}
-                  />
                 </div>
-                <div className="group relative transition-all duration-300 ease-in-out hover:scale-[1.02]">
+                <div className="group relative transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)] hover:scale-[1.02]">
                   <GlassCard>
                     <div className="flex items-start gap-4 p-4">
                       <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
@@ -540,12 +485,6 @@ export default function Home({}) {
                       </div>
                     </div>
                   </GlassCard>
-                  <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                     style={{
-                       background:
-                         'radial-gradient(400px circle at 50% 50%, hsl(var(--primary) / 0.1), transparent 80%)',
-                     }}
-                  />
                 </div>
               </div>
             </div>
@@ -761,19 +700,12 @@ export default function Home({}) {
               <GlassCard
                 className={cn(
                   'group relative transition-all duration-300 ease-in-out',
-                  'hover:scale-[1.02]',
+                  'hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)] hover:scale-[1.02]',
                   'md:col-span-3 lg:col-span-2 lg:row-span-2 min-h-[300px] p-6'
                 )}
               >
                   <h3 className="mb-4 text-lg font-semibold">Investment Breakdown</h3>
                   <InvestmentChart />
-                  <div
-                    className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                    style={{
-                      background:
-                        'radial-gradient(800px circle at 50% 50%, hsl(var(--primary) / 0.1), transparent 80%)',
-                    }}
-                  />
               </GlassCard>
               <FinancialMetricCard
                 label="Payback Period"
@@ -961,7 +893,7 @@ export default function Home({}) {
               />
             </div>
             <div className="space-y-6">
-              <GlassCard className="bg-white/80 dark:bg-black/30 shadow-soft-light dark:shadow-soft-dark">
+              <GlassCard className="bg-white/80 dark:bg-black/30 shadow-soft-light dark:shadow-soft-dark hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
                 <CardHeader>
                   <CardTitle className="text-gray-800 dark:text-gray-200">Our Request</CardTitle>
                 </CardHeader>
@@ -972,7 +904,7 @@ export default function Home({}) {
                   </p>
                 </CardContent>
               </GlassCard>
-              <GlassCard className="bg-white/80 dark:bg-black/30 shadow-soft-light dark:shadow-soft-dark">
+              <GlassCard className="bg-white/80 dark:bg-black/30 shadow-soft-light dark:shadow-soft-dark hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
                 <CardHeader>
                   <CardTitle className="text-gray-800 dark:text-gray-200">Immediate Next Steps</CardTitle>
                 </CardHeader>
@@ -1006,7 +938,7 @@ export default function Home({}) {
         {/* Slide 12: Conclusion */}
         <section id="conclusion">
           <div className="container text-center">
-            <div className="group relative transition-all duration-300 ease-in-out hover:scale-[1.02]">
+            <div className="group relative transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)] hover:scale-[1.02]">
               <GlassCard className="text-center">
                 <h2 className="text-3xl font-display font-bold md:text-4xl text-foreground">
                   Investing in the Future Sovereign Capability of Qatar
@@ -1023,12 +955,6 @@ export default function Home({}) {
                   </Button>
                 </div>
               </GlassCard>
-              <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                  style={{
-                    background:
-                      'radial-gradient(800px circle at 50% 50%, hsl(var(--primary) / 0.1), transparent 80%)',
-                  }}
-              />
             </div>
           </div>
         </section>
