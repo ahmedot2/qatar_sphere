@@ -347,7 +347,7 @@ const RoadmapTimelineItem = ({
 
   return (
     <div ref={ref} className="relative mt-8 flex w-full justify-center md:justify-normal">
-      {side === 'right' && <div className="hidden w-1/2 md:block"></div>}
+      {side === 'right' && <div className="hidden w-1/2 md:block md:w-1/2"></div>}
       <motion.div
         initial="hidden"
         animate={isInView ? 'visible' : 'hidden'}
@@ -388,7 +388,7 @@ const RoadmapTimelineItem = ({
           {isTarget ? <CircleCheckBig /> : <span className="font-bold">{phase}</span>}
         </div>
       </div>
-      {side === 'left' && <div className="hidden w-1/2 md:block"></div>}
+      {side === 'left' && <div className="hidden w-1/2 md:block md:w-1/2"></div>}
     </div>
   );
 };
@@ -436,14 +436,16 @@ export default function Home({}) {
 
       <main className="flex-1">
         {/* Video Section */}
-        <section id="video-intro" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center">
-            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto">
-                <div className="aspect-video w-full bg-muted/30">
-                    <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-1.mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </div>
+        <section id="video-intro" className="relative flex h-screen items-center justify-center overflow-hidden">
+          <video
+            autoPlay
+            loop
+            muted
+            className="absolute z-[-1] h-full w-full object-cover"
+            src="/videos/intro-1.mp4"
+          >
+            Your browser does not support the video tag.
+          </video>
         </section>
 
         {/* Slide 1: Title */}
@@ -1027,7 +1029,7 @@ export default function Home({}) {
               <GlassCard className="bg-white/80 dark:bg-black/30 shadow-soft-light dark:shadow-soft-dark">
                 <CardHeader>
                   <CardTitle className="text-gray-800 dark:text-gray-200">Immediate Next Steps</CardTitle>
-                </CardHeader>
+                </Header>
                 <CardContent>
                   <ul className="space-y-4 text-muted-foreground">
                     <li className="flex items-start gap-3">
@@ -1097,10 +1099,3 @@ export default function Home({}) {
     </div>
   );
 }
-
-
-
-
-
-
-
