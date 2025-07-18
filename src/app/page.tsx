@@ -39,6 +39,8 @@ import {
   Replace,
   Globe2,
   Recycle,
+  Menu,
+  User,
 } from 'lucide-react';
 import { InvestmentChart } from '@/components/investment-chart';
 import { cn } from '@/lib/utils';
@@ -371,12 +373,31 @@ export default function Home({}) {
 
   return (
     <div className="flex min-h-screen flex-col text-foreground">
-      <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
-          <a className="flex items-center gap-2" href="/">
-            <Orbit className="h-6 w-6" />
-            <span className="font-logo">QatarSphere</span>
-          </a>
+      <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl">
+        <div className="mx-auto grid h-16 grid-cols-3 items-center rounded-full bg-background/80 px-4 shadow-lg backdrop-blur-md sm:px-6">
+          <div className="flex items-center gap-2 sm:gap-4">
+            <Button variant="ghost" size="icon" className="h-10 w-10">
+              <Menu className="h-5 w-5" />
+            </Button>
+            <a href="#solution" className="hidden text-sm font-medium hover:text-primary sm:block">
+              Solution
+            </a>
+            <a href="#impact" className="hidden text-sm font-medium hover:text-primary sm:block">
+              Impact
+            </a>
+          </div>
+          <div className="flex justify-center">
+            <a className="flex items-center gap-2" href="/">
+              <Orbit className="h-6 w-6" />
+              <span className="font-logo text-lg">QatarSphere</span>
+            </a>
+          </div>
+          <div className="hidden items-center justify-end gap-2 sm:flex">
+             <Button variant="ghost" size="icon" className="h-10 w-10">
+              <User className="h-5 w-5" />
+            </Button>
+            <Button>Contact</Button>
+          </div>
         </div>
       </header>
       
@@ -402,7 +423,7 @@ export default function Home({}) {
           className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center text-center"
         >
           <GlassCard className="w-full max-w-4xl">
-            <h1 className="font-display text-3xl font-bold uppercase text-red-800 tracking-wider sm:text-4xl md:text-6xl lg:text-7xl md:tracking-widest">
+            <h1 className="font-display text-3xl font-bold uppercase text-primary tracking-wider sm:text-4xl md:text-6xl lg:text-7xl md:tracking-widest">
               QatarSphere District
             </h1>
             <DecryptedText
@@ -1041,3 +1062,5 @@ export default function Home({}) {
     </div>
   );
 }
+
+    
