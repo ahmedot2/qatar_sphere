@@ -271,72 +271,67 @@ const FinancialMetricCard = ({
 );
 
 const RoadmapTimelineItem = ({
-  side,
   phase,
   title,
   description,
   isTarget = false,
+  isLast = false,
 }: {
-  side: 'left' | 'right';
   phase?: number;
   title: string;
   description?: string;
   isTarget?: boolean;
+  isLast?: boolean;
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-  
-  const desktopVariants = {
-    hidden: { opacity: 0, x: side === 'left' ? -50 : 50 },
-    visible: { opacity: 1, x: 0 },
+
+  const variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
   };
 
-
   return (
-    <div ref={ref} className="relative mt-8 flex w-full justify-center md:justify-normal">
-      {side === 'right' && <div className="hidden w-1/2 md:block md:w-1/2"></div>}
-      <motion.div
-        initial="hidden"
-        animate={isInView ? 'visible' : 'hidden'}
-        variants={desktopVariants}
-        transition={{ duration: 0.6, ease: 'easeOut' }}
-        className={cn('w-full md:max-w-md group', 
-          'transition-all duration-300 ease-in-out hover:scale-[1.02]',
-          side === 'left' ? 'md:w-1/2 md:pr-8 md:text-right' : 'md:w-1/2 md:pl-8')}
-      >
-         <GlassCard className={cn(
-            isTarget && 'border-green-500/50',
-            "text-left"
-          )}>
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={isInView ? 'visible' : 'hidden'}
+      variants={variants}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
+      className="relative flex items-start gap-6"
+    >
+      <div className="flex flex-col items-center">
+        <div
+          className={cn(
+            'z-10 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 bg-background shadow-lg',
+            isTarget
+              ? 'border-green-500 bg-green-500/20 text-green-500 animate-pulse'
+              : 'border-primary text-primary'
+          )}
+        >
+          {isTarget ? <CircleCheckBig /> : <span className="font-bold">{phase}</span>}
+        </div>
+        {!isLast && <div className="h-full w-0.5 grow bg-border/50" />}
+      </div>
+      <div className={cn('pb-12 pt-1 group w-full transition-all duration-300 ease-in-out hover:scale-[1.02]')}>
+        <GlassCard className={cn(isTarget && 'border-green-500/50')}>
           <CardHeader>
             <CardTitle className={cn(isTarget && 'text-green-500')}>{title}</CardTitle>
           </CardHeader>
           {description && (
-          <CardContent>
-            <p className="text-muted-foreground">{description}</p>
-          </CardContent>
+            <CardContent>
+              <p className="text-muted-foreground">{description}</p>
+            </CardContent>
           )}
-          <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+           <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
             style={{
               background:
                 'radial-gradient(400px circle at 50% 50%, hsl(var(--primary) / 0.1), transparent 80%)',
             }}
           />
         </GlassCard>
-      </motion.div>
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
-        <div className={cn(
-            "z-10 flex h-10 w-10 items-center justify-center rounded-full border-2 bg-background shadow-lg",
-            isTarget
-              ? "border-green-500 bg-green-500/20 text-green-500 animate-pulse"
-              : "border-primary text-primary"
-          )}
-        >
-          {isTarget ? <CircleCheckBig /> : <span className="font-bold">{phase}</span>}
-        </div>
       </div>
-      {side === 'left' && <div className="hidden w-1/2 md:block md:w-1/2"></div>}
-    </div>
+    </motion.div>
   );
 };
 
@@ -821,36 +816,30 @@ export default function Home({}) {
                 text="An aggressive yet achievable 36-month construction and development plan, ensuring a grand opening in 2028."
               />
             </div>
-            <div className="relative mt-12 flex flex-col items-center">
-              <div className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-border/50"></div>
-              
-              <RoadmapTimelineItem 
-                side="left"
+            <div className="relative mt-12 mx-auto max-w-2xl">
+              <RoadmapTimelineItem
                 phase={1}
                 title="Phase 1: Foundation (Year 1)"
                 description="Finalize master plan, secure permits, formalize partnerships, and begin site preparation."
               />
-              
-              <RoadmapTimelineItem 
-                side="right"
+
+              <RoadmapTimelineItem
                 phase={2}
                 title="Phase 2: Vertical Construction (Year 2-3)"
                 description="Sphere structural completion, facade &amp; tech integration. Develop Innovation Campus."
               />
 
-              <RoadmapTimelineItem 
-                side="left"
+              <RoadmapTimelineItem
                 phase={3}
                 title="Phase 3: Launch Readiness (Year 3-4)"
                 description="Systems integration, testing, commissioning, and global marketing launch."
               />
-              
-              <RoadmapTimelineItem 
-                side="right"
+
+              <RoadmapTimelineItem
                 isTarget={true}
                 title="TARGET: GRAND OPENING Q4 2028"
+                isLast={true}
               />
-
             </div>
           </div>
         </section>
@@ -1052,5 +1041,3 @@ export default function Home({}) {
     </div>
   );
 }
-
-    
