@@ -393,6 +393,7 @@ export default function Home({}) {
           autoPlay
           loop
           muted
+          playsInline
           className="h-full w-full object-cover"
           src="/videos/intro-1.mp4"
         />
