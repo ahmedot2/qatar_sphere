@@ -44,7 +44,7 @@ import { InvestmentChart } from '@/components/investment-chart';
 import { cn } from '@/lib/utils';
 import DecryptedText from '@/components/decrypted-text';
 import AnimatedCounter from '@/components/animated-counter';
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
 const ExecutiveSummaryCard = ({
@@ -370,6 +370,10 @@ const RiskCard = ({ icon, children }: { icon: React.ReactNode; children: React.R
 
 
 export default function Home({}) {
+  const { scrollYProgress } = useScroll();
+  const videoOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
+  const videoScale = useTransform(scrollYProgress, [0, 0.1], [1, 0.95]);
+
   return (
     <div className="flex min-h-screen flex-col text-foreground">
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -380,19 +384,24 @@ export default function Home({}) {
           </a>
         </div>
       </header>
+      
+      <motion.div
+        className="fixed inset-x-0 top-0 h-screen w-full -z-10 bg-black"
+        style={{ opacity: videoOpacity, scale: videoScale }}
+      >
+        <video
+          autoPlay
+          loop
+          muted
+          className="h-full w-full object-cover"
+          src="/videos/intro-1.mp4"
+        />
+      </motion.div>
 
       <main className="flex-1">
-        {/* Video Section */}
-        <section id="video-intro" className="relative flex h-screen items-center justify-center overflow-hidden">
-          <video
-            autoPlay
-            loop
-            muted
-            className="absolute z-[-1] h-full w-full object-cover"
-            src="/videos/intro-1.mp4"
-          />
-        </section>
-
+        {/* Spacer for the fixed hero video */}
+        <div className="h-screen" />
+        
         {/* Slide 1: Title */}
         <section
           id="title"
