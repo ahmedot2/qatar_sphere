@@ -246,7 +246,7 @@ const FinancialMetricCard = ({
     className={cn(
       'group relative transition-all duration-300 ease-in-out',
       'hover:scale-[1.02]',
-      'flex flex-col justify-between p-6',
+      'flex flex-col p-6',
       className
     )}
   >
@@ -386,7 +386,7 @@ export default function Home({}) {
       </header>
       
       <motion.div
-        className="fixed inset-x-0 top-0 h-screen w-full -z-10 bg-black hidden md:block"
+        className="fixed inset-x-0 top-0 h-screen w-full -z-10 bg-black"
         style={{ opacity: videoOpacity, scale: videoScale }}
       >
         <video
@@ -407,7 +407,7 @@ export default function Home({}) {
           className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center text-center"
         >
           <GlassCard className="w-full max-w-4xl">
-            <h1 className="font-display text-3xl font-bold tracking-wider sm:text-4xl md:text-6xl lg:text-7xl md:tracking-widest uppercase text-red-800">
+            <h1 className="font-display text-3xl font-bold uppercase text-red-800 tracking-wider sm:text-4xl md:text-6xl lg:text-7xl md:tracking-widest">
               QatarSphere District
             </h1>
             <DecryptedText
