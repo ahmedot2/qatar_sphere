@@ -68,8 +68,8 @@ const ExecutiveSummaryCard = ({
     <div className="flex items-center gap-4">
       <div
         className={cn(
-          'flex h-11 w-11 items-center justify-center rounded-lg bg-gray-200/70 dark:bg-gray-800/60',
-          'transition-colors duration-300 group-hover:bg-primary/10 group-hover:text-primary'
+          'flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-to-br from-yellow-300 to-amber-500 text-white/90 shadow-lg',
+          '[&>svg]:-mt-1 [&>svg]:drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]'
         )}
       >
         {icon}
@@ -114,7 +114,7 @@ const SolutionCard = ({
     />
     <div className="p-6">
       <h3 className="text-2xl font-bold">{title}</h3>
-      <ul className="mt-4 space-y-4 text-foreground">{children}</ul>
+      <ul className="mt-4 space-y-4 text-foreground text-gold-icon">{children}</ul>
     </div>
   </div>
 );
@@ -139,8 +139,8 @@ const ImpactCard = ({
     <div className="flex items-start gap-6">
       <div
         className={cn(
-          'flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-gray-200/70 dark:bg-gray-800/60',
-          'transition-colors duration-300 group-hover:bg-primary/10 group-hover:text-primary'
+          'flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-yellow-300 to-amber-500 text-white/90 shadow-lg',
+          '[&>svg]:-mt-1 [&>svg]:drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]'
         )}
       >
         {icon}
@@ -172,8 +172,8 @@ const PartnerCard = ({
     <div className="flex items-center gap-4">
       <div
         className={cn(
-          'flex h-11 w-11 items-center justify-center rounded-lg bg-gray-200/70 dark:bg-gray-800/60',
-          'transition-colors duration-300 group-hover:bg-primary/10 group-hover:text-primary'
+          'flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-to-br from-yellow-300 to-amber-500 text-white/90 shadow-lg',
+          '[&>svg]:-mt-1 [&>svg]:drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]'
         )}
       >
         {icon}
@@ -191,7 +191,7 @@ const ValuePropCard = ({ icon, title }: { icon: React.ReactNode; title: string }
     'hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)] hover:-translate-y-1'
   )}>
     <div className="flex flex-col items-center gap-4">
-      <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gray-200/70 dark:bg-gray-800/60 transition-colors duration-300 group-hover:bg-primary/10 group-hover:text-primary">
+      <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-yellow-300 to-amber-500 text-white/90 shadow-lg [&>svg]:-mt-1 [&>svg]:drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
         {icon}
       </div>
       <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">{title}</h3>
@@ -224,7 +224,7 @@ const FinancialMetricCard = ({
   >
     <div className="flex items-center justify-between text-muted-foreground">
       <span>{label}</span>
-      {icon}
+      <span className="text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">{icon}</span>
     </div>
     <div className="flex-grow text-2xl font-bold sm:text-3xl md:text-4xl">
       {typeof value === 'number' ? (
@@ -272,7 +272,7 @@ const RoadmapTimelineItem = ({
             'z-10 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 bg-background shadow-lg',
             isTarget
               ? 'border-green-500 bg-green-500/20 text-green-500 animate-pulse'
-              : 'border-primary text-primary'
+              : 'border-amber-400 text-amber-400'
           )}
         >
           {isTarget ? <CircleCheckBig /> : <span className="font-bold">{phase}</span>}
@@ -306,7 +306,8 @@ const RiskCard = ({ icon, children }: { icon: React.ReactNode; children: React.R
     <div className="flex items-start gap-4">
       <div
         className={cn(
-          'flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-gray-200/70 dark:bg-gray-800/60 transition-colors duration-300 group-hover:bg-primary/10 group-hover:text-primary'
+          'flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-yellow-300 to-amber-500 text-white/90 shadow-lg',
+           '[&>svg]:-mt-1 [&>svg]:drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]'
         )}
       >
         {icon}
@@ -457,7 +458,7 @@ export default function Home({}) {
                 <div className="group relative transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)] hover:scale-[1.02]">
                   <GlassCard>
                     <div className="flex items-start gap-4 p-4">
-                      <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                      <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-yellow-300 to-amber-500 text-white/90 shadow-lg [&>svg]:-mt-1 [&>svg]:drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
                         <Globe size={24} />
                       </div>
                       <div>
@@ -473,7 +474,7 @@ export default function Home({}) {
                 <div className="group relative transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)] hover:scale-[1.02]">
                   <GlassCard>
                     <div className="flex items-start gap-4 p-4">
-                      <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                      <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-yellow-300 to-amber-500 text-white/90 shadow-lg [&>svg]:-mt-1 [&>svg]:drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
                         <BrainCircuit size={24} />
                       </div>
                       <div>
@@ -533,19 +534,19 @@ export default function Home({}) {
                 imageSrc="https://placehold.co/600x400.png"
                 imageAlt="Public Experience"
                 imageHint="modern entertainment venue"
-                icon={<Building2 className="mt-1 h-5 w-5 shrink-0 text-primary" />}
+                icon={<Building2 className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />}
                 title="Zone 1: The Public Experience"
               >
                 <li className="flex items-start gap-3">
-                  <Building2 className="mt-1 h-5 w-5 shrink-0 text-primary" />
+                  <Building2 className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
                   <span>The QatarSphere venue, with dynamic, submersible stages.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Hotel className="mt-1 h-5 w-5 shrink-0 text-primary" />
+                  <Hotel className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
                   <span>Luxury hotels with 2,500 rooms.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <ShoppingBag className="mt-1 h-5 w-5 shrink-0 text-primary" />
+                  <ShoppingBag className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
                   <span>200+ retail spaces and a 2-mile entertainment promenade.</span>
                 </li>
               </SolutionCard>
@@ -553,21 +554,21 @@ export default function Home({}) {
                 imageSrc="https://placehold.co/600x400.png"
                 imageAlt="Innovation Campus"
                 imageHint="futuristic research lab"
-                icon={<FlaskConical className="mt-1 h-5 w-5 shrink-0 text-primary" />}
+                icon={<FlaskConical className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />}
                 title="Zone 2: The Qatar Innovation Campus"
               >
                 <li className="flex items-start gap-3">
-                  <FlaskConical className="mt-1 h-5 w-5 shrink-0 text-primary" />
+                  <FlaskConical className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
                   <span>State-of-the-art R&amp;D facilities and secure data centers.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Bot className="mt-1 h-5 w-5 shrink-0 text-primary" />
+                  <Bot className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
                   <span>
                     &quot;Sandbox&quot; environments for testing autonomous robots and AI systems.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Server className="mt-1 h-5 w-5 shrink-0 text-primary" />
+                  <Server className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
                   <span>Corporate headquarters and startup incubators for global tech firms.</span>
                 </li>
               </SolutionCard>
@@ -911,19 +912,19 @@ export default function Home({}) {
                 <CardContent>
                   <ul className="space-y-4 text-foreground">
                     <li className="flex items-start gap-3">
-                      <CircleCheckBig className="h-5 w-5 text-primary shrink-0 mt-1" />
+                      <CircleCheckBig className="h-5 w-5 text-amber-400 shrink-0 mt-1" />
                       <span>
                         <span className="font-bold text-foreground">Secure Board Approval</span>
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CircleCheckBig className="h-5 w-5 text-primary shrink-0 mt-1" />
+                      <CircleCheckBig className="h-5 w-5 text-amber-400 shrink-0 mt-1" />
                       <span>
                         <span className="font-bold text-foreground">Formalize Partnerships (90 Days)</span>
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CircleCheckBig className="h-5 w-5 text-primary shrink-0 mt-1" />
+                      <CircleCheckBig className="h-5 w-5 text-amber-400 shrink-0 mt-1" />
                       <span>
                         <span className="font-bold text-foreground">Commence Phase 1 (6 Months)</span>
                       </span>
@@ -971,14 +972,3 @@ export default function Home({}) {
     </div>
   );
 }
-
-    
-
-    
-
-
-
-
-    
-
-    
