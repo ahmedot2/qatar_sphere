@@ -400,6 +400,7 @@ export default function Home({}) {
       </motion.div>
 
       <main className="flex-1">
+        <div className="h-screen" />
         {/* Slide 1: Title */}
         <section
           id="title"
@@ -1051,3 +1052,5 @@ export default function Home({}) {
     </div>
   );
 }
+
+    
