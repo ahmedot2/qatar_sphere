@@ -76,7 +76,7 @@ const ExecutiveSummaryCard = ({
       </div>
       <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">{title}</h3>
     </div>
-    <div className="mt-4 text-gray-600 dark:text-gray-400">
+    <div className="mt-4 text-accent">
       <p>{children}</p>
     </div>
     <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
@@ -120,7 +120,7 @@ const SolutionCard = ({
     />
     <div className="p-6">
       <h3 className="text-2xl font-bold">{title}</h3>
-      <ul className="mt-4 space-y-4 text-muted-foreground">{children}</ul>
+      <ul className="mt-4 space-y-4 text-accent">{children}</ul>
     </div>
     <div
       className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
@@ -159,7 +159,7 @@ const ImpactCard = ({
       </div>
       <div className="flex flex-col">
         <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200" dangerouslySetInnerHTML={{ __html: title }} />
-        <p className="mt-2 text-gray-600 dark:text-gray-400">{children}</p>
+        <p className="mt-2 text-accent">{children}</p>
       </div>
     </div>
     <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
@@ -198,7 +198,7 @@ const PartnerCard = ({
       </div>
       <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">{title}</h3>
     </div>
-    <p className="mt-4 text-gray-600 dark:text-gray-400">{children}</p>
+    <p className="mt-4 text-accent">{children}</p>
     <div
       className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
       style={{
@@ -322,7 +322,7 @@ const RoadmapTimelineItem = ({
           </CardHeader>
           {description && (
             <CardContent>
-              <p className="text-muted-foreground">{description}</p>
+              <p className="text-accent">{description}</p>
             </CardContent>
           )}
            <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
@@ -353,7 +353,7 @@ const RiskCard = ({ icon, children }: { icon: React.ReactNode; children: React.R
       >
         {icon}
       </div>
-      <p className="text-gray-600 dark:text-gray-400">{children}</p>
+      <p className="text-accent">{children}</p>
     </div>
     <div
       className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
@@ -966,7 +966,7 @@ export default function Home({}) {
                   <CardTitle className="text-gray-800 dark:text-gray-200">Our Request</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">
+                  <p className="text-accent">
                     We formally seek the strategic and financial backing of the Qatar Investment
                     Authority to serve as the anchor investor for the QatarSphere District.
                   </p>
@@ -977,7 +977,7 @@ export default function Home({}) {
                   <CardTitle className="text-gray-800 dark:text-gray-200">Immediate Next Steps</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-4 text-muted-foreground">
+                  <ul className="space-y-4 text-accent">
                     <li className="flex items-start gap-3">
                       <CircleCheckBig className="h-5 w-5 text-primary shrink-0 mt-1" />
                       <span>
