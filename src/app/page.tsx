@@ -270,54 +270,6 @@ const FinancialMetricCard = ({
   </GlassCard>
 );
 
-const TimelineItem = ({
-  side,
-  children,
-}: {
-  side: 'left' | 'right';
-  children: React.ReactNode;
-}) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
-
-  const variants = {
-    hidden: { opacity: 0, x: side === 'left' ? -100 : 100 },
-    visible: { opacity: 1, x: 0 },
-  };
-
-  return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={isInView ? 'visible' : 'hidden'}
-      variants={variants}
-      transition={{ duration: 0.5, ease: 'easeOut' }}
-      className="relative flex justify-center"
-    >
-      <div
-        className={cn(
-          'flex w-full items-center',
-          side === 'left' ? 'justify-end md:w-1/2 md:pr-8' : 'justify-start md:w-1/2 md:pl-8'
-        )}
-      >
-        {children}
-      </div>
-      {side === 'right' && <div className="hidden w-1/2 md:block"></div>}
-      <div
-        className={cn(
-          'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform'
-        )}
-      >
-        <div className="z-10 flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary bg-background text-primary shadow-lg ring-4 ring-background">
-          {side === 'right' ? 2 : (side === 'left' ? 1 : 3) }
-        </div>
-      </div>
-      {side === 'left' && <div className="hidden w-1/2 md:block"></div>}
-    </motion.div>
-  );
-};
-
-
 const RoadmapTimelineItem = ({
   side,
   phase,
@@ -1062,7 +1014,7 @@ export default function Home({}) {
           <div className="container text-center">
             <div className="group relative transition-all duration-300 ease-in-out hover:scale-[1.02]">
               <GlassCard className="text-center">
-                <h2 className="text-3xl font-headline font-bold md:text-4xl">
+                <h2 className="text-3xl font-headline font-bold md:text-4xl text-foreground">
                   Investing in the Future Sovereign Capability of Qatar
                 </h2>
                 <p className="mx-auto mt-4 max-w-3xl text-muted-foreground md:text-xl">
