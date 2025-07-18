@@ -400,15 +400,12 @@ export default function Home({}) {
       </motion.div>
 
       <main className="flex-1">
-        {/* Spacer for the fixed hero video */}
-        <div className="h-screen" />
-        
         {/* Slide 1: Title */}
         <section
           id="title"
-          className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center text-center"
+          className="relative flex h-screen flex-col items-center justify-center text-center pt-16"
         >
-          <GlassCard className="w-full">
+          <GlassCard className="w-full max-w-4xl">
             <h1 className="font-display text-4xl font-bold tracking-wider md:text-6xl lg:text-7xl uppercase text-red-800">
               QatarSphere District
             </h1>
