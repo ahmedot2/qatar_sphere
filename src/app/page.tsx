@@ -254,7 +254,7 @@ const FinancialMetricCard = ({
       <span>{label}</span>
       {icon}
     </div>
-    <div className="text-2xl font-bold sm:text-3xl md:text-4xl">
+    <div className="flex-grow text-2xl font-bold sm:text-3xl md:text-4xl">
       {typeof value === 'number' ? (
         <AnimatedCounter value={value} prefix={prefix} postfix={postfix} />
       ) : (
@@ -1052,3 +1052,5 @@ export default function Home({}) {
     </div>
   );
 }
+
+    
