@@ -246,7 +246,7 @@ const FinancialMetricCard = ({
     className={cn(
       'group relative transition-all duration-300 ease-in-out',
       'hover:scale-[1.02]',
-      'flex flex-col justify-between p-6',
+      'flex flex-col p-6',
       className
     )}
   >
@@ -386,7 +386,7 @@ export default function Home({}) {
       </header>
       
       <motion.div
-        className="fixed inset-x-0 top-0 h-screen w-full -z-10 bg-black"
+        className="fixed inset-x-0 top-0 h-screen w-full -z-10 bg-black hidden md:block"
         style={{ opacity: videoOpacity, scale: videoScale }}
       >
         <video
