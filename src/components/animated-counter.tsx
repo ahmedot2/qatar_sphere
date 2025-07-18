@@ -36,5 +36,5 @@ export default function AnimatedCounter({ value, prefix = "", postfix = "", clas
     [springValue, prefix, postfix]
   );
 
-  return <span ref={ref} className={className} />;
+  return <span ref={ref} className={className}>{prefix}{0}{postfix}</span>;
 }
