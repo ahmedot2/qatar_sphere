@@ -246,7 +246,7 @@ const FinancialMetricCard = ({
     className={cn(
       'group relative transition-all duration-300 ease-in-out',
       'hover:scale-[1.02]',
-      'flex flex-col p-6',
+      'flex flex-col justify-between p-6',
       className
     )}
   >
