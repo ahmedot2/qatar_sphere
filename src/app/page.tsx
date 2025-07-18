@@ -358,7 +358,7 @@ export default function Home({}) {
           className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center text-center"
         >
           <GlassCard className="w-full max-w-4xl hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
-            <h1 className="font-headline text-3xl font-bold uppercase text-primary tracking-wider sm:text-4xl md:text-6xl lg:text-7xl md:tracking-widest">
+            <h1 className="font-logo text-3xl font-bold uppercase text-primary tracking-wider sm:text-4xl md:text-6xl lg:text-7xl md:tracking-widest">
               QatarSphere District
             </h1>
             <DecryptedText
