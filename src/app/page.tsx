@@ -335,24 +335,31 @@ const RoadmapTimelineItem = ({
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   const variants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0 },
+  };
+  
+  const desktopVariants = {
     hidden: { opacity: 0, x: side === 'left' ? -50 : 50 },
     visible: { opacity: 1, x: 0 },
   };
 
+
   return (
-    <div ref={ref} className="relative mt-8 flex justify-center">
+    <div ref={ref} className="relative mt-8 flex w-full justify-center md:justify-normal">
       {side === 'right' && <div className="hidden w-1/2 md:block"></div>}
       <motion.div
         initial="hidden"
         animate={isInView ? 'visible' : 'hidden'}
-        variants={variants}
+        variants={desktopVariants}
         transition={{ duration: 0.6, ease: 'easeOut' }}
         className={cn('w-full md:max-w-md group', 
           'transition-all duration-300 ease-in-out hover:scale-[1.02]',
           side === 'left' ? 'md:w-1/2 md:pr-8 md:text-right' : 'md:w-1/2 md:pl-8')}
       >
          <GlassCard className={cn(
-            isTarget && 'border-green-500/50'
+            isTarget && 'border-green-500/50',
+            "text-left"
           )}>
           <CardHeader>
             <CardTitle className={cn(isTarget && 'text-green-500')}>{title}</CardTitle>
@@ -429,7 +436,7 @@ export default function Home({}) {
 
       <main className="flex-1">
         {/* Video Section */}
-        <section id="video-intro" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4 sm:p-8 md:p-12">
+        <section id="video-intro" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center">
             <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto">
                 <div className="aspect-video w-full bg-muted/30">
                     <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-1.mp4">
@@ -442,7 +449,7 @@ export default function Home({}) {
         {/* Slide 1: Title */}
         <section
           id="title"
-          className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center text-center p-4"
+          className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center text-center"
         >
           <GlassCard className="w-full">
             <h1 className="font-display text-4xl font-bold tracking-wider md:text-6xl lg:text-7xl uppercase text-red-800">
@@ -455,7 +462,7 @@ export default function Home({}) {
               revealDirection="start"
               speed={20}
               maxIterations={10}
-              parentClassName="mx-auto mt-6 max-w-3xl text-xl text-muted-foreground md:text-2xl"
+              parentClassName="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground md:text-2xl"
             />
             <div className="mt-6 text-lg">
               <p className="font-semibold">Presented by:</p>
@@ -468,7 +475,7 @@ export default function Home({}) {
         </section>
 
         {/* Video Section 2 */}
-        <section id="video-2" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4 sm:p-8 md:p-12">
+        <section id="video-2" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center">
             <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto">
                 <div className="aspect-video w-full bg-muted/30">
                     <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-2.mp4">
@@ -484,7 +491,7 @@ export default function Home({}) {
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-3xl font-headline font-bold md:text-4xl">Executive Summary</h2>
               <DecryptedText
-                parentClassName="mx-auto mt-4 max-w-3xl text-xl text-muted-foreground md:text-2xl"
+                parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-2xl"
                 animateOn="view"
                 sequential
                 speed={20}
@@ -514,7 +521,7 @@ export default function Home({}) {
         </section>
 
         {/* Video Section 3 */}
-        <section id="video-3" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4 sm:p-8 md:p-12">
+        <section id="video-3" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center">
             <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto">
                 <div className="aspect-video w-full bg-muted/30">
                     <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-3.mp4">
@@ -529,11 +536,11 @@ export default function Home({}) {
           <div className="container flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2">
               <div className="space-y-4">
-                  <h2 className="text-3xl font-headline font-bold">
+                  <h2 className="text-3xl font-headline font-bold md:text-4xl">
                     A New Paradigm: Beyond Entertainment
                   </h2>
                   <DecryptedText
-                    parentClassName="text-xl text-muted-foreground md:text-2xl"
+                    parentClassName="text-lg text-muted-foreground md:text-2xl"
                     animateOn="view"
                     sequential={true}
                     speed={20}
@@ -602,7 +609,7 @@ export default function Home({}) {
         </section>
 
         {/* Video Section 4 */}
-        <section id="video-4" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4 sm:p-8 md:p-12">
+        <section id="video-4" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center">
             <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto">
                 <div className="aspect-video w-full bg-muted/30">
                     <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-4.mp4">
@@ -620,7 +627,7 @@ export default function Home({}) {
                 Proposed Solution: A Dual-Purpose Ecosystem
               </h2>
               <DecryptedText
-                parentClassName="mx-auto mt-4 max-w-3xl text-xl text-muted-foreground md:text-2xl"
+                parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-2xl"
                 animateOn="view"
                 sequential={true}
                 speed={20}
@@ -676,7 +683,7 @@ export default function Home({}) {
         </section>
 
         {/* Video Section 5 */}
-        <section id="video-5" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4 sm:p-8 md:p-12">
+        <section id="video-5" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center">
             <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto">
                 <div className="aspect-video w-full bg-muted/30">
                     <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-5.mp4">
@@ -694,7 +701,7 @@ export default function Home({}) {
                 National &amp; Cultural Impact
               </h2>
               <DecryptedText
-                parentClassName="mx-auto mt-4 max-w-3xl text-xl text-muted-foreground md:text-2xl"
+                parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-2xl"
                 animateOn="view"
                 sequential={true}
                 speed={20}
@@ -720,7 +727,7 @@ export default function Home({}) {
         </section>
 
         {/* Video Section 6 */}
-        <section id="video-6" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4 sm:p-8 md:p-12">
+        <section id="video-6" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center">
             <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto">
                 <div className="aspect-video w-full bg-muted/30">
                     <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-6.mp4">
@@ -738,7 +745,7 @@ export default function Home({}) {
                 A Redefined Value Proposition
               </h2>
               <DecryptedText
-                parentClassName="mx-auto mt-4 max-w-3xl text-xl text-muted-foreground md:text-2xl"
+                parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-2xl"
                 animateOn="view"
                 sequential={true}
                 speed={20}
@@ -756,7 +763,7 @@ export default function Home({}) {
         </section>
 
         {/* Video Section 7 */}
-        <section id="video-7" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4 sm:p-8 md:p-12">
+        <section id="video-7" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center">
             <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto">
                 <div className="aspect-video w-full bg-muted/30">
                     <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-7.mp4">
@@ -772,7 +779,7 @@ export default function Home({}) {
             <div className="mx-auto mb-12 max-w-3xl text-center">
                 <h2 className="text-3xl font-headline font-bold md:text-4xl">Financial Overview</h2>
                 <DecryptedText
-                    parentClassName="mx-auto mt-4 max-w-3xl text-xl text-muted-foreground md:text-2xl"
+                    parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-2xl"
                     animateOn="view"
                     sequential={true}
                     speed={20}
@@ -833,7 +840,7 @@ export default function Home({}) {
         </section>
 
         {/* Video Section 8 */}
-        <section id="video-8" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4 sm:p-8 md:p-12">
+        <section id="video-8" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center">
             <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto">
                 <div className="aspect-video w-full bg-muted/30">
                     <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-8.mp4">
@@ -851,7 +858,7 @@ export default function Home({}) {
                 Implementation Roadmap: 2025-2028
               </h2>
               <DecryptedText
-                parentClassName="mx-auto mt-4 max-w-3xl text-xl text-muted-foreground md:text-2xl"
+                parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-2xl"
                 animateOn="view"
                 sequential={true}
                 speed={20}
@@ -859,7 +866,7 @@ export default function Home({}) {
                 text="An aggressive yet achievable 36-month construction and development plan, ensuring a grand opening in 2028."
               />
             </div>
-            <div className="relative mt-12">
+            <div className="relative mt-12 flex flex-col items-center">
               <div className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-border/50"></div>
               
               <RoadmapTimelineItem 
@@ -894,7 +901,7 @@ export default function Home({}) {
         </section>
 
         {/* Video Section 9 */}
-        <section id="video-9" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4 sm:p-8 md:p-12">
+        <section id="video-9" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center">
             <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto">
                 <div className="aspect-video w-full bg-muted/30">
                     <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-9.mp4">
@@ -910,7 +917,7 @@ export default function Home({}) {
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-3xl font-headline font-bold md:text-4xl">Strategic Partnerships</h2>
               <DecryptedText
-                parentClassName="mx-auto mt-4 max-w-3xl text-xl text-muted-foreground md:text-2xl"
+                parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-2xl"
                 animateOn="view"
                 sequential={true}
                 speed={20}
@@ -937,7 +944,7 @@ export default function Home({}) {
         </section>
 
         {/* Video Section 10 */}
-        <section id="video-10" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center p-4 sm:p-8 md:p-12">
+        <section id="video-10" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center">
             <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto">
                 <div className="aspect-video w-full bg-muted/30">
                     <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-10.mp4">
@@ -955,7 +962,7 @@ export default function Home({}) {
                 Expanded Risk Assessment &amp; Mitigation
               </h2>
               <DecryptedText
-                parentClassName="mx-auto mt-4 max-w-3xl text-xl text-muted-foreground md:text-2xl"
+                parentClassName="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-2xl"
                 animateOn="view"
                 sequential={true}
                 speed={20}
@@ -995,9 +1002,9 @@ export default function Home({}) {
         <section id="cta">
           <div className="container grid items-center gap-12 md:grid-cols-2">
             <div className="flex flex-col justify-center space-y-4">
-              <h2 className="text-3xl font-headline font-bold">Call to Action</h2>
+              <h2 className="text-3xl font-headline font-bold md:text-4xl">Call to Action</h2>
               <DecryptedText
-                parentClassName="text-xl text-muted-foreground md:text-2xl"
+                parentClassName="text-lg text-muted-foreground md:text-2xl"
                 animateOn="view"
                 sequential={true}
                 speed={20}
@@ -1090,6 +1097,7 @@ export default function Home({}) {
     </div>
   );
 }
+
 
 
 
