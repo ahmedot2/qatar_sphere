@@ -410,7 +410,7 @@ export default function Home({}) {
               QatarSphere District
             </h1>
             <DecryptedText
-              text="A Landmark Investment in Qatar's Future: Building the World's First Cognitive City, a Hub for Technology, Tourism, and Talent.A Landmark Investment in Qatar's Future: Building the World's First Cognitive City, a Hub for Technology, Tourism, and Talent.A Landmark Investment in Qatar's Future: Building the World's First Cognitive City, a Hub for Technology, Tourism, and Talent."
+              text="A Landmark Investment in Qatar's Future: Building the World's First Cognitive City, a Hub for Technology, Tourism, and Talent."
               animateOn="view"
               sequential={true}
               revealDirection="start"
@@ -1051,3 +1051,6 @@ export default function Home({}) {
     
 
 
+
+
+    
