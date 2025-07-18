@@ -285,11 +285,6 @@ const RoadmapTimelineItem = ({
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-
-  const variants = {
-    hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0 },
-  };
   
   const desktopVariants = {
     hidden: { opacity: 0, x: side === 'left' ? -50 : 50 },
@@ -395,9 +390,7 @@ export default function Home({}) {
             muted
             className="absolute z-[-1] h-full w-full object-cover"
             src="/videos/intro-1.mp4"
-          >
-            Your browser does not support the video tag.
-          </video>
+          />
         </section>
 
         {/* Slide 1: Title */}
@@ -981,7 +974,7 @@ export default function Home({}) {
               <GlassCard className="bg-white/80 dark:bg-black/30 shadow-soft-light dark:shadow-soft-dark">
                 <CardHeader>
                   <CardTitle className="text-gray-800 dark:text-gray-200">Immediate Next Steps</CardTitle>
-                </Header>
+                </CardHeader>
                 <CardContent>
                   <ul className="space-y-4 text-muted-foreground">
                     <li className="flex items-start gap-3">
