@@ -76,7 +76,7 @@ const ExecutiveSummaryCard = ({
       </div>
       <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">{title}</h3>
     </div>
-    <div className="mt-4 text-accent">
+    <div className="mt-4 text-muted-foreground">
       <p>{children}</p>
     </div>
     <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
@@ -120,7 +120,7 @@ const SolutionCard = ({
     />
     <div className="p-6">
       <h3 className="text-2xl font-bold">{title}</h3>
-      <ul className="mt-4 space-y-4 text-accent">{children}</ul>
+      <ul className="mt-4 space-y-4 text-muted-foreground">{children}</ul>
     </div>
     <div
       className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
@@ -159,7 +159,7 @@ const ImpactCard = ({
       </div>
       <div className="flex flex-col">
         <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200" dangerouslySetInnerHTML={{ __html: title }} />
-        <p className="mt-2 text-accent">{children}</p>
+        <p className="mt-2 text-muted-foreground">{children}</p>
       </div>
     </div>
     <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
@@ -198,7 +198,7 @@ const PartnerCard = ({
       </div>
       <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">{title}</h3>
     </div>
-    <p className="mt-4 text-accent">{children}</p>
+    <p className="mt-4 text-muted-foreground">{children}</p>
     <div
       className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
       style={{
@@ -300,9 +300,9 @@ const RoadmapTimelineItem = ({
       animate={isInView ? 'visible' : 'hidden'}
       variants={variants}
       transition={{ duration: 0.5, ease: 'easeOut' }}
-      className="relative flex items-start gap-6"
+      className="relative flex items-start gap-4 sm:gap-6"
     >
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center h-full">
         <div
           className={cn(
             'z-10 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 bg-background shadow-lg',
@@ -313,7 +313,7 @@ const RoadmapTimelineItem = ({
         >
           {isTarget ? <CircleCheckBig /> : <span className="font-bold">{phase}</span>}
         </div>
-        {!isLast && <div className="h-full w-0.5 grow bg-border/50" />}
+        {!isLast && <div className="mt-2 w-0.5 grow bg-border/50" />}
       </div>
       <div className={cn('pb-12 pt-1 group w-full transition-all duration-300 ease-in-out hover:scale-[1.02]')}>
         <GlassCard className={cn(isTarget && 'border-green-500/50')}>
@@ -322,7 +322,7 @@ const RoadmapTimelineItem = ({
           </CardHeader>
           {description && (
             <CardContent>
-              <p className="text-accent">{description}</p>
+              <p className="text-muted-foreground">{description}</p>
             </CardContent>
           )}
            <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
@@ -353,7 +353,7 @@ const RiskCard = ({ icon, children }: { icon: React.ReactNode; children: React.R
       >
         {icon}
       </div>
-      <p className="text-accent">{children}</p>
+      <p className="text-muted-foreground">{children}</p>
     </div>
     <div
       className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
@@ -966,7 +966,7 @@ export default function Home({}) {
                   <CardTitle className="text-gray-800 dark:text-gray-200">Our Request</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-accent">
+                  <p className="text-muted-foreground">
                     We formally seek the strategic and financial backing of the Qatar Investment
                     Authority to serve as the anchor investor for the QatarSphere District.
                   </p>
@@ -977,7 +977,7 @@ export default function Home({}) {
                   <CardTitle className="text-gray-800 dark:text-gray-200">Immediate Next Steps</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-4 text-accent">
+                  <ul className="space-y-4 text-muted-foreground">
                     <li className="flex items-start gap-3">
                       <CircleCheckBig className="h-5 w-5 text-primary shrink-0 mt-1" />
                       <span>
