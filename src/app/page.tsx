@@ -410,13 +410,13 @@ export default function Home({}) {
               QatarSphere District
             </h1>
             <DecryptedText
-              text="A Landmark Investment in Qatar's Future: Building the World's First Cognitive City, a Hub for Technology, Tourism, and Talent."
+              text="A Landmark Investment in Qatar's Future: Building the World's First Cognitive City, a Hub for Technology, Tourism, and Talent.A Landmark Investment in Qatar's Future: Building the World's First Cognitive City, a Hub for Technology, Tourism, and Talent.A Landmark Investment in Qatar's Future: Building the World's First Cognitive City, a Hub for Technology, Tourism, and Talent."
               animateOn="view"
               sequential={true}
               revealDirection="start"
               speed={20}
               maxIterations={10}
-              parentClassName="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground md:text-2xl"
+              parentClassName="mx-auto mt-6 max-w-3xl text-lg text-destructive md:text-2xl"
             />
             <div className="mt-6 text-lg">
               <p className="font-semibold">Presented by:</p>
@@ -1049,4 +1049,5 @@ export default function Home({}) {
     
 
     
+
 
