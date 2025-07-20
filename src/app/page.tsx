@@ -874,6 +874,17 @@ export default function Home({}) {
           </div>
         </section>
 
+        {/* Video Section 11 */}
+        <section id="video-11" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center">
+            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto">
+                <div className="aspect-video w-full bg-muted/30">
+                    <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-11.mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+
         {/* Slide 11: Call to Action */}
         <section id="cta">
           <div className="container grid items-center gap-12 md:grid-cols-2">
@@ -929,6 +940,17 @@ export default function Home({}) {
               </GlassCard>
             </div>
           </div>
+        </section>
+
+        {/* Video Section 12 */}
+        <section id="video-12" className="relative flex h-[calc(100vh-4rem)] flex-col items-center justify-center">
+            <div className="w-full max-w-screen-2xl rounded-2xl overflow-hidden mx-auto">
+                <div className="aspect-video w-full bg-muted/30">
+                    <video className="w-full h-full" controls autoPlay muted loop src="/videos/intro-12.mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
         </section>
 
         {/* Slide 12: Conclusion */}
