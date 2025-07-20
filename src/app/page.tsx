@@ -46,7 +46,7 @@ import { InvestmentChart } from '@/components/investment-chart';
 import { cn } from '@/lib/utils';
 import DecryptedText from '@/components/decrypted-text';
 import AnimatedCounter from '@/components/animated-counter';
-import { motion, useInView, useScroll, useTransform } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 
 const ExecutiveSummaryCard = ({
@@ -319,10 +319,6 @@ const RiskCard = ({ icon, children }: { icon: React.ReactNode; children: React.R
 
 
 export default function Home({}) {
-  const { scrollYProgress } = useScroll();
-  const videoOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
-  const videoScale = useTransform(scrollYProgress, [0, 0.1], [1, 0.95]);
-
   return (
     <div className="flex min-h-screen flex-col text-foreground">
       <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl">
@@ -336,9 +332,8 @@ export default function Home({}) {
         </div>
       </header>
       
-      <motion.div
+      <div
         className="fixed inset-x-0 top-0 h-screen w-full -z-10 bg-black"
-        style={{ opacity: videoOpacity, scale: videoScale }}
       >
         <video
           autoPlay
@@ -348,10 +343,9 @@ export default function Home({}) {
           className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover"
           src="/videos/intro-1.mp4"
         />
-      </motion.div>
+      </div>
 
       <main className="flex-1">
-        <div className="h-screen" />
         {/* Slide 1: Title */}
         <section
           id="title"
@@ -395,7 +389,7 @@ export default function Home({}) {
         <section id="executive-summary">
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground">Executive Summary</h2>
+              <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">Executive Summary</h2>
               <DecryptedText
                 parentClassName="mx-auto mt-4 max-w-3xl text-lg text-destructive md:text-2xl"
                 animateOn="view"
@@ -442,7 +436,7 @@ export default function Home({}) {
           <div className="container flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2">
               <div className="space-y-4">
-                  <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground">
+                  <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">
                     A New Paradigm: Beyond Entertainment
                   </h2>
                   <DecryptedText
@@ -517,7 +511,7 @@ export default function Home({}) {
         <section id="solution">
           <div className="container space-y-12">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground">
+              <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">
                 Proposed Solution: A Dual-Purpose Ecosystem
               </h2>
               <DecryptedText
@@ -591,7 +585,7 @@ export default function Home({}) {
         <section id="impact">
           <div className="container space-y-12">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground">
+              <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">
                 National &amp; Cultural Impact
               </h2>
               <DecryptedText
@@ -635,7 +629,7 @@ export default function Home({}) {
         <section id="value-proposition">
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground">
+              <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">
                 A Redefined Value Proposition
               </h2>
               <DecryptedText
@@ -671,7 +665,7 @@ export default function Home({}) {
         <section id="financials">
           <div className="container">
             <div className="mx-auto mb-12 max-w-3xl text-center">
-                <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground">Financial Overview</h2>
+                <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">Financial Overview</h2>
                 <DecryptedText
                     parentClassName="mx-auto mt-4 max-w-3xl text-lg text-destructive md:text-2xl"
                     animateOn="view"
@@ -741,7 +735,7 @@ export default function Home({}) {
         <section id="roadmap">
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground">
+              <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">
                 Implementation Roadmap: 2025-2028
               </h2>
               <DecryptedText
@@ -796,7 +790,7 @@ export default function Home({}) {
         <section id="partnerships">
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground">Strategic Partnerships</h2>
+              <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">Strategic Partnerships</h2>
               <DecryptedText
                 parentClassName="mx-auto mt-4 max-w-3xl text-lg text-destructive md:text-2xl"
                 animateOn="view"
@@ -839,7 +833,7 @@ export default function Home({}) {
         <section id="risk">
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground">
+              <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">
                 Expanded Risk Assessment &amp; Mitigation
               </h2>
               <DecryptedText
@@ -883,7 +877,7 @@ export default function Home({}) {
         <section id="cta">
           <div className="container grid items-center gap-12 md:grid-cols-2">
             <div className="flex flex-col justify-center space-y-4">
-              <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground">Call to Action</h2>
+              <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">Call to Action</h2>
               <DecryptedText
                 parentClassName="text-lg text-destructive md:text-2xl"
                 animateOn="view"
@@ -941,7 +935,7 @@ export default function Home({}) {
           <div className="container text-center">
             <div className="group relative transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)] hover:scale-[1.02]">
               <GlassCard className="text-center">
-                <h2 className="text-3xl font-display font-bold tracking-wider md:text-4xl text-foreground">
+                <h2 className="text-3xl font-display font-bold tracking-wider md:text-4xl text-foreground tracking-wider">
                   Investing in the Future Sovereign Capability of Qatar
                 </h2>
                 <p className="mx-auto mt-4 max-w-3xl text-foreground md:text-xl">
