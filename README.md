@@ -1,5 +1,5 @@
-# Firebase Studio
+# QatarSphere Digital Showcase
 
-This is a NextJS starter in Firebase Studio.
+This is a Next.js project for the QatarSphere Digital Showcase, a landmark investment in Qatar's future.
 
-To get started, take a look at src/app/page.tsx.
+[git@github.com:ahmedot2/qatar_sphere.git](git@github.com:ahmedot2/qatar_sphere.git)
