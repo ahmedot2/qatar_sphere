@@ -486,7 +486,7 @@ export default function Home({}) {
             </div>
             <div className="md:w-1/2">
                 <Image
-                  src="https://placehold.co/600x700.png"
+                  src="/images/new-paradigm.jpg"
                   width={600}
                   height={700}
                   alt="Futuristic Laboratory"
