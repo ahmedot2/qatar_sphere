@@ -526,7 +526,7 @@ export default function Home({}) {
             </GlassCard>
             <div className="grid gap-8 md:grid-cols-2">
               <SolutionCard
-                imageSrc="https://placehold.co/600x400.png"
+                imageSrc="/public-experience.jpg"
                 imageAlt="Public Experience"
                 imageHint="modern entertainment venue"
                 icon={<Building2 className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />}
@@ -546,7 +546,7 @@ export default function Home({}) {
                 </li>
               </SolutionCard>
               <SolutionCard
-                imageSrc="https://placehold.co/600x400.png"
+                imageSrc="/innovation-campus.jpg"
                 imageAlt="Innovation Campus"
                 imageHint="futuristic research lab"
                 icon={<FlaskConical className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />}
