@@ -363,7 +363,7 @@ export default function Home({}) {
               revealDirection="start"
               speed={20}
               maxIterations={10}
-              parentClassName="mx-auto mt-6 max-w-3xl text-lg text-destructive md:text-2xl"
+              parentClassName="mx-auto mt-6 max-w-3xl text-lg text-accent md:text-2xl"
             />
             <div className="mt-6 text-lg">
               <p className="font-semibold">Presented by:</p>
