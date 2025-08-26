@@ -318,7 +318,13 @@ const RiskCard = ({ icon, children }: { icon: React.ReactNode; children: React.R
 );
 
 
-export default function Home({}) {
+export default function Home({
+  params,
+  searchParams,
+}: {
+  params: Record<string, string>;
+  searchParams: Record<string, string>;
+}) {
   return (
     <div className="flex min-h-screen flex-col text-foreground">
       <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl">
@@ -989,3 +995,5 @@ export default function Home({}) {
     </div>
   );
 }
+
+    
