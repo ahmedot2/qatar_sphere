@@ -815,32 +815,34 @@ export default function Home({
         {/* Slide 9: Strategic Partnerships */}
         <section id="partnerships">
           <div className="w-full max-w-screen-2xl">
-            <GlassCard className="mb-12 text-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
-              <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">Strategic Partnerships</h2>
-              <DecryptedText
-                parentClassName="mx-auto mt-4 max-w-3xl text-lg text-destructive md:text-2xl"
-                animateOn="view"
-                sequential={true}
-                speed={20}
-                maxIterations={10}
-                text="De-risking execution with a consortium of world-class leaders in their respective fields."
-              />
+            <GlassCard className="p-6 md:p-8 space-y-12">
+              <GlassCard className="text-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
+                <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">Strategic Partnerships</h2>
+                <DecryptedText
+                  parentClassName="mx-auto mt-4 max-w-3xl text-lg text-destructive md:text-2xl"
+                  animateOn="view"
+                  sequential={true}
+                  speed={20}
+                  maxIterations={10}
+                  text="De-risking execution with a consortium of world-class leaders in their respective fields."
+                />
+              </GlassCard>
+              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                <PartnerCard icon={<Building size={28} />} title="CSCEC">
+                  Construction partner, the world&apos;s largest contractor, ensuring on-time
+                  delivery.
+                </PartnerCard>
+                <PartnerCard icon={<Cpu size={28} />} title="Tencent">
+                  Technology &amp; AI partner to power immersive content and personalization engines.
+                </PartnerCard>
+                <PartnerCard icon={<Database size={28} />} title="Alibaba">
+                  Cloud &amp; Data partner for robust, real-time smart city management.
+                </PartnerCard>
+                <PartnerCard icon={<Layers size={28} />} title="Wanda Group">
+                  Entertainment content partner for co-developing world-class shows.
+                </PartnerCard>
+              </div>
             </GlassCard>
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-              <PartnerCard icon={<Building size={28} />} title="CSCEC">
-                Construction partner, the world&apos;s largest contractor, ensuring on-time
-                delivery.
-              </PartnerCard>
-              <PartnerCard icon={<Cpu size={28} />} title="Tencent">
-                Technology &amp; AI partner to power immersive content and personalization engines.
-              </PartnerCard>
-              <PartnerCard icon={<Database size={28} />} title="Alibaba">
-                Cloud &amp; Data partner for robust, real-time smart city management.
-              </PartnerCard>
-              <PartnerCard icon={<Layers size={28} />} title="Wanda Group">
-                Entertainment content partner for co-developing world-class shows.
-              </PartnerCard>
-            </div>
           </div>
         </section>
 
