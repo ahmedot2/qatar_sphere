@@ -450,63 +450,63 @@ export default function Home({
         <section id="new-paradigm">
           <div className="w-full max-w-screen-2xl">
             <GlassCard className="p-6 md:p-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
-                <div className="space-y-8">
-                  <GlassCard className="p-6 text-center md:text-left">
-                    <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">
-                      A New Paradigm: Beyond Entertainment
-                    </h2>
-                    <DecryptedText
-                      parentClassName="mt-4 text-lg text-destructive md:text-2xl"
-                      animateOn="view"
-                      sequential={true}
-                      speed={20}
-                      maxIterations={10}
-                      text="From an Entertainment Venue to a Cognitive Hub. While competitors focus on building bigger screens, we will build a smarter city. The QatarSphere District's vision transcends entertainment to become a globally significant hub for technological innovation."
-                    />
-                  </GlassCard>
-                  <div className="space-y-6">
-                    <div className="group relative transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)] hover:scale-[1.02]">
-                      <GlassCard>
-                        <div className="flex items-start gap-4 p-4">
-                          <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-yellow-300 to-amber-500 text-white/90 shadow-lg [&>svg]:-mt-1 [&>svg]:drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
-                            <Globe size={24} />
-                          </div>
-                          <div>
-                            <h3 className="text-lg font-semibold">The Entertainment Layer</h3>
-                            <p className="text-foreground">
-                              A world-class destination attracting 3.2 million visitors annually, serving
-                              as the public face and a key revenue driver.
-                            </p>
-                          </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-stretch gap-8">
+                <GlassCard className="md:col-span-2 lg:col-span-3 p-6 text-center md:text-left">
+                  <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">
+                    A New Paradigm: Beyond Entertainment
+                  </h2>
+                  <DecryptedText
+                    parentClassName="mt-4 text-lg text-destructive md:text-2xl"
+                    animateOn="view"
+                    sequential={true}
+                    speed={20}
+                    maxIterations={10}
+                    text="From an Entertainment Venue to a Cognitive Hub. While competitors focus on building bigger screens, we will build a smarter city. The QatarSphere District's vision transcends entertainment to become a globally significant hub for technological innovation."
+                  />
+                </GlassCard>
+
+                <div className="space-y-6 lg:col-span-1">
+                  <div className="group relative transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)] hover:scale-[1.02]">
+                    <GlassCard className="h-full">
+                      <div className="flex items-start gap-4 p-4">
+                        <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-yellow-300 to-amber-500 text-white/90 shadow-lg [&>svg]:-mt-1 [&>svg]:drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
+                          <Globe size={24} />
                         </div>
-                      </GlassCard>
-                    </div>
-                    <div className="group relative transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)] hover:scale-[1.02]">
-                      <GlassCard>
-                        <div className="flex items-start gap-4 p-4">
-                          <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-yellow-300 to-amber-500 text-white/90 shadow-lg [&>svg]:-mt-1 [&>svg]:drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
-                            <BrainCircuit size={24} />
-                          </div>
-                          <div>
-                            <h3 className="text-lg font-semibold">The Technology Core</h3>
-                            <p className="text-foreground">
-                              A Special Economic and Technology Zone (SET-Zone) to attract leaders in AI,
-                              Quantum Computing, Advanced Robotics, and Blockchain.
-                            </p>
-                          </div>
+                        <div>
+                          <h3 className="text-lg font-semibold">The Entertainment Layer</h3>
+                          <p className="text-foreground">
+                            A world-class destination attracting 3.2 million visitors annually, serving
+                            as the public face and a key revenue driver.
+                          </p>
                         </div>
-                      </GlassCard>
-                    </div>
+                      </div>
+                    </GlassCard>
+                  </div>
+                  <div className="group relative transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)] hover:scale-[1.02]">
+                    <GlassCard className="h-full">
+                      <div className="flex items-start gap-4 p-4">
+                        <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-yellow-300 to-amber-500 text-white/90 shadow-lg [&>svg]:-mt-1 [&>svg]:drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
+                          <BrainCircuit size={24} />
+                        </div>
+                        <div>
+                          <h3 className="text-lg font-semibold">The Technology Core</h3>
+                          <p className="text-foreground">
+                            A Special Economic and Technology Zone (SET-Zone) to attract leaders in AI,
+                            Quantum Computing, Advanced Robotics, and Blockchain.
+                          </p>
+                        </div>
+                      </div>
+                    </GlassCard>
                   </div>
                 </div>
-                <div>
+
+                <div className="lg:col-span-2">
                   <Image
                     src="/new-paradigm.jpg"
-                    width={600}
-                    height={700}
+                    width={800}
+                    height={600}
                     alt="Futuristic Laboratory"
-                    className="rounded-2xl object-cover"
+                    className="w-full h-full rounded-2xl object-cover"
                     data-ai-hint="futuristic laboratory"
                   />
                 </div>
