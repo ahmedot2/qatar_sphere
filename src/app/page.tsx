@@ -418,11 +418,11 @@ export default function Home({
                   />
                 </GlassCard>
               </GlassCard>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <ExecutiveSummaryCard icon={<Cpu size={24} />} title="The Proposal" className="md:col-span-2">
+              <div className="grid md:grid-cols-2 gap-6">
+                  <ExecutiveSummaryCard icon={<Cpu size={24} />} title="The Proposal" className="col-span-1 md:col-span-2">
                       A <b>$4.2 billion total investment</b> to develop the world&apos;s first "cognitive city" district.
                   </ExecutiveSummaryCard>
-                  <ExecutiveSummaryCard icon={<TrendingUp size={24} />} title="The Dual Engine" className="md:col-span-2">
+                  <ExecutiveSummaryCard icon={<TrendingUp size={24} />} title="The Dual Engine" className="col-span-1 md:col-span-2">
                       Adds <b>QAR 20-30B ($5.5-8.2B USD)</b> annually to GDP, creating a powerful new economic driver.
                   </ExecutiveSummaryCard>
                   <ExecutiveSummaryCard icon={<ShieldCheck size={24} />} title="Strategic Imperative">
