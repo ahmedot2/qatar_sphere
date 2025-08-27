@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import '../components/gradient-text.css';
+
 @layer base {
   :root {
     --background: 240 8% 97%;
