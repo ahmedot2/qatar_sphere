@@ -410,7 +410,7 @@ export default function Home({
                   <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground">Executive Summary</h2>
                 </GlassCard>
                 <DecryptedText
-                  parentClassName="mx-auto max-w-3xl text-lg text-destructive md:text-2xl"
+                  parentClassName="mx-auto mt-4 max-w-3xl text-lg text-destructive md:text-2xl"
                   animateOn="view"
                   sequential
                   speed={20}
@@ -418,7 +418,7 @@ export default function Home({
                   text="A Vision for National Prosperity & Technological Sovereignty. We present the QatarSphere District—a strategic national project designed not just to lead in entertainment, but to become a global epicenter for the next industrial revolution."
                 />
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 gap-6">
                 <ExecutiveSummaryCard icon={<Cpu size={24} />} title="The Proposal" className="col-span-1 md:col-span-2">
                   A <b>$4.2 billion total investment</b> to develop the world&apos;s first "cognitive city" district.
                 </ExecutiveSummaryCard>
@@ -654,25 +654,27 @@ export default function Home({
         {/* Slide 6: Redefined Value Proposition */}
         <section id="value-proposition">
           <div className="w-full max-w-screen-2xl">
-            <GlassCard className="mb-12 text-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
-              <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">
-                A Redefined Value Proposition
-              </h2>
-              <DecryptedText
-                parentClassName="mx-auto mt-4 max-w-3xl text-lg text-destructive md:text-2xl"
-                animateOn="view"
-                sequential={true}
-                speed={20}
-                maxIterations={10}
-                text="A multiplier effect on national value. The QatarSphere District delivers a strategic return far greater than a standalone tourism project."
-              />
+            <GlassCard className="p-6 md:p-8 space-y-12">
+              <GlassCard className="text-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
+                <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">
+                  A Redefined Value Proposition
+                </h2>
+                <DecryptedText
+                  parentClassName="mx-auto mt-4 max-w-3xl text-lg text-destructive md:text-2xl"
+                  animateOn="view"
+                  sequential={true}
+                  speed={20}
+                  maxIterations={10}
+                  text="A multiplier effect on national value. The QatarSphere District delivers a strategic return far greater than a standalone tourism project."
+                />
+              </GlassCard>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <ValuePropCard icon={<TrendingUp size={28} />} title="Economic Diversification" />
+                <ValuePropCard icon={<ShieldCheck size={28} />} title="Technological Sovereignty" />
+                <ValuePropCard icon={<Globe size={28} />} title="Global Influence" />
+                <ValuePropCard icon={<BrainCircuit size={28} />} title="Human Capital" />
+              </div>
             </GlassCard>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <ValuePropCard icon={<TrendingUp size={28} />} title="Economic Diversification" />
-              <ValuePropCard icon={<ShieldCheck size={28} />} title="Technological Sovereignty" />
-              <ValuePropCard icon={<Globe size={28} />} title="Global Influence" />
-              <ValuePropCard icon={<BrainCircuit size={28} />} title="Human Capital" />
-            </div>
           </div>
         </section>
 
