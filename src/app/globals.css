@@ -34,7 +34,7 @@
   .dark {
     --background: 222 84% 4%;
     --foreground: 210 40% 98%;
-    --card: 226 73% 22%;
+    --card: 0 59% 30%;
     --card-foreground: 210 40% 98%;
     --popover: 222 84% 4%;
     --popover-foreground: 210 40% 98%;
@@ -48,8 +48,8 @@
     --accent-foreground: 240 3% 12%;
     --destructive: 45 98% 50%;
     --destructive-foreground: 210 40% 98%;
-    --border: 226 73% 22%;
-    --input: 226 73% 22%;
+    --border: 0 59% 30%;
+    --input: 0 59% 30%;
     --ring: 210 40% 98%;
     --chart-1: 210 40% 98%;
     --chart-2: 240 5% 53%;
@@ -76,5 +76,3 @@
     @apply w-full p-8 sm:p-12 md:p-16 flex flex-col items-center justify-center relative overflow-hidden;
   }
 }
-
-    
