@@ -244,13 +244,13 @@ const RoadmapTimelineItem = ({
   title,
   description,
   isTarget = false,
-  isLast = false,
+  className,
 }: {
   phase?: number;
   title: string;
   description?: string;
   isTarget?: boolean;
-  isLast?: boolean;
+  className?: string;
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
@@ -267,36 +267,35 @@ const RoadmapTimelineItem = ({
       animate={isInView ? 'visible' : 'hidden'}
       variants={variants}
       transition={{ duration: 0.5, ease: 'easeOut' }}
-      className="relative flex items-start gap-4 sm:gap-6"
+      className={cn(
+        'group relative h-full w-full transition-all duration-300 ease-in-out hover:scale-[1.02]',
+        className
+      )}
     >
-      <div className="flex flex-col items-center h-full">
-        <div
-          className={cn(
-            'z-10 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 bg-background shadow-lg',
-            isTarget
-              ? 'border-green-500 bg-green-500/20 text-green-500 animate-pulse'
-              : 'border-amber-400 text-amber-400'
-          )}
-        >
-          {isTarget ? <CircleCheckBig /> : <span className="font-bold">{phase}</span>}
-        </div>
-        {!isLast && <div className="mt-2 w-0.5 grow bg-border/50" />}
-      </div>
-      <div className={cn('pb-12 pt-1 group w-full transition-all duration-300 ease-in-out hover:scale-[1.02]')}>
-        <GlassCard className={cn('hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]', isTarget && 'border-green-500/50')}>
-          <CardHeader>
-            <CardTitle className={cn(isTarget && 'text-green-500')}>{title}</CardTitle>
-          </CardHeader>
-          {description && (
-            <CardContent>
-              <p className="text-foreground">{description}</p>
-            </CardContent>
-          )}
-        </GlassCard>
-      </div>
+      <GlassCard className={cn('h-full hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]', isTarget && 'border-green-500/50')}>
+        <CardHeader className="flex-row items-center gap-4">
+          <div
+            className={cn(
+              'z-10 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 bg-background shadow-lg',
+              isTarget
+                ? 'border-green-500 bg-green-500/20 text-green-500 animate-pulse'
+                : 'border-amber-400 text-amber-400'
+            )}
+          >
+            {isTarget ? <CircleCheckBig /> : <span className="font-bold">{phase}</span>}
+          </div>
+          <CardTitle className={cn('text-xl', isTarget && 'text-green-500')}>{title}</CardTitle>
+        </CardHeader>
+        {description && (
+          <CardContent>
+            <p className="text-foreground">{description}</p>
+          </CardContent>
+        )}
+      </GlassCard>
     </motion.div>
   );
 };
+
 
 const RiskCard = ({ icon, children }: { icon: React.ReactNode; children: React.ReactNode }) => (
   <div
@@ -776,29 +775,27 @@ export default function Home({
                   text="An aggressive yet achievable 36-month construction and development plan, ensuring a grand opening in 2028."
                 />
               </GlassCard>
-              <div className="relative mx-auto max-w-2xl">
-                <GlassCard className="p-4 md:p-6 hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
-                  <RoadmapTimelineItem
-                    phase={1}
-                    title="Phase 1: Foundation (Year 1)"
-                    description="Finalize master plan, secure permits, formalize partnerships, and begin site preparation."
-                  />
-                  <RoadmapTimelineItem
-                    phase={2}
-                    title="Phase 2: Vertical Construction (Year 2-3)"
-                    description="Sphere structural completion, facade &amp; tech integration. Develop Innovation Campus."
-                  />
-                  <RoadmapTimelineItem
-                    phase={3}
-                    title="Phase 3: Launch Readiness (Year 3-4)"
-                    description="Systems integration, testing, commissioning, and global marketing launch."
-                  />
-                  <RoadmapTimelineItem
-                    isTarget={true}
-                    title="TARGET: GRAND OPENING Q4 2028"
-                    isLast={true}
-                  />
-                </GlassCard>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+                <RoadmapTimelineItem
+                  phase={1}
+                  title="Phase 1: Foundation (Year 1)"
+                  description="Finalize master plan, secure permits, formalize partnerships, and begin site preparation."
+                />
+                <RoadmapTimelineItem
+                  phase={2}
+                  title="Phase 2: Vertical Construction (Year 2-3)"
+                  description="Sphere structural completion, facade &amp; tech integration. Develop Innovation Campus."
+                />
+                <RoadmapTimelineItem
+                  phase={3}
+                  title="Phase 3: Launch Readiness (Year 3-4)"
+                  description="Systems integration, testing, commissioning, and global marketing launch."
+                />
+                <RoadmapTimelineItem
+                  isTarget={true}
+                  title="TARGET: GRAND OPENING Q4 2028"
+                  className="md:col-span-2 lg:col-span-3"
+                />
               </div>
             </GlassCard>
           </div>
