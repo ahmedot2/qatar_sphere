@@ -452,19 +452,19 @@ export default function Home({
             <GlassCard className="p-6 md:p-8">
               <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
                 <div className="space-y-8">
-                  <div className="space-y-4">
+                  <GlassCard className="p-6 text-center md:text-left">
                     <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">
                       A New Paradigm: Beyond Entertainment
                     </h2>
                     <DecryptedText
-                      parentClassName="text-lg text-destructive md:text-2xl"
+                      parentClassName="mt-4 text-lg text-destructive md:text-2xl"
                       animateOn="view"
                       sequential={true}
                       speed={20}
                       maxIterations={10}
                       text="From an Entertainment Venue to a Cognitive Hub. While competitors focus on building bigger screens, we will build a smarter city. The QatarSphere District's vision transcends entertainment to become a globally significant hub for technological innovation."
                     />
-                  </div>
+                  </GlassCard>
                   <div className="space-y-6">
                     <div className="group relative transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)] hover:scale-[1.02]">
                       <GlassCard>
