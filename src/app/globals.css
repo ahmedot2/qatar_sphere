@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import '../components/gradient-text.css';
-
 @layer base {
   :root {
     --background: 222 84% 97%;
@@ -78,3 +76,5 @@
     @apply w-full p-8 sm:p-12 md:p-16 flex flex-col items-center justify-center relative overflow-hidden;
   }
 }
+
+    

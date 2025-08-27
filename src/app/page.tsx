@@ -48,7 +48,6 @@ import DecryptedText from '@/components/decrypted-text';
 import AnimatedCounter from '@/components/animated-counter';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import GradientText from '@/components/gradient-text';
 
 const ExecutiveSummaryCard = ({
   icon,
@@ -364,14 +363,9 @@ export default function Home({
           <GlassCard className="w-full max-w-screen-2xl p-6 md:p-8 hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <GlassCard className="md:col-span-2">
-                <GradientText
-                    as="h1"
-                    className="font-logo text-2xl font-bold uppercase text-primary tracking-wider sm:text-4xl md:text-6xl lg:text-7xl md:tracking-widest"
-                    colors={['#800000', '#FFFFFF', '#800000']}
-                    animationSpeed={10}
-                  >
-                    QatarSphere District
-                  </GradientText>
+                <h1 className="font-logo text-2xl font-bold uppercase text-primary tracking-wider sm:text-4xl md:text-6xl lg:text-7xl md:tracking-widest">
+                  QatarSphere District
+                </h1>
               </GlassCard>
               <GlassCard className="md:col-span-1 flex items-center justify-center">
                 <DecryptedText
@@ -1024,5 +1018,7 @@ export default function Home({
     </div>
   );
 }
+
+    
 
     
