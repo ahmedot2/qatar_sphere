@@ -403,7 +403,7 @@ export default function Home({
 
         {/* Slide 2: Executive Summary */}
         <section id="executive-summary">
-          <div className="container">
+          <div className="w-full max-w-screen-2xl">
             <GlassCard className="p-6 md:p-8 space-y-8">
               <div className="space-y-4 text-center">
                 <GlassCard>
@@ -418,17 +418,17 @@ export default function Home({
                     text="A Vision for National Prosperity & Technological Sovereignty. We present the QatarSphere District—a strategic national project designed not just to lead in entertainment, but to become a global epicenter for the next industrial revolution."
                 />
               </div>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <ExecutiveSummaryCard icon={<Cpu size={24} />} title="The Proposal" className="col-span-1 md:col-span-2">
                       A <b>$4.2 billion total investment</b> to develop the world&apos;s first "cognitive city" district.
                   </ExecutiveSummaryCard>
                   <ExecutiveSummaryCard icon={<TrendingUp size={24} />} title="The Dual Engine" className="col-span-1 md:col-span-2">
                       Adds <b>QAR 20-30B ($5.5-8.2B USD)</b> annually to GDP, creating a powerful new economic driver.
                   </ExecutiveSummaryCard>
-                  <ExecutiveSummaryCard icon={<ShieldCheck size={24} />} title="Strategic Imperative" className="col-span-1 md:col-span-1">
+                  <ExecutiveSummaryCard icon={<ShieldCheck size={24} />} title="Strategic Imperative" className="col-span-1">
                       Moves beyond tourism to create a living laboratory for AI, Quantum Computing, and Robotics, aligning with QNV 2030.
                   </ExecutiveSummaryCard>
-                  <ExecutiveSummaryCard icon={<Handshake size={24} />} title="The Ask" className="col-span-1 md:col-span-1">
+                  <ExecutiveSummaryCard icon={<Handshake size={24} />} title="The Ask" className="col-span-1">
                       Seeking QIA&apos;s backing to anchor this nation-building project and secure Qatar&apos;s position as a global leader.
                   </ExecutiveSummaryCard>
               </div>
@@ -449,7 +449,7 @@ export default function Home({
 
         {/* Slide 3: A New Paradigm */}
         <section id="new-paradigm">
-          <div className="container flex flex-col md:flex-row items-center gap-12">
+          <div className="w-full max-w-screen-2xl flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2">
               <GlassCard className="mb-8 hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
                   <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">
@@ -525,7 +525,7 @@ export default function Home({
 
         {/* Slide 4: Proposed Solution */}
         <section id="solution">
-          <div className="container space-y-12">
+          <div className="w-full max-w-screen-2xl space-y-12">
             <GlassCard className="text-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
               <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">
                 Proposed Solution: A Dual-Purpose Ecosystem
@@ -599,7 +599,7 @@ export default function Home({
 
         {/* Slide 5: National & Cultural Impact */}
         <section id="impact">
-          <div className="container space-y-12">
+          <div className="w-full max-w-screen-2xl space-y-12">
             <GlassCard className="text-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
               <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">
                 National &amp; Cultural Impact
@@ -643,7 +643,7 @@ export default function Home({
 
         {/* Slide 6: Redefined Value Proposition */}
         <section id="value-proposition">
-          <div className="container">
+          <div className="w-full max-w-screen-2xl">
             <GlassCard className="mb-12 text-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
               <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">
                 A Redefined Value Proposition
@@ -679,7 +679,7 @@ export default function Home({
 
         {/* Slide 7: Financial Overview */}
         <section id="financials">
-          <div className="container">
+          <div className="w-full max-w-screen-2xl">
             <GlassCard className="mb-12 text-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
                 <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">Financial Overview</h2>
                 <DecryptedText
@@ -749,7 +749,7 @@ export default function Home({
 
         {/* Slide 8: Implementation Roadmap */}
         <section id="roadmap">
-          <div className="container">
+          <div className="w-full max-w-screen-2xl">
             <GlassCard className="mb-12 text-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
               <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">
                 Implementation Roadmap: 2025-2028
@@ -804,7 +804,7 @@ export default function Home({
         
         {/* Slide 9: Strategic Partnerships */}
         <section id="partnerships">
-          <div className="container">
+          <div className="w-full max-w-screen-2xl">
             <GlassCard className="mb-12 text-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
               <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">Strategic Partnerships</h2>
               <DecryptedText
@@ -847,7 +847,7 @@ export default function Home({
 
         {/* Slide 10: Risk Assessment */}
         <section id="risk">
-          <div className="container">
+          <div className="w-full max-w-screen-2xl">
             <GlassCard className="mb-12 text-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
               <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">
                 Expanded Risk Assessment &amp; Mitigation
@@ -902,7 +902,7 @@ export default function Home({
 
         {/* Slide 11: Call to Action */}
         <section id="cta">
-          <div className="container grid items-center gap-12 md:grid-cols-2">
+          <div className="w-full max-w-screen-2xl grid items-center gap-12 md:grid-cols-2">
             <GlassCard className="h-full flex flex-col justify-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
               <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">Call to Action</h2>
               <DecryptedText
@@ -970,7 +970,7 @@ export default function Home({
 
         {/* Slide 12: Conclusion */}
         <section id="conclusion">
-          <div className="container text-center">
+          <div className="w-full max-w-screen-2xl text-center">
             <div className="group relative transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)] hover:scale-[1.02]">
               <GlassCard className="text-center">
                 <h2 className="text-3xl font-display font-bold tracking-wider md:text-4xl text-foreground tracking-wider">
