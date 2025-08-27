@@ -860,44 +860,46 @@ export default function Home({
         {/* Slide 10: Risk Assessment */}
         <section id="risk">
           <div className="w-full max-w-screen-2xl">
-            <GlassCard className="mb-12 text-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
-              <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">
-                Expanded Risk Assessment &amp; Mitigation
-              </h2>
-              <DecryptedText
-                parentClassName="mx-auto mt-4 max-w-3xl text-lg text-destructive md:text-2xl"
-                animateOn="view"
-                sequential={true}
-                speed={20}
-                maxIterations={10}
-                text="Proactive management for assured success with robust contingency plans."
-              />
+            <GlassCard className="p-6 md:p-8 space-y-12">
+              <GlassCard className="text-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
+                <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">
+                  Expanded Risk Assessment &amp; Mitigation
+                </h2>
+                <DecryptedText
+                  parentClassName="mx-auto mt-4 max-w-3xl text-lg text-destructive md:text-2xl"
+                  animateOn="view"
+                  sequential={true}
+                  speed={20}
+                  maxIterations={10}
+                  text="Proactive management for assured success with robust contingency plans."
+                />
+              </GlassCard>
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <RiskCard icon={<Wrench size={24} />}>
+                  Partnering with CSCEC, leveraging prefabrication, and securing a 15% contingency
+                  budget.
+                </RiskCard>
+                <RiskCard icon={<Activity size={24} />}>
+                  Dual-engine model hedges risk, as the R&amp;D/Tech sector is less correlated with
+                  consumer travel.
+                </RiskCard>
+                <RiskCard icon={<Replace size={24} />}>
+                  Modular, open-architecture design for easy upgrades. The QIC&apos;s purpose is to
+                  drive change.
+                </RiskCard>
+                <RiskCard icon={<Globe2 size={24} />}>
+                  Diversified global partnerships. Position QIC as a neutral, &quot;open-source&quot;
+                  R&amp;D hub.
+                </RiskCard>
+                <RiskCard icon={<Recycle size={24} />}>
+                  LEED Platinum design, on-site solar generation, and advanced water recycling.
+                </RiskCard>
+                <RiskCard icon={<ShieldCheck size={24} />}>
+                  Robust cybersecurity protocols and physical security designed in partnership with
+                  global experts.
+                </RiskCard>
+              </div>
             </GlassCard>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              <RiskCard icon={<Wrench size={24} />}>
-                Partnering with CSCEC, leveraging prefabrication, and securing a 15% contingency
-                budget.
-              </RiskCard>
-              <RiskCard icon={<Activity size={24} />}>
-                Dual-engine model hedges risk, as the R&amp;D/Tech sector is less correlated with
-                consumer travel.
-              </RiskCard>
-              <RiskCard icon={<Replace size={24} />}>
-                Modular, open-architecture design for easy upgrades. The QIC&apos;s purpose is to
-                drive change.
-              </RiskCard>
-              <RiskCard icon={<Globe2 size={24} />}>
-                Diversified global partnerships. Position QIC as a neutral, &quot;open-source&quot;
-                R&amp;D hub.
-              </RiskCard>
-              <RiskCard icon={<Recycle size={24} />}>
-                LEED Platinum design, on-site solar generation, and advanced water recycling.
-              </RiskCard>
-              <RiskCard icon={<ShieldCheck size={24} />}>
-                Robust cybersecurity protocols and physical security designed in partnership with
-                global experts.
-              </RiskCard>
-            </div>
           </div>
         </section>
 
