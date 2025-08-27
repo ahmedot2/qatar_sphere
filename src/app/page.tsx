@@ -777,33 +777,27 @@ export default function Home({
                 />
               </GlassCard>
               <div className="relative mx-auto max-w-2xl">
-              <GlassCard className="text-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
-                <RoadmapTimelineItem
-                  phase={1}
-                  title="Phase 1: Foundation (Year 1)"
-                  description="Finalize master plan, secure permits, formalize partnerships, and begin site preparation."
-                />
-</GlassCard>
-<GlassCard className="text-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
-                <RoadmapTimelineItem
-                  phase={2}
-                  title="Phase 2: Vertical Construction (Year 2-3)"
-                  description="Sphere structural completion, facade &amp; tech integration. Develop Innovation Campus."
-                />
-</GlassCard>
-<GlassCard className="text-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
-                <RoadmapTimelineItem
-                  phase={3}
-                  title="Phase 3: Launch Readiness (Year 3-4)"
-                  description="Systems integration, testing, commissioning, and global marketing launch."
-                />
-</GlassCard>
-<GlassCard className="text-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
-                <RoadmapTimelineItem
-                  isTarget={true}
-                  title="TARGET: GRAND OPENING Q4 2028"
-                  isLast={true}
-                />
+                <GlassCard className="p-4 md:p-6 hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
+                  <RoadmapTimelineItem
+                    phase={1}
+                    title="Phase 1: Foundation (Year 1)"
+                    description="Finalize master plan, secure permits, formalize partnerships, and begin site preparation."
+                  />
+                  <RoadmapTimelineItem
+                    phase={2}
+                    title="Phase 2: Vertical Construction (Year 2-3)"
+                    description="Sphere structural completion, facade &amp; tech integration. Develop Innovation Campus."
+                  />
+                  <RoadmapTimelineItem
+                    phase={3}
+                    title="Phase 3: Launch Readiness (Year 3-4)"
+                    description="Systems integration, testing, commissioning, and global marketing launch."
+                  />
+                  <RoadmapTimelineItem
+                    isTarget={true}
+                    title="TARGET: GRAND OPENING Q4 2028"
+                    isLast={true}
+                  />
                 </GlassCard>
               </div>
             </GlassCard>
@@ -1025,4 +1019,3 @@ export default function Home({
 }
 
     
-
