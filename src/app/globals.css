@@ -23,7 +23,6 @@
     --border: 240 6% 90%;
     --input: 240 6% 90%;
     --ring: 240 3% 12%;
-    --radius: 0.8rem;
     --chart-1: 240 3% 12%;
     --chart-2: 240 4% 34%;
     --chart-3: 240 5% 53%;
@@ -34,7 +33,7 @@
   .dark {
     --background: 222 84% 4%;
     --foreground: 210 40% 98%;
-    --card: 0 59% 30%;
+    --card: 0 59% 25%;
     --card-foreground: 210 40% 98%;
     --popover: 222 84% 4%;
     --popover-foreground: 210 40% 98%;
@@ -48,8 +47,8 @@
     --accent-foreground: 240 3% 12%;
     --destructive: 45 98% 50%;
     --destructive-foreground: 210 40% 98%;
-    --border: 0 59% 30%;
-    --input: 0 59% 30%;
+    --border: 0 59% 25%;
+    --input: 0 59% 25%;
     --ring: 210 40% 98%;
     --chart-1: 210 40% 98%;
     --chart-2: 240 5% 53%;
