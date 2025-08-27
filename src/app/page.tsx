@@ -398,26 +398,28 @@ export default function Home({
         {/* Slide 2: Executive Summary */}
         <section id="executive-summary">
           <div className="container">
-            <GlassCard className="p-6 md:p-8">
-              <div className="text-center mb-8 md:mb-12">
-                  <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground">Executive Summary</h2>
+            <GlassCard className="p-6 md:p-8 space-y-8">
+              <GlassCard className="text-center">
+                <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground">Executive Summary</h2>
+                <GlassCard className="mt-4">
                   <DecryptedText
-                      parentClassName="mx-auto mt-4 max-w-3xl text-lg text-destructive md:text-2xl"
+                      parentClassName="mx-auto max-w-3xl text-lg text-destructive md:text-2xl"
                       animateOn="view"
                       sequential
                       speed={20}
                       maxIterations={10}
                       text="A Vision for National Prosperity & Technological Sovereignty. We present the QatarSphere District—a strategic national project designed not just to lead in entertainment, but to become a global epicenter for the next industrial revolution."
                   />
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                  <ExecutiveSummaryCard icon={<Cpu size={24} />} title="The Proposal" className="lg:col-span-2">
+                </GlassCard>
+              </GlassCard>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <ExecutiveSummaryCard icon={<Cpu size={24} />} title="The Proposal" className="md:col-span-2">
                       A <b>$4.2 billion total investment</b> to develop the world&apos;s first "cognitive city" district.
                   </ExecutiveSummaryCard>
-                  <ExecutiveSummaryCard icon={<TrendingUp size={24} />} title="The Dual Engine" className="lg:col-span-2">
+                  <ExecutiveSummaryCard icon={<TrendingUp size={24} />} title="The Dual Engine" className="md:col-span-2">
                       Adds <b>QAR 20-30B ($5.5-8.2B USD)</b> annually to GDP, creating a powerful new economic driver.
                   </ExecutiveSummaryCard>
-                  <ExecutiveSummaryCard icon={<ShieldCheck size={24} />} title="Strategic Imperative" className="lg:col-span-2">
+                  <ExecutiveSummaryCard icon={<ShieldCheck size={24} />} title="Strategic Imperative">
                       Moves beyond tourism to create a living laboratory for AI, Quantum Computing, and Robotics, aligning with QNV 2030.
                   </ExecutiveSummaryCard>
                   <ExecutiveSummaryCard icon={<Handshake size={24} />} title="The Ask">
