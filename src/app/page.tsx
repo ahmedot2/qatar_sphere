@@ -529,64 +529,68 @@ export default function Home({
 
         {/* Slide 4: Proposed Solution */}
         <section id="solution">
-          <div className="w-full max-w-screen-2xl space-y-12">
-            <GlassCard className="text-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
-              <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">
-                Proposed Solution: A Dual-Purpose Ecosystem
-              </h2>
-              <DecryptedText
-                parentClassName="mx-auto mt-4 max-w-3xl text-lg text-destructive md:text-2xl"
-                animateOn="view"
-                sequential={true}
-                speed={20}
-                maxIterations={10}
-                text="Our 850,000-square-meter district is designed with two synergistic purposes, creating a virtuous cycle of innovation and experience."
-              />
+          <div className="w-full max-w-screen-2xl">
+            <GlassCard className="p-6 md:p-8">
+              <div className="space-y-12">
+                <GlassCard className="text-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
+                  <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">
+                    Proposed Solution: A Dual-Purpose Ecosystem
+                  </h2>
+                  <DecryptedText
+                    parentClassName="mx-auto mt-4 max-w-3xl text-lg text-destructive md:text-2xl"
+                    animateOn="view"
+                    sequential={true}
+                    speed={20}
+                    maxIterations={10}
+                    text="Our 850,000-square-meter district is designed with two synergistic purposes, creating a virtuous cycle of innovation and experience."
+                  />
+                </GlassCard>
+                <div className="grid gap-8 md:grid-cols-2">
+                  <SolutionCard
+                    imageSrc="/public-experience.jpg"
+                    imageAlt="Public Experience"
+                    imageHint="modern entertainment venue"
+                    icon={<Building2 className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />}
+                    title="Zone 1: The Public Experience"
+                  >
+                    <li className="flex items-start gap-3">
+                      <Building2 className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
+                      <span>The QatarSphere venue, with dynamic, submersible stages.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Hotel className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
+                      <span>Luxury hotels with 2,500 rooms.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <ShoppingBag className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
+                      <span>200+ retail spaces and a 2-mile entertainment promenade.</span>
+                    </li>
+                  </SolutionCard>
+                  <SolutionCard
+                    imageSrc="/innovation-campus.jpg"
+                    imageAlt="Innovation Campus"
+                    imageHint="futuristic research lab"
+                    icon={<FlaskConical className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />}
+                    title="Zone 2: The Qatar Innovation Campus"
+                  >
+                    <li className="flex items-start gap-3">
+                      <FlaskConical className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
+                      <span>State-of-the-art R&amp;D facilities and secure data centers.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Bot className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
+                      <span>
+                        &quot;Sandbox&quot; environments for testing autonomous robots and AI systems.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Server className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
+                      <span>Corporate headquarters and startup incubators for global tech firms.</span>
+                    </li>
+                  </SolutionCard>
+                </div>
+              </div>
             </GlassCard>
-            <div className="grid gap-8 md:grid-cols-2">
-              <SolutionCard
-                imageSrc="/public-experience.jpg"
-                imageAlt="Public Experience"
-                imageHint="modern entertainment venue"
-                icon={<Building2 className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />}
-                title="Zone 1: The Public Experience"
-              >
-                <li className="flex items-start gap-3">
-                  <Building2 className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
-                  <span>The QatarSphere venue, with dynamic, submersible stages.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Hotel className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
-                  <span>Luxury hotels with 2,500 rooms.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ShoppingBag className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
-                  <span>200+ retail spaces and a 2-mile entertainment promenade.</span>
-                </li>
-              </SolutionCard>
-              <SolutionCard
-                imageSrc="/innovation-campus.jpg"
-                imageAlt="Innovation Campus"
-                imageHint="futuristic research lab"
-                icon={<FlaskConical className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />}
-                title="Zone 2: The Qatar Innovation Campus"
-              >
-                <li className="flex items-start gap-3">
-                  <FlaskConical className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
-                  <span>State-of-the-art R&amp;D facilities and secure data centers.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Bot className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
-                  <span>
-                    &quot;Sandbox&quot; environments for testing autonomous robots and AI systems.
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Server className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
-                  <span>Corporate headquarters and startup incubators for global tech firms.</span>
-                </li>
-              </SolutionCard>
-            </div>
           </div>
         </section>
 
