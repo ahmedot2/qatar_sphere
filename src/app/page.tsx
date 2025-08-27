@@ -692,59 +692,61 @@ export default function Home({
         {/* Slide 7: Financial Overview */}
         <section id="financials">
           <div className="w-full max-w-screen-2xl">
-            <GlassCard className="mb-12 text-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
-                <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">Financial Overview</h2>
-                <DecryptedText
-                    parentClassName="mx-auto mt-4 max-w-3xl text-lg text-destructive md:text-2xl"
-                    animateOn="view"
-                    sequential={true}
-                    speed={20}
-                    maxIterations={10}
-                    text="A sound and highly profitable national investment built on rigorous analysis and a resilient, diversified revenue strategy."
-                />
-            </GlassCard>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-4">
-              <FinancialMetricCard
-                label="Total Investment"
-                value={4.2}
-                prefix="$"
-                postfix="B"
-                icon={<DollarSign size={24} />}
-                className="lg:col-span-2"
-              />
-              <FinancialMetricCard
-                label="Projected Annual Revenue"
-                value={1.8}
-                prefix="$"
-                postfix="B"
-                icon={<Target size={24} />}
-                className="lg:col-span-2"
-              />
-              <GlassCard
-                className={cn(
-                  'group relative transition-all duration-300 ease-in-out',
-                  'hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)] hover:scale-[1.02]',
-                  'md:col-span-3 lg:col-span-2 lg:row-span-2 min-h-[300px] p-6'
-                )}
-              >
-                  <h3 className="mb-4 text-lg font-semibold">Investment Breakdown</h3>
-                  <InvestmentChart />
+            <GlassCard className="p-6 md:p-8 space-y-12">
+              <GlassCard className="text-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
+                  <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">Financial Overview</h2>
+                  <DecryptedText
+                      parentClassName="mx-auto mt-4 max-w-3xl text-lg text-destructive md:text-2xl"
+                      animateOn="view"
+                      sequential={true}
+                      speed={20}
+                      maxIterations={10}
+                      text="A sound and highly profitable national investment built on rigorous analysis and a resilient, diversified revenue strategy."
+                  />
               </GlassCard>
-              <FinancialMetricCard
-                label="Payback Period"
-                value={2.3}
-                prefix="~"
-                postfix=" Yrs"
-                icon={<RefreshCw size={24} />}
-                className="md:col-span-1 lg:col-span-2"
-              />
-              <FinancialMetricCard
-                label="Annual GDP Contribution"
-                value="QAR 20-30B"
-                icon={<AreaChart size={24} />}
-                className="md:col-span-2 lg:col-span-2"
-              />
-            </div>
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-4">
+                <FinancialMetricCard
+                  label="Total Investment"
+                  value={4.2}
+                  prefix="$"
+                  postfix="B"
+                  icon={<DollarSign size={24} />}
+                  className="lg:col-span-2"
+                />
+                <FinancialMetricCard
+                  label="Projected Annual Revenue"
+                  value={1.8}
+                  prefix="$"
+                  postfix="B"
+                  icon={<Target size={24} />}
+                  className="lg:col-span-2"
+                />
+                <GlassCard
+                  className={cn(
+                    'group relative transition-all duration-300 ease-in-out',
+                    'hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)] hover:scale-[1.02]',
+                    'md:col-span-3 lg:col-span-2 lg:row-span-2 min-h-[300px] p-6'
+                  )}
+                >
+                    <h3 className="mb-4 text-lg font-semibold">Investment Breakdown</h3>
+                    <InvestmentChart />
+                </GlassCard>
+                <FinancialMetricCard
+                  label="Payback Period"
+                  value={2.3}
+                  prefix="~"
+                  postfix=" Yrs"
+                  icon={<RefreshCw size={24} />}
+                  className="md:col-span-1 lg:col-span-2"
+                />
+                <FinancialMetricCard
+                  label="Annual GDP Contribution"
+                  value="QAR 20-30B"
+                  icon={<AreaChart size={24} />}
+                  className="md:col-span-2 lg:col-span-2"
+                />
+              </div>
+            </GlassCard>
           </div>
         </section>
 
