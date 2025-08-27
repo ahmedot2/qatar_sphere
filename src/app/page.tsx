@@ -410,27 +410,27 @@ export default function Home({
                   <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground">Executive Summary</h2>
                 </GlassCard>
                 <DecryptedText
-                    parentClassName="mx-auto max-w-3xl text-lg text-destructive md:text-2xl"
-                    animateOn="view"
-                    sequential
-                    speed={20}
-                    maxIterations={10}
-                    text="A Vision for National Prosperity & Technological Sovereignty. We present the QatarSphere District—a strategic national project designed not just to lead in entertainment, but to become a global epicenter for the next industrial revolution."
+                  parentClassName="mx-auto max-w-3xl text-lg text-destructive md:text-2xl"
+                  animateOn="view"
+                  sequential
+                  speed={20}
+                  maxIterations={10}
+                  text="A Vision for National Prosperity & Technological Sovereignty. We present the QatarSphere District—a strategic national project designed not just to lead in entertainment, but to become a global epicenter for the next industrial revolution."
                 />
               </div>
-              <div className="grid md:grid-cols-2 gap-6">
-                  <ExecutiveSummaryCard icon={<Cpu size={24} />} title="The Proposal" className="col-span-1 md:col-span-2">
-                      A <b>$4.2 billion total investment</b> to develop the world&apos;s first "cognitive city" district.
-                  </ExecutiveSummaryCard>
-                  <ExecutiveSummaryCard icon={<TrendingUp size={24} />} title="The Dual Engine" className="col-span-1 md:col-span-2">
-                      Adds <b>QAR 20-30B ($5.5-8.2B USD)</b> annually to GDP, creating a powerful new economic driver.
-                  </ExecutiveSummaryCard>
-                  <ExecutiveSummaryCard icon={<ShieldCheck size={24} />} title="Strategic Imperative" className="col-span-1">
-                      Moves beyond tourism to create a living laboratory for AI, Quantum Computing, and Robotics, aligning with QNV 2030.
-                  </ExecutiveSummaryCard>
-                  <ExecutiveSummaryCard icon={<Handshake size={24} />} title="The Ask" className="col-span-1">
-                      Seeking QIA&apos;s backing to anchor this nation-building project and secure Qatar&apos;s position as a global leader.
-                  </ExecutiveSummaryCard>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <ExecutiveSummaryCard icon={<Cpu size={24} />} title="The Proposal" className="col-span-1 md:col-span-2">
+                  A <b>$4.2 billion total investment</b> to develop the world&apos;s first "cognitive city" district.
+                </ExecutiveSummaryCard>
+                <ExecutiveSummaryCard icon={<TrendingUp size={24} />} title="The Dual Engine" className="col-span-1 md:col-span-2">
+                  Adds <b>QAR 20-30B ($5.5-8.2B USD)</b> annually to GDP, creating a powerful new economic driver.
+                </ExecutiveSummaryCard>
+                <ExecutiveSummaryCard icon={<ShieldCheck size={24} />} title="Strategic Imperative" className="col-span-1">
+                  Moves beyond tourism to create a living laboratory for AI, Quantum Computing, and Robotics, aligning with QNV 2030.
+                </ExecutiveSummaryCard>
+                <ExecutiveSummaryCard icon={<Handshake size={24} />} title="The Ask" className="col-span-1">
+                  Seeking QIA&apos;s backing to anchor this nation-building project and secure Qatar&apos;s position as a global leader.
+                </ExecutiveSummaryCard>
               </div>
             </GlassCard>
           </div>
@@ -607,34 +607,36 @@ export default function Home({
 
         {/* Slide 5: National & Cultural Impact */}
         <section id="impact">
-          <div className="w-full max-w-screen-2xl space-y-12">
-            <GlassCard className="text-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
-              <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">
-                National &amp; Cultural Impact
-              </h2>
-              <DecryptedText
-                parentClassName="mx-auto mt-4 max-w-3xl text-lg text-destructive md:text-2xl"
-                animateOn="view"
-                sequential={true}
-                speed={20}
-                maxIterations={10}
-                text="Fulfilling an Accelerated Vision for 2030, this project is a powerful catalyst for our national vision, creating parallel streams of human and economic development."
-              />
+          <div className="w-full max-w-screen-2xl">
+            <GlassCard className="p-6 md:p-8 space-y-12">
+              <GlassCard className="text-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
+                <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">
+                  National &amp; Cultural Impact
+                </h2>
+                <DecryptedText
+                  parentClassName="mx-auto mt-4 max-w-3xl text-lg text-destructive md:text-2xl"
+                  animateOn="view"
+                  sequential={true}
+                  speed={20}
+                  maxIterations={10}
+                  text="Fulfilling an Accelerated Vision for 2030, this project is a powerful catalyst for our national vision, creating parallel streams of human and economic development."
+                />
+              </GlassCard>
+              <div className="grid md:grid-cols-3 gap-8">
+                <ImpactCard icon={<Book size={28} />} title="Celebrate Heritage,<br/>Power the Future">
+                  A unique brand of &apos;Culture &amp; Code&apos; to define Qatar&apos;s global
+                  identity, featuring a Qatar Heritage Pavilion.
+                </ImpactCard>
+                <ImpactCard icon={<Users2 size={28} />} title="Build a<br/>Knowledge Workforce">
+                  A National Technology Fellowship to develop elite Qatari talent in AI, quantum
+                  mechanics, and robotics.
+                </ImpactCard>
+                <ImpactCard icon={<HeartHandshake size={28} />} title="Enhance Community<br/>Well-being">
+                  World-class public spaces, family-friendly programming, and a new source of
+                  national pride.
+                </ImpactCard>
+              </div>
             </GlassCard>
-            <div className="mt-12 grid md:grid-cols-3 gap-8">
-              <ImpactCard icon={<Book size={28} />} title="Celebrate Heritage,<br/>Power the Future">
-                A unique brand of &apos;Culture &amp; Code&apos; to define Qatar&apos;s global
-                identity, featuring a Qatar Heritage Pavilion.
-              </ImpactCard>
-              <ImpactCard icon={<Users2 size={28} />} title="Build a<br/>Knowledge Workforce">
-                A National Technology Fellowship to develop elite Qatari talent in AI, quantum
-                mechanics, and robotics.
-              </ImpactCard>
-              <ImpactCard icon={<HeartHandshake size={28} />} title="Enhance Community<br/>Well-being">
-                World-class public spaces, family-friendly programming, and a new source of
-                national pride.
-              </ImpactCard>
-            </div>
           </div>
         </section>
 
