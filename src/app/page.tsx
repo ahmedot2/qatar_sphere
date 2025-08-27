@@ -361,24 +361,30 @@ export default function Home({
           id="title"
           className="relative flex h-screen flex-col items-center justify-center text-center"
         >
-          <GlassCard className="w-full max-w-4xl hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
-            <h1 className="font-logo text-3xl font-bold uppercase text-primary tracking-wider sm:text-4xl md:text-6xl lg:text-7xl md:tracking-widest">
-              QatarSphere District
-            </h1>
-            <DecryptedText
-              text="A Landmark Investment in Qatar's Future: Building the World's First Cognitive City, a Hub for Technology, Tourism, and Talent."
-              animateOn="view"
-              sequential={true}
-              revealDirection="start"
-              speed={20}
-              maxIterations={10}
-              parentClassName="mx-auto mt-6 max-w-3xl text-lg text-destructive md:text-2xl"
-            />
-            <div className="mt-6 text-lg">
-              <p className="font-semibold">Presented by:</p>
-              <p className="text-accent text-lg">
-                His Excellency Sheikh Jabr bin Thani Al Thani
-              </p>
+          <GlassCard className="w-full max-w-4xl p-6 md:p-8 hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <GlassCard className="md:col-span-2">
+                  <h1 className="font-logo text-3xl font-bold uppercase text-primary tracking-wider sm:text-4xl md:text-6xl lg:text-7xl md:tracking-widest">
+                    QatarSphere District
+                  </h1>
+              </GlassCard>
+              <GlassCard className="md:col-span-1 flex items-center justify-center">
+                <DecryptedText
+                  text="A Landmark Investment in Qatar's Future: Building the World's First Cognitive City, a Hub for Technology, Tourism, and Talent."
+                  animateOn="view"
+                  sequential={true}
+                  revealDirection="start"
+                  speed={20}
+                  maxIterations={10}
+                  parentClassName="mx-auto max-w-3xl text-lg text-destructive md:text-2xl"
+                />
+              </GlassCard>
+              <GlassCard className="md:col-span-1 flex flex-col items-center justify-center text-lg">
+                  <p className="font-semibold">Presented by:</p>
+                  <p className="text-accent text-lg">
+                    His Excellency Sheikh Jabr bin Thani Al Thani
+                  </p>
+              </GlassCard>
             </div>
           </GlassCard>
           <div className="absolute inset-0 -z-10 bg-grid-slate-100 [mask-image:linear-gradient(to_bottom,white,transparent)] dark:bg-grid-slate-700/30"></div>
