@@ -530,65 +530,63 @@ export default function Home({
         {/* Slide 4: Proposed Solution */}
         <section id="solution">
           <div className="w-full max-w-screen-2xl">
-            <GlassCard className="p-6 md:p-8">
-              <div className="space-y-12">
-                <GlassCard className="text-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
-                  <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">
-                    Proposed Solution: A Dual-Purpose Ecosystem
-                  </h2>
-                  <DecryptedText
-                    parentClassName="mx-auto mt-4 max-w-3xl text-lg text-destructive md:text-2xl"
-                    animateOn="view"
-                    sequential={true}
-                    speed={20}
-                    maxIterations={10}
-                    text="Our 850,000-square-meter district is designed with two synergistic purposes, creating a virtuous cycle of innovation and experience."
-                  />
-                </GlassCard>
-                <div className="grid gap-8 md:grid-cols-2">
-                  <SolutionCard
-                    imageSrc="/public-experience.jpg"
-                    imageAlt="Public Experience"
-                    imageHint="modern entertainment venue"
-                    icon={<Building2 className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />}
-                    title="Zone 1: The Public Experience"
-                  >
-                    <li className="flex items-start gap-3">
-                      <Building2 className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
-                      <span>The QatarSphere venue, with dynamic, submersible stages.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Hotel className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
-                      <span>Luxury hotels with 2,500 rooms.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <ShoppingBag className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
-                      <span>200+ retail spaces and a 2-mile entertainment promenade.</span>
-                    </li>
-                  </SolutionCard>
-                  <SolutionCard
-                    imageSrc="/innovation-campus.jpg"
-                    imageAlt="Innovation Campus"
-                    imageHint="futuristic research lab"
-                    icon={<FlaskConical className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />}
-                    title="Zone 2: The Qatar Innovation Campus"
-                  >
-                    <li className="flex items-start gap-3">
-                      <FlaskConical className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
-                      <span>State-of-the-art R&amp;D facilities and secure data centers.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Bot className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
-                      <span>
-                        &quot;Sandbox&quot; environments for testing autonomous robots and AI systems.
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Server className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
-                      <span>Corporate headquarters and startup incubators for global tech firms.</span>
-                    </li>
-                  </SolutionCard>
-                </div>
+            <GlassCard className="p-6 md:p-8 space-y-12">
+              <GlassCard className="text-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
+                <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">
+                  Proposed Solution: A Dual-Purpose Ecosystem
+                </h2>
+                <DecryptedText
+                  parentClassName="mx-auto mt-4 max-w-3xl text-lg text-destructive md:text-2xl"
+                  animateOn="view"
+                  sequential={true}
+                  speed={20}
+                  maxIterations={10}
+                  text="Our 850,000-square-meter district is designed with two synergistic purposes, creating a virtuous cycle of innovation and experience."
+                />
+              </GlassCard>
+              <div className="grid gap-8 md:grid-cols-2">
+                <SolutionCard
+                  imageSrc="/public-experience.jpg"
+                  imageAlt="Public Experience"
+                  imageHint="modern entertainment venue"
+                  icon={<Building2 className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />}
+                  title="Zone 1: The Public Experience"
+                >
+                  <li className="flex items-start gap-3">
+                    <Building2 className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
+                    <span>The QatarSphere venue, with dynamic, submersible stages.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Hotel className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
+                    <span>Luxury hotels with 2,500 rooms.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <ShoppingBag className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
+                    <span>200+ retail spaces and a 2-mile entertainment promenade.</span>
+                  </li>
+                </SolutionCard>
+                <SolutionCard
+                  imageSrc="/innovation-campus.jpg"
+                  imageAlt="Innovation Campus"
+                  imageHint="futuristic research lab"
+                  icon={<FlaskConical className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />}
+                  title="Zone 2: The Qatar Innovation Campus"
+                >
+                  <li className="flex items-start gap-3">
+                    <FlaskConical className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
+                    <span>State-of-the-art R&amp;D facilities and secure data centers.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Bot className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
+                    <span>
+                      &quot;Sandbox&quot; environments for testing autonomous robots and AI systems.
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Server className="mt-1 h-5 w-5 shrink-0 text-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
+                    <span>Corporate headquarters and startup incubators for global tech firms.</span>
+                  </li>
+                </SolutionCard>
               </div>
             </GlassCard>
           </div>
@@ -764,44 +762,51 @@ export default function Home({
         {/* Slide 8: Implementation Roadmap */}
         <section id="roadmap">
           <div className="w-full max-w-screen-2xl">
-            <GlassCard className="mb-12 text-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
-              <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">
-                Implementation Roadmap: 2025-2028
-              </h2>
-              <DecryptedText
-                parentClassName="mx-auto mt-4 max-w-3xl text-lg text-destructive md:text-2xl"
-                animateOn="view"
-                sequential={true}
-                speed={20}
-                maxIterations={10}
-                text="An aggressive yet achievable 36-month construction and development plan, ensuring a grand opening in 2028."
-              />
+            <GlassCard className="p-6 md:p-8 space-y-12">
+              <GlassCard className="text-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
+                <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">
+                  Implementation Roadmap: 2025-2028
+                </h2>
+                <DecryptedText
+                  parentClassName="mx-auto mt-4 max-w-3xl text-lg text-destructive md:text-2xl"
+                  animateOn="view"
+                  sequential={true}
+                  speed={20}
+                  maxIterations={10}
+                  text="An aggressive yet achievable 36-month construction and development plan, ensuring a grand opening in 2028."
+                />
+              </GlassCard>
+              <div className="relative mx-auto max-w-2xl">
+              <GlassCard className="text-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
+                <RoadmapTimelineItem
+                  phase={1}
+                  title="Phase 1: Foundation (Year 1)"
+                  description="Finalize master plan, secure permits, formalize partnerships, and begin site preparation."
+                />
+</GlassCard>
+<GlassCard className="text-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
+                <RoadmapTimelineItem
+                  phase={2}
+                  title="Phase 2: Vertical Construction (Year 2-3)"
+                  description="Sphere structural completion, facade &amp; tech integration. Develop Innovation Campus."
+                />
+</GlassCard>
+<GlassCard className="text-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
+                <RoadmapTimelineItem
+                  phase={3}
+                  title="Phase 3: Launch Readiness (Year 3-4)"
+                  description="Systems integration, testing, commissioning, and global marketing launch."
+                />
+</GlassCard>
+<GlassCard className="text-center hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
+                <RoadmapTimelineItem
+                  isTarget={true}
+                  title="TARGET: GRAND OPENING Q4 2028"
+                  isLast={true}
+                />
+                </GlassCard>
+              </div>
             </GlassCard>
-            <div className="relative mt-12 mx-auto max-w-2xl">
-              <RoadmapTimelineItem
-                phase={1}
-                title="Phase 1: Foundation (Year 1)"
-                description="Finalize master plan, secure permits, formalize partnerships, and begin site preparation."
-              />
-
-              <RoadmapTimelineItem
-                phase={2}
-                title="Phase 2: Vertical Construction (Year 2-3)"
-                description="Sphere structural completion, facade &amp; tech integration. Develop Innovation Campus."
-              />
-
-              <RoadmapTimelineItem
-                phase={3}
-                title="Phase 3: Launch Readiness (Year 3-4)"
-                description="Systems integration, testing, commissioning, and global marketing launch."
-              />
-
-              <RoadmapTimelineItem
-                isTarget={true}
-                title="TARGET: GRAND OPENING Q4 2028"
-                isLast={true}
-              />
-            </div>
           </div>
         </section>
 
@@ -1020,3 +1025,4 @@ export default function Home({
 }
 
     
+
