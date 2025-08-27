@@ -382,7 +382,7 @@ export default function Home({
               <GlassCard className="md:col-span-1 flex flex-col items-center justify-center text-lg">
                   <p className="font-semibold">Presented by:</p>
                   <p className="text-accent text-lg">
-                    His Excellency Sheikh Jabr bin Thani Al Thani
+                    H.E SHEIKH JABR BIN JASIM BIN THANI AL THANI
                   </p>
               </GlassCard>
             </div>
