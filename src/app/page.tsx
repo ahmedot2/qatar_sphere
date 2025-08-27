@@ -364,7 +364,7 @@ export default function Home({
           <GlassCard className="w-full max-w-4xl p-6 md:p-8 hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <GlassCard className="md:col-span-2">
-                  <h1 className="font-logo text-3xl font-bold uppercase text-primary tracking-wider sm:text-4xl md:text-6xl lg:text-7xl md:tracking-widest">
+                  <h1 className="font-logo text-2xl font-bold uppercase text-primary tracking-wider sm:text-4xl md:text-6xl lg:text-7xl md:tracking-widest">
                     QatarSphere District
                   </h1>
               </GlassCard>
@@ -376,7 +376,7 @@ export default function Home({
                   revealDirection="start"
                   speed={20}
                   maxIterations={10}
-                  parentClassName="mx-auto max-w-3xl text-lg text-destructive md:text-2xl"
+                  parentClassName="mx-auto max-w-3xl text-lg text-destructive md:text-xl"
                 />
               </GlassCard>
               <GlassCard className="md:col-span-1 flex flex-col items-center justify-center text-lg">
@@ -405,17 +405,19 @@ export default function Home({
         <section id="executive-summary">
           <div className="container">
             <GlassCard className="p-6 md:p-8 space-y-8">
-              <GlassCard className="text-center">
-                <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground">Executive Summary</h2>
+              <div className="space-y-4 text-center">
+                <GlassCard>
+                  <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground">Executive Summary</h2>
+                </GlassCard>
                 <DecryptedText
-                    parentClassName="mx-auto max-w-3xl text-lg text-destructive md:text-2xl mt-4"
+                    parentClassName="mx-auto max-w-3xl text-lg text-destructive md:text-2xl"
                     animateOn="view"
                     sequential
                     speed={20}
                     maxIterations={10}
                     text="A Vision for National Prosperity & Technological Sovereignty. We present the QatarSphere District—a strategic national project designed not just to lead in entertainment, but to become a global epicenter for the next industrial revolution."
                 />
-              </GlassCard>
+              </div>
               <div className="grid md:grid-cols-2 gap-6">
                   <ExecutiveSummaryCard icon={<Cpu size={24} />} title="The Proposal" className="col-span-1 md:col-span-2">
                       A <b>$4.2 billion total investment</b> to develop the world&apos;s first "cognitive city" district.
@@ -423,10 +425,10 @@ export default function Home({
                   <ExecutiveSummaryCard icon={<TrendingUp size={24} />} title="The Dual Engine" className="col-span-1 md:col-span-2">
                       Adds <b>QAR 20-30B ($5.5-8.2B USD)</b> annually to GDP, creating a powerful new economic driver.
                   </ExecutiveSummaryCard>
-                  <ExecutiveSummaryCard icon={<ShieldCheck size={24} />} title="Strategic Imperative">
+                  <ExecutiveSummaryCard icon={<ShieldCheck size={24} />} title="Strategic Imperative" className="col-span-1 md:col-span-1">
                       Moves beyond tourism to create a living laboratory for AI, Quantum Computing, and Robotics, aligning with QNV 2030.
                   </ExecutiveSummaryCard>
-                  <ExecutiveSummaryCard icon={<Handshake size={24} />} title="The Ask">
+                  <ExecutiveSummaryCard icon={<Handshake size={24} />} title="The Ask" className="col-span-1 md:col-span-1">
                       Seeking QIA&apos;s backing to anchor this nation-building project and secure Qatar&apos;s position as a global leader.
                   </ExecutiveSummaryCard>
               </div>
@@ -1002,3 +1004,5 @@ export default function Home({
     </div>
   );
 }
+
+    
