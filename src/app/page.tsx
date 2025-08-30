@@ -407,15 +407,15 @@ export default function Home({
               <div className="space-y-4 text-center">
                 <GlassCard>
                   <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground">Executive Summary</h2>
+                  <DecryptedText
+                    parentClassName="mx-auto mt-4 max-w-3xl text-lg text-destructive md:text-2xl"
+                    animateOn="view"
+                    sequential
+                    speed={20}
+                    maxIterations={10}
+                    text="A Vision for National Prosperity & Technological Sovereignty. We present the QatarSphere District—a strategic national project designed not just to lead in entertainment, but to become a global epicenter for the next industrial revolution."
+                  />
                 </GlassCard>
-                <DecryptedText
-                  parentClassName="mx-auto mt-4 max-w-3xl text-lg text-destructive md:text-2xl"
-                  animateOn="view"
-                  sequential
-                  speed={20}
-                  maxIterations={10}
-                  text="A Vision for National Prosperity & Technological Sovereignty. We present the QatarSphere District—a strategic national project designed not just to lead in entertainment, but to become a global epicenter for the next industrial revolution."
-                />
               </div>
               <div className="grid md:grid-cols-2 gap-6">
                 <ExecutiveSummaryCard icon={<Cpu size={24} />} title="The Proposal" className="col-span-1 md:col-span-2">
