@@ -175,8 +175,7 @@ const PartnerCard = ({
     <div className="flex items-center gap-4">
       <div
         className={cn(
-          'flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-to-br from-yellow-300 to-amber-500 text-white/90 shadow-lg',
-          '[&>svg]:-mt-1 [&>svg]:drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]'
+          'text-accent drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]'
         )}
       >
         {icon}
@@ -829,17 +828,17 @@ export default function Home({
                 />
               </GlassCard>
               <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-                <PartnerCard icon={<Building size={28} />} title="CSCEC">
+                <PartnerCard icon={<Building size={32} />} title="CSCEC">
                   Construction partner, the world&apos;s largest contractor, ensuring on-time
                   delivery.
                 </PartnerCard>
-                <PartnerCard icon={<Cpu size={28} />} title="Tencent">
+                <PartnerCard icon={<Cpu size={32} />} title="Tencent">
                   Technology &amp; AI partner to power immersive content and personalization engines.
                 </PartnerCard>
-                <PartnerCard icon={<Database size={28} />} title="Alibaba">
+                <PartnerCard icon={<Database size={32} />} title="Alibaba">
                   Cloud &amp; Data partner for robust, real-time smart city management.
                 </PartnerCard>
-                <PartnerCard icon={<Layers size={28} />} title="Wanda Group">
+                <PartnerCard icon={<Layers size={32} />} title="Wanda Group">
                   Entertainment content partner for co-developing world-class shows.
                 </PartnerCard>
               </div>
@@ -1023,4 +1022,5 @@ export default function Home({
     
 
     
+
 
