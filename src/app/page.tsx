@@ -380,7 +380,7 @@ export default function Home({
               </GlassCard>
               <GlassCard className="md:col-span-1 flex flex-col items-center justify-center text-lg">
                   <p className="font-semibold">Presented by:</p>
-                  <p className="text-accent text-lg">
+                  <p className="text-gray-300 text-lg">
                     H.E SHEIKH JABR BIN JASIM BIN THANI AL THANI
                   </p>
               </GlassCard>
@@ -464,9 +464,8 @@ export default function Home({
                     text="From an Entertainment Venue to a Cognitive Hub. While competitors focus on building bigger screens, we will build a smarter city. The QatarSphere District's vision transcends entertainment to become a globally significant hub for technological innovation."
                   />
                 </GlassCard>
-
                 <div className="grid grid-cols-1 lg:grid-cols-3 items-stretch gap-8">
-                  <div className="space-y-6 lg:col-span-1 flex flex-col gap-8">
+                  <div className="flex flex-col gap-8 lg:col-span-1">
                     <div className="group relative transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)] hover:scale-[1.02]">
                       <GlassCard className="h-full">
                         <div className="flex items-start gap-4 p-4">
