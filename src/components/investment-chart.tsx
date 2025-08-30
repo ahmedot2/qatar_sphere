@@ -16,11 +16,11 @@ const chartConfig = {
   },
   venue: {
     label: "Sphere Venue",
-    color: "hsl(var(--chart-1))",
+    color: "hsl(var(--accent))",
   },
   infra: {
     label: "District Infrastructure",
-    color: "hsl(var(--chart-2))",
+    color: "hsl(var(--accent) / 0.7)",
   },
 } satisfies ChartConfig
 
