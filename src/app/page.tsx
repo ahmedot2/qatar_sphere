@@ -77,7 +77,7 @@ const ExecutiveSummaryCard = ({
       >
         {icon}
       </div>
-      <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">{title}</h3>
+      <h3 className="text-lg font-semibold text-foreground">{title}</h3>
     </div>
     <div className="mt-4 text-foreground">
       <p>{children}</p>
@@ -149,7 +149,7 @@ const ImpactCard = ({
         {icon}
       </div>
       <div className="flex flex-col">
-        <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200" dangerouslySetInnerHTML={{ __html: title }} />
+        <h3 className="text-lg font-semibold text-foreground" dangerouslySetInnerHTML={{ __html: title }} />
         <p className="mt-2 text-foreground">{children}</p>
       </div>
     </div>
@@ -181,7 +181,7 @@ const PartnerCard = ({
       >
         {icon}
       </div>
-      <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">{title}</h3>
+      <h3 className="text-lg font-semibold text-foreground">{title}</h3>
     </div>
     <p className="mt-4 text-foreground">{children}</p>
   </div>
@@ -197,7 +197,7 @@ const ValuePropCard = ({ icon, title }: { icon: React.ReactNode; title: string }
       <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-yellow-300 to-amber-500 text-white/90 shadow-lg [&>svg]:-mt-1 [&>svg]:drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
         {icon}
       </div>
-      <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">{title}</h3>
+      <h3 className="text-lg font-semibold text-foreground">{title}</h3>
     </div>
   </div>
 );
@@ -726,7 +726,7 @@ export default function Home({
                     'md:col-span-3 lg:col-span-2 lg:row-span-2 min-h-[300px] p-6'
                   )}
                 >
-                    <h3 className="mb-4 text-lg font-semibold">Investment Breakdown</h3>
+                    <h3 className="mb-4 text-lg font-semibold text-foreground">Investment Breakdown</h3>
                     <InvestmentChart />
                 </GlassCard>
                 <FinancialMetricCard
@@ -932,7 +932,7 @@ export default function Home({
             <div className="space-y-6">
               <GlassCard className="bg-white/80 dark:bg-black/30 shadow-soft-light dark:shadow-soft-dark hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
                 <CardHeader>
-                  <CardTitle className="text-gray-800 dark:text-gray-200">Our Request</CardTitle>
+                  <CardTitle className="text-foreground">Our Request</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-foreground">
@@ -943,7 +943,7 @@ export default function Home({
               </GlassCard>
               <GlassCard className="bg-white/80 dark:bg-black/30 shadow-soft-light dark:shadow-soft-dark hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)]">
                 <CardHeader>
-                  <CardTitle className="text-gray-800 dark:text-gray-200">Immediate Next Steps</CardTitle>
+                  <CardTitle className="text-foreground">Immediate Next Steps</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-4 text-foreground">
@@ -1023,3 +1023,4 @@ export default function Home({
     
 
     
+
