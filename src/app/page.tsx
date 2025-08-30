@@ -414,16 +414,16 @@ export default function Home({
                 </GlassCard>
               </div>
               <div className="grid md:grid-cols-2 gap-6">
-                <ExecutiveSummaryCard icon={<Cpu size={32} />} title="The Proposal" className="col-span-1 md:col-span-2">
+                <ExecutiveSummaryCard icon={<Cpu size={40} className="text-accent drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />} title="The Proposal" className="col-span-1 md:col-span-2">
                   A <b>$4.2 billion total investment</b> to develop the world&apos;s first "cognitive city" district.
                 </ExecutiveSummaryCard>
-                <ExecutiveSummaryCard icon={<TrendingUp size={32} />} title="The Dual Engine" className="col-span-1 md:col-span-2">
+                <ExecutiveSummaryCard icon={<TrendingUp size={40} className="text-accent drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />} title="The Dual Engine" className="col-span-1 md:col-span-2">
                   Adds <b>QAR 20-30B ($5.5-8.2B USD)</b> annually to GDP, creating a powerful new economic driver.
                 </ExecutiveSummaryCard>
-                <ExecutiveSummaryCard icon={<ShieldCheck size={32} />} title="Strategic Imperative" className="col-span-1">
+                <ExecutiveSummaryCard icon={<ShieldCheck size={40} className="text-accent drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />} title="Strategic Imperative" className="col-span-1">
                   Moves beyond tourism to create a living laboratory for AI, Quantum Computing, and Robotics, aligning with QNV 2030.
                 </ExecutiveSummaryCard>
-                <ExecutiveSummaryCard icon={<Handshake size={32} />} title="The Ask" className="col-span-1">
+                <ExecutiveSummaryCard icon={<Handshake size={40} className="text-accent drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />} title="The Ask" className="col-span-1">
                   Seeking QIA&apos;s backing to anchor this nation-building project and secure Qatar&apos;s position as a global leader.
                 </ExecutiveSummaryCard>
               </div>
@@ -465,11 +465,9 @@ export default function Home({
                     <div className="group relative transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)] hover:scale-[1.02]">
                       <GlassCard className="h-full">
                         <div className="flex items-start gap-4 p-4">
-                          <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-yellow-300 to-amber-500 text-white/90 shadow-lg [&>svg]:-mt-1 [&>svg]:drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
-                            <Globe size={24} />
-                          </div>
+                           <Globe size={32} className="shrink-0 text-accent drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
                           <div>
-                            <h3 className="text-lg font-semibold">The Entertainment Layer</h3>
+                            <h3 className="text-lg font-semibold text-foreground">The Entertainment Layer</h3>
                             <p className="text-foreground">
                               A world-class destination attracting 3.2 million visitors annually, serving
                               as the public face and a key revenue driver.
@@ -481,11 +479,9 @@ export default function Home({
                     <div className="group relative transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)] hover:scale-[1.02]">
                       <GlassCard className="h-full">
                         <div className="flex items-start gap-4 p-4">
-                          <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-yellow-300 to-amber-500 text-white/90 shadow-lg [&>svg]:-mt-1 [&>svg]:drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
-                            <BrainCircuit size={24} />
-                          </div>
+                          <BrainCircuit size={32} className="shrink-0 text-accent drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
                           <div>
-                            <h3 className="text-lg font-semibold">The Technology Core</h3>
+                            <h3 className="text-lg font-semibold text-foreground">The Technology Core</h3>
                             <p className="text-foreground">
                               A Special Economic and Technology Zone (SET-Zone) to attract leaders in AI,
                               Quantum Computing, Advanced Robotics, and Blockchain.
@@ -616,15 +612,15 @@ export default function Home({
                 />
               </GlassCard>
               <div className="grid md:grid-cols-3 gap-8">
-                <ImpactCard icon={<Book size={36} />} title="Celebrate Heritage,<br/>Power the Future">
+                <ImpactCard icon={<Book size={40} className="text-accent drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />} title="Celebrate Heritage,<br/>Power the Future">
                   A unique brand of &apos;Culture &amp; Code&apos; to define Qatar&apos;s global
                   identity, featuring a Qatar Heritage Pavilion.
                 </ImpactCard>
-                <ImpactCard icon={<Users2 size={36} />} title="Build a<br/>Knowledge Workforce">
+                <ImpactCard icon={<Users2 size={40} className="text-accent drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />} title="Build a<br/>Knowledge Workforce">
                   A National Technology Fellowship to develop elite Qatari talent in AI, quantum
                   mechanics, and robotics.
                 </ImpactCard>
-                <ImpactCard icon={<HeartHandshake size={36} />} title="Enhance Community<br/>Well-being">
+                <ImpactCard icon={<HeartHandshake size={40} className="text-accent drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />} title="Enhance Community<br/>Well-being">
                   World-class public spaces, family-friendly programming, and a new source of
                   national pride.
                 </ImpactCard>
@@ -662,10 +658,10 @@ export default function Home({
                 />
               </GlassCard>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <ValuePropCard icon={<TrendingUp size={40} />} title="Economic Diversification" />
-                <ValuePropCard icon={<ShieldCheck size={40} />} title="Technological Sovereignty" />
-                <ValuePropCard icon={<Globe size={40} />} title="Global Influence" />
-                <ValuePropCard icon={<BrainCircuit size={40} />} title="Human Capital" />
+                <ValuePropCard icon={<TrendingUp size={48} className="text-accent drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />} title="Economic Diversification" />
+                <ValuePropCard icon={<ShieldCheck size={48} className="text-accent drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />} title="Technological Sovereignty" />
+                <ValuePropCard icon={<Globe size={48} className="text-accent drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />} title="Global Influence" />
+                <ValuePropCard icon={<BrainCircuit size={48} className="text-accent drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />} title="Human Capital" />
               </div>
             </GlassCard>
           </div>
@@ -824,17 +820,17 @@ export default function Home({
                 />
               </GlassCard>
               <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-                <PartnerCard icon={<Building size={32} />} title="CSCEC">
+                <PartnerCard icon={<Building size={40} />} title="CSCEC">
                   Construction partner, the world&apos;s largest contractor, ensuring on-time
                   delivery.
                 </PartnerCard>
-                <PartnerCard icon={<Cpu size={32} />} title="Tencent">
+                <PartnerCard icon={<Cpu size={40} />} title="Tencent">
                   Technology &amp; AI partner to power immersive content and personalization engines.
                 </PartnerCard>
-                <PartnerCard icon={<Database size={32} />} title="Alibaba">
+                <PartnerCard icon={<Database size={40} />} title="Alibaba">
                   Cloud &amp; Data partner for robust, real-time smart city management.
                 </PartnerCard>
-                <PartnerCard icon={<Layers size={32} />} title="Wanda Group">
+                <PartnerCard icon={<Layers size={40} />} title="Wanda Group">
                   Entertainment content partner for co-developing world-class shows.
                 </PartnerCard>
               </div>
