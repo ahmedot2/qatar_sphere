@@ -71,8 +71,7 @@ const ExecutiveSummaryCard = ({
     <div className="flex items-center gap-4">
       <div
         className={cn(
-          'flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-to-br from-yellow-300 to-amber-500 text-white/90 shadow-lg',
-          '[&>svg]:-mt-1 [&>svg]:drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]'
+          'text-accent drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]'
         )}
       >
         {icon}
@@ -140,10 +139,9 @@ const ImpactCard = ({
     )}
   >
     <div className="flex items-start gap-6">
-      <div
+       <div
         className={cn(
-          'flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-yellow-300 to-amber-500 text-white/90 shadow-lg',
-          '[&>svg]:-mt-1 [&>svg]:drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]'
+          'text-accent drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]'
         )}
       >
         {icon}
@@ -193,7 +191,7 @@ const ValuePropCard = ({ icon, title }: { icon: React.ReactNode; title: string }
     'hover:shadow-[0_0_20px_0px_hsl(var(--destructive)/0.4)] hover:-translate-y-1'
   )}>
     <div className="flex flex-col items-center gap-4">
-      <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-yellow-300 to-amber-500 text-white/90 shadow-lg [&>svg]:-mt-1 [&>svg]:drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
+      <div className="text-accent drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
         {icon}
       </div>
       <h3 className="text-lg font-semibold text-foreground">{title}</h3>
@@ -307,8 +305,7 @@ const RiskCard = ({ icon, children }: { icon: React.ReactNode; children: React.R
     <div className="flex items-start gap-4">
       <div
         className={cn(
-          'flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-yellow-300 to-amber-500 text-white/90 shadow-lg',
-           '[&>svg]:-mt-1 [&>svg]:drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]'
+          'text-accent drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]'
         )}
       >
         {icon}
@@ -417,16 +414,16 @@ export default function Home({
                 </GlassCard>
               </div>
               <div className="grid md:grid-cols-2 gap-6">
-                <ExecutiveSummaryCard icon={<Cpu size={24} />} title="The Proposal" className="col-span-1 md:col-span-2">
+                <ExecutiveSummaryCard icon={<Cpu size={32} />} title="The Proposal" className="col-span-1 md:col-span-2">
                   A <b>$4.2 billion total investment</b> to develop the world&apos;s first "cognitive city" district.
                 </ExecutiveSummaryCard>
-                <ExecutiveSummaryCard icon={<TrendingUp size={24} />} title="The Dual Engine" className="col-span-1 md:col-span-2">
+                <ExecutiveSummaryCard icon={<TrendingUp size={32} />} title="The Dual Engine" className="col-span-1 md:col-span-2">
                   Adds <b>QAR 20-30B ($5.5-8.2B USD)</b> annually to GDP, creating a powerful new economic driver.
                 </ExecutiveSummaryCard>
-                <ExecutiveSummaryCard icon={<ShieldCheck size={24} />} title="Strategic Imperative" className="col-span-1">
+                <ExecutiveSummaryCard icon={<ShieldCheck size={32} />} title="Strategic Imperative" className="col-span-1">
                   Moves beyond tourism to create a living laboratory for AI, Quantum Computing, and Robotics, aligning with QNV 2030.
                 </ExecutiveSummaryCard>
-                <ExecutiveSummaryCard icon={<Handshake size={24} />} title="The Ask" className="col-span-1">
+                <ExecutiveSummaryCard icon={<Handshake size={32} />} title="The Ask" className="col-span-1">
                   Seeking QIA&apos;s backing to anchor this nation-building project and secure Qatar&apos;s position as a global leader.
                 </ExecutiveSummaryCard>
               </div>
@@ -450,7 +447,7 @@ export default function Home({
           <div className="w-full max-w-screen-2xl">
             <GlassCard className="p-6 md:p-8">
               <div className="grid grid-cols-1 gap-8">
-                <GlassCard className="p-6 text-center md:text-left">
+                <GlassCard className="p-6 text-center md:text-left md:col-span-2">
                   <h2 className="font-display text-3xl font-bold tracking-wider md:text-4xl text-foreground tracking-wider">
                     A New Paradigm: Beyond Entertainment
                   </h2>
@@ -498,7 +495,6 @@ export default function Home({
                       </GlassCard>
                     </div>
                   </div>
-
                   <div className="lg:col-span-2">
                     <Image
                       src="/new-paradigm.jpg"
@@ -620,15 +616,15 @@ export default function Home({
                 />
               </GlassCard>
               <div className="grid md:grid-cols-3 gap-8">
-                <ImpactCard icon={<Book size={28} />} title="Celebrate Heritage,<br/>Power the Future">
+                <ImpactCard icon={<Book size={36} />} title="Celebrate Heritage,<br/>Power the Future">
                   A unique brand of &apos;Culture &amp; Code&apos; to define Qatar&apos;s global
                   identity, featuring a Qatar Heritage Pavilion.
                 </ImpactCard>
-                <ImpactCard icon={<Users2 size={28} />} title="Build a<br/>Knowledge Workforce">
+                <ImpactCard icon={<Users2 size={36} />} title="Build a<br/>Knowledge Workforce">
                   A National Technology Fellowship to develop elite Qatari talent in AI, quantum
                   mechanics, and robotics.
                 </ImpactCard>
-                <ImpactCard icon={<HeartHandshake size={28} />} title="Enhance Community<br/>Well-being">
+                <ImpactCard icon={<HeartHandshake size={36} />} title="Enhance Community<br/>Well-being">
                   World-class public spaces, family-friendly programming, and a new source of
                   national pride.
                 </ImpactCard>
@@ -666,10 +662,10 @@ export default function Home({
                 />
               </GlassCard>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <ValuePropCard icon={<TrendingUp size={28} />} title="Economic Diversification" />
-                <ValuePropCard icon={<ShieldCheck size={28} />} title="Technological Sovereignty" />
-                <ValuePropCard icon={<Globe size={28} />} title="Global Influence" />
-                <ValuePropCard icon={<BrainCircuit size={28} />} title="Human Capital" />
+                <ValuePropCard icon={<TrendingUp size={40} />} title="Economic Diversification" />
+                <ValuePropCard icon={<ShieldCheck size={40} />} title="Technological Sovereignty" />
+                <ValuePropCard icon={<Globe size={40} />} title="Global Influence" />
+                <ValuePropCard icon={<BrainCircuit size={40} />} title="Human Capital" />
               </div>
             </GlassCard>
           </div>
@@ -875,26 +871,26 @@ export default function Home({
                 />
               </GlassCard>
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                <RiskCard icon={<Wrench size={24} />}>
+                <RiskCard icon={<Wrench size={32} />}>
                   Partnering with CSCEC, leveraging prefabrication, and securing a 15% contingency
                   budget.
                 </RiskCard>
-                <RiskCard icon={<Activity size={24} />}>
+                <RiskCard icon={<Activity size={32} />}>
                   Dual-engine model hedges risk, as the R&amp;D/Tech sector is less correlated with
                   consumer travel.
                 </RiskCard>
-                <RiskCard icon={<Replace size={24} />}>
+                <RiskCard icon={<Replace size={32} />}>
                   Modular, open-architecture design for easy upgrades. The QIC&apos;s purpose is to
                   drive change.
                 </RiskCard>
-                <RiskCard icon={<Globe2 size={24} />}>
+                <RiskCard icon={<Globe2 size={32} />}>
                   Diversified global partnerships. Position QIC as a neutral, &quot;open-source&quot;
                   R&amp;D hub.
                 </RiskCard>
-                <RiskCard icon={<Recycle size={24} />}>
+                <RiskCard icon={<Recycle size={32} />}>
                   LEED Platinum design, on-site solar generation, and advanced water recycling.
                 </RiskCard>
-                <RiskCard icon={<ShieldCheck size={24} />}>
+                <RiskCard icon={<ShieldCheck size={32} />}>
                   Robust cybersecurity protocols and physical security designed in partnership with
                   global experts.
                 </RiskCard>
@@ -1024,3 +1020,6 @@ export default function Home({
     
 
 
+
+
+    
